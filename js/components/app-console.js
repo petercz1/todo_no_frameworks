@@ -8,7 +8,7 @@ class appConsole extends RootElement {
 		this.pubsub = PubSub;
 		this.renderData(this.pubsub.getData('getPeople', null));
 		this.pubsub.subscribe('ChangeTask', 'getTaskTotal', null, this.renderData);
-		this.pubsub.subscribe('DeleteTask', 'getPeople', null, this.renderData);
+		this.pubsub.subscribe('DeleteTask', 'getCheckedtotal', null, this.renderData);
   }
 
 	// renders all data from 'getPeople()'
