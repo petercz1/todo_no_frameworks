@@ -20,7 +20,7 @@ export default new class SendData {
         headers: new Headers({
           "Content-Type": "application/json"
         }),
-        body: JSON.stringify(file)
+        body: JSON.stringify(task)
       };
 
       // FETCH it and deal with any network errors
