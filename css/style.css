@@ -1,31 +1,32 @@
-body{
-	width: 75%;
-	margin: auto;
+body {
+  width: 75%;
+  margin: auto;
 }
 
-label{
-	display:inline-block;
-	width: 20em;
+label {
+  display: inline-block;
+  width: 20em;
 }
 
-*{
-	box-sizing:border-box;
-border: 1px solid light
+* {
+  box-sizing: border-box;
+  border: 1px solid lightgray;
 }
 
 
-app-task div{
-	margin: 0.5em;
+app-task div {
+  margin: 0.5em;
 }
 
-.addTask{
-	width:100%;
-}
-.addTask input{
-	width: 80%;
+.addTask {
+  width: 100%;
 }
 
-.addTask button{
-	box-sizing:border-box;
-	width: 20%;
+.addTask input {
+  width: 80%;
+}
+
+.addTask button {
+  box-sizing: border-box;
+  width: 20%;
 }
