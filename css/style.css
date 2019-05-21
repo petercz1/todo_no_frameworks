@@ -19,9 +19,9 @@ body {
   margin: 0.5em;
   font-size: 0;
 }
-
+/* 
 .task input,
-.task button,
+.task button, */
 .task label,
 .addTask input,
 .addTask button {
