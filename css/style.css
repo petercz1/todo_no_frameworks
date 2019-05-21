@@ -34,8 +34,7 @@ body {
 
 .task input,
 .task span {
-  margin: 0 0.5rem;
-}
+width: 20%;}
 
 .addTask input {
   width: 80%;
