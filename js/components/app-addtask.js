@@ -21,7 +21,10 @@ class appAddTask extends RootElement {
       task: document.querySelector('#task').value,
       checked: true,
     };
-    this.pubsub.publish('NewTask', task);
+	this.pubsub.publish('NewTask', task);
+	
+	 // generate new random name
+	 this.generateName();
   }
 
   // random name generator for testing, saves having to type a value into the input box
