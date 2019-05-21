@@ -10,7 +10,6 @@ class appAddTask extends RootElement {
 
   renderData() {
     this.innerHTML = `
-      <h2>Enter a task</h2>
       <input type="text" id="task" placeholder="add task"></input>
       <button id="newPerson">add person</button>
     `;
