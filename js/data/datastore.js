@@ -3,6 +3,7 @@ class DataStore {
   constructor() {
     // create datastores
     this.data = [];
+    this.
   }
 
   // getRequest() and setRequest() are the primary getters/setters
