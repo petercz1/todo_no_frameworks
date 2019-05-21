@@ -51,13 +51,11 @@ class DataStore {
 
   setDeletetask(data) {
     // filter returns a copy of the array, which then replaces the original
-    console.log('deleting task');
     console.log(data);
     console.log(this.tasks);
     this.tasks = this.tasks.filter(task => {
       return task.id != data.id;
     })
-    console.log(this.tasks);
   }
 }
 
