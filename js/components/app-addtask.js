@@ -24,11 +24,11 @@ class appAddTask extends RootElement {
 	this.pubsub.publish('NewTask', task);
 	
 	 // generate new random task
-	 this.generateName();
+	 this.generateTask();
   }
 
-  // random name generator for testing, saves having to type a value into the input box
-  generateName() {
+  // random task generator for testing, saves having to type a value into the input box
+  generateTask() {
     let names = ['bill', 'bob', 'brenda', 'bert', 'barry', 'brian', 'boomer', 'butch', 'beau', 'benny', 'bessie', 'bonza', 'bunty', 'boris', 'broderick', 'byron'];
     this.querySelector('#name').value = names[Math.floor(Math.random() * names.length)];
   }
