@@ -18,7 +18,7 @@ class appAddTask extends RootElement {
 
   addtask() {
     let task = {
-      task: document.querySelector('#taskname').value,
+      taskname: document.querySelector('#taskname').value,
       checked: true,
     };
 	this.pubsub.publish('NewTask', task);
