@@ -7,12 +7,12 @@ class appTasks extends RootElement {
   constructor() {
     super();
     this.pubsub = PubSub;
-    this.renderData(this.pubsub.getData('getPeople',null));
-    this.pubsub.subscribe('NewPerson', 'getPeople', null, this.renderData);
-    this.pubsub.subscribe('DeletePerson', 'getPeople', null, this.renderData);
+    this.renderData(this.pubsub.getData('getTasks',null));
+    this.pubsub.subscribe('NewPerson', 'getTasks', null, this.renderData);
+    this.pubsub.subscribe('DeletePerson', 'getTasks', null, this.renderData);
   }
 
-  // renders all people returned from 'getPeople()'
+  // renders all people returned from 'getTasks()'
   renderData(people) {
     this.innerHTML = `
       <small>&lt;app-people&gt;</small>
