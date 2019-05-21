@@ -16,7 +16,7 @@ class appTask extends RootElement {
     <div class="task">
       <label for="${this.task.id}" class="label">${this.task.taskname}</label>
       <input type="checkbox" id="${this.task.id}" />
-      <button>&#128465;</button></br>
+      <button>&#128465;</button>
     </div>
     `;
     this.querySelector('input').addEventListener('change', this.registerChange);
