@@ -15,11 +15,7 @@ export default new class SendData {
     let url = new URL(`${window.location.origin}/backend/setTask.php`);
     let data = {};
     // filter for process_video == checked and then extract just the path name
-    data = files.filter(data => data.process_video == true).map(data => {
-      return {
-       
-      };
-    });
+
 
     data.forEach(async file => {
       let init = {
