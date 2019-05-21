@@ -1,4 +1,9 @@
-
+html {
+	box-sizing: border-box;
+  }
+  *, *:before, *:after {
+	box-sizing: inherit;
+  }
 
 body {
   width: 75%;
@@ -9,11 +14,6 @@ label {
   display: inline-block;
   width: 20em;
 }
-
-* {
-  box-sizing: border-box;
-}
-
 
 app-task div {
   margin: 0.5em;
