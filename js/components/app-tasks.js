@@ -15,7 +15,6 @@ class appTasks extends RootElement {
   // renders all people returned from 'getTasks()'
   renderData(people) {
     this.innerHTML = `
-      <small>&lt;app-people&gt;</small>
       <h2>All people</h2>
       <p> uncheck to deselect</p>
       <div id="people"></div>
