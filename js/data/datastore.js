@@ -29,7 +29,7 @@ class DataStore {
     return (this.tasks.filter(task => (task.checked == true)).length);
   }
   getTaskTotal() {
-    return this.data.tasks.length;
+    return this.tasks.length;
   }
 
   setNewTask(data) {
