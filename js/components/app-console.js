@@ -16,7 +16,7 @@ class appConsole extends RootElement {
 		this.innerHTML = `	
 		<h3>Console monitoring stuff</h3>
 		<p>You have <span class="bold">${data.tasksLength}</span> tasks, <span class="bold">
-		${this.taskLen}</span> are completed</p>
+		${this.tasksChecked}</span> are completed</p>
 		`;
 	}
 }
