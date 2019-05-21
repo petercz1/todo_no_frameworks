@@ -31,7 +31,7 @@ class appAddTask extends RootElement {
   generateTask() {
 	let tasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee','google "pimp my noodles"',
 				'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list','beat personal best on snake'];
-	let 
+	let item = 
     this.querySelector('#taskname').value = tasks[Math.floor(Math.random() * tasks.length)];
   }
 }
