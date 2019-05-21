@@ -20,6 +20,7 @@ h1{
 
 .block{
 	margin:0.5em;
+	font-size: 0;
 }
 
 .task label {
