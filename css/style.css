@@ -8,7 +8,10 @@ label{
 	width: 20em;
 }
 
-*
+*{
+	box-sizing:border-box;
+
+}
 
 
 app-task div{
