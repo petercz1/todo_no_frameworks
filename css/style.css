@@ -10,7 +10,7 @@ body {
 .task,
 #tasks,
 .addTask {
-  margin: 0.5em;
+  margin: 2em;
   font-size: 0;
 }
 
