@@ -12,7 +12,7 @@ class appConsole extends RootElement {
 
 	// renders all data from 'getPeople()'
 	renderData(data){
-		console.log(dats);
+		console.log(data);
 		this.innerHTML = `	
 		<h3>Console monitoring stuff</h3>
 		<p>You have <span class="bold">${data.tasksLength}</span> tasks, <span class="bold">
