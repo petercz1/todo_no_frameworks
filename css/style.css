@@ -15,10 +15,8 @@ app-tasks, app-task, app-addtask{
 }
 
 app-task *,
-app-task input,
-app-task span,
-app-addtask input,
-app-addtask button {
+app-addtask *,
+ {
   box-sizing: border-box;
   font-size: 1rem;
 }
