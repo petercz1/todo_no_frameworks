@@ -7,7 +7,8 @@ body {
   margin: auto;
 }
 
-.task, .tasks,
+.task,
+.tasks,
 .addTask {
   margin: 0.5em;
   font-size: 0;
