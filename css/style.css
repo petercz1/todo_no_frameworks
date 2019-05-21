@@ -13,7 +13,7 @@ body {
   margin: auto;
 }
 
-.task label {
+.task label {#
   display: inline-block;
   width: 20em;
 }
