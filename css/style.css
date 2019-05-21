@@ -23,7 +23,7 @@ body {
 
 .task input,
 .task button {
-	box-sizing: border-box;
+  box-sizing: border-box;
   width: 10%;
 }
 
