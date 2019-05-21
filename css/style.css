@@ -20,7 +20,7 @@ body {
   width: 80%;
 }
 
-.task input,
+.task input[type=],
 .task button {
   width: 10%;
 }
