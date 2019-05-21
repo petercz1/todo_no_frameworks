@@ -33,7 +33,7 @@ body {
 }
 
 .task input,
-.task p {
+.task span {
   margin: 0 0.5rem;
 }
 
