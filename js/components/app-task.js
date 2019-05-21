@@ -7,7 +7,7 @@ class appTask extends RootElement {
     this.pubsub = PubSub;
     this.task = task;
     this.renderData();
-    this
+    this.p
   }
 
   renderData() {
