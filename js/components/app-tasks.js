@@ -19,8 +19,8 @@ class appTasks extends RootElement {
     // `;
     // append task elements
     tasks.forEach(task => {
-      this.querySelector('#tasks').append(new AppTask(task));
-      this.querySelector('#tasks').append(new AppTask(task));
+      // this.querySelector('#tasks').append(new AppTask(task));
+      this.html(new AppTask(task));
     });
   }
 }
