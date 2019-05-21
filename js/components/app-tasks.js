@@ -3,7 +3,7 @@ import RootElement from './app-rootelement.js';
 import PubSub from '../pubsub/pubsub.js';
 import Person from './app-task.js/index.js';
 
-class appPeople extends RootElement {
+class appTasks extends RootElement {
   constructor() {
     super();
     this.pubsub = PubSub;
@@ -26,6 +26,6 @@ class appPeople extends RootElement {
   }
 }
 
-export default appPeople;
+export default appTasks;
 
-customElements.define('app-people', appPeople);
+customElements.define('app-people', appTasks);
