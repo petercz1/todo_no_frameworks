@@ -37,7 +37,7 @@ class DataStore {
     return (this.tasks.filter(task => (task.checked == true)).length);
   }
   getCount() {
-    return this.Tasks.length;
+    return this.tasks.length;
   }
 
   // get and set messages
@@ -53,11 +53,11 @@ class DataStore {
   setNewTask(data) {
     console.log(data);
     // find max id
-    let max = Math.max(...this.Tasks.map(obj => obj.id), 0);
+    let max = Math.max(...this.tasks.map(obj => obj.id), 0);
     // increment it
     data.id = max + 1;
     // add it
-    this.Tasks.push(data);
+    this.tasks.push(data);
     //}
   }
   setChangetask(data) {
@@ -65,7 +65,7 @@ class DataStore {
   }
   setDeletetask(data) {
     // filter returns a copy of the array, which then replaces the original
-    this.Tasks = this.Tasks.filter(task => {
+    this.tasks = this.tasks.filter(task => {
       return task.id != data.id;
     })
   }
