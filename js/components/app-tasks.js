@@ -1,7 +1,7 @@
 import RootElement from './app-rootelement.js';
 
 import PubSub from '../pubsub/pubsub.js';
-import Person from './app-task.js/index.js';
+import Task from './app-task.js/index.js';
 
 class appTasks extends RootElement {
   constructor() {
