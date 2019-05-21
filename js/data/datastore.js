@@ -30,7 +30,7 @@ class DataStore {
     return this.meta;
   }
   getTaskTotal() {
-    return this.tasks.length;
+    this.meta.tasklength =  this.tasks.length;
   }
 
   setNewTask(data) {
