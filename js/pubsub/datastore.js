@@ -26,7 +26,7 @@ class DataStore {
 
   // get data of various types
   getTasks() {
-    return this.Tasks
+    return this.tasks
   }
 
   getChosenTasks() {
