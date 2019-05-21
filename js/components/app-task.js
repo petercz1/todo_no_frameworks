@@ -22,6 +22,8 @@ class appTask extends RootElement {
     `;
     if (this.task.checked) {
       this.querySelector('input').setAttribute('checked', true);
+    }else{
+      
     }
     this.querySelector('input').addEventListener('change', this.registerChange);
     this.querySelector('button').addEventListener('click', this.registerDelete);
