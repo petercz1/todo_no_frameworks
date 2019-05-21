@@ -17,7 +17,7 @@ class appConsole extends RootElement {
 		this.innerHTML = `	
 		<h3>Console monitoring stuff</h3>
 		<p>You have <span class="bold">${data.length}</span> tasks, <span class="bold">
-		${this.pubsub.getData('getCheckedTotal', null)}</span> are checked</p>
+		${this.pubsub.getData('getCheckedTotal', null)}</span> are completed</p>
 		`;
 	}
 }
