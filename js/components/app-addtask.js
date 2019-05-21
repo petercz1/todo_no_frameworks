@@ -12,7 +12,7 @@ class appAddTask extends RootElement {
 
   renderData() {
 	this.innerHTML = `
-	<input type="text" id="taskname" placeholder="your new task" value="check for brain"></input>
+	<input type="text" id="taskname" placeholder="your new task"></input>
 	<button id="newTask">add task</button>
     `;
     document.querySelector('#newTask').addEventListener('click', this.addtask);
@@ -23,10 +23,10 @@ class appAddTask extends RootElement {
       taskname: document.querySelector('#taskname').value,
       checked: false,
     };
+	// generate new random task
 	this.generateTask();
 	this.pubsub.publish('NewTask', task);
 	
-	 // generate new random task
   }
 
   // random task generator for testing, saves having to make up a task and type it into the input box
