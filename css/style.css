@@ -12,8 +12,7 @@ app-task,
 app-addtask {
   margin: 2em;
   font-size: 0;
-  border: 1px solid black;
-  background-color: lightblue;
+
 }
 
 app-task *,
