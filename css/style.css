@@ -11,7 +11,7 @@ app-tasks, app-task, app-addtask{
 	margin: 2em;
 	font-size: 0;
 	border: 1px solid white;
-	background-color: light
+	background-color: lightblue;
 }
 
 app-task label,
