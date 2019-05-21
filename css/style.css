@@ -25,7 +25,7 @@ body {
 }
 
 .task *{
-	
+	border: 1px solid black;
 }
 .task label {
   display: inline-block;
