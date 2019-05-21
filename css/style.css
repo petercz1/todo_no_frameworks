@@ -29,7 +29,6 @@ app-task div,
 app-addtask div {
   margin: 0.5em;
   font-size: 0;
-  border: 1px solid lightgray;
 }
 
 .addTask input {
