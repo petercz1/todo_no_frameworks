@@ -2,3 +2,7 @@ label{
 	display:inline-block;
 	width: 15em;
 }
+
+input{
+	width: 15em;
+}
