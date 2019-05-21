@@ -14,7 +14,8 @@ class appConsole extends RootElement {
 	// renders all data from 'getPeople()'
 	renderData(data){
 		console.log(data);
-		this.innerHTML = `	
+		this.innerHTML = `
+		<div>	
 		<h3>Console monitoring stuff</h3>
 		<p>You have <span class="bold">${data.taskLength}</span> tasks, <span class="bold">
 		${data.tasksChecked}</span> are completed</p>
