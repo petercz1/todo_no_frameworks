@@ -3,7 +3,7 @@ class DataStore {
   constructor() {
     // create datastores
     this.tasks = [];
-    this.meta = {tasksChecked: 0};
+    this.meta = {tasksChecked: 0, };
   }
 
   // getRequest() and setRequest() are the primary getters/setters
