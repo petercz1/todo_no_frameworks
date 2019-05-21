@@ -10,6 +10,6 @@ input[type="text"]{
 
 app-task{
 	margin: 3.5em;
-	padding: 
+	padding: 0.5em;
 	border: 1px solid black;
 }
