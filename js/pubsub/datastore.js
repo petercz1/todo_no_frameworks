@@ -21,7 +21,7 @@ class DataStore {
     return res;
   }
 
-  // get data of various types
+  // get task list
   getTasks() {
     return this.tasks
   }
