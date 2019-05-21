@@ -44,6 +44,7 @@ class DataStore {
   }
   setChangeTask(data) {
     console.log(data);
+    this.updateMeta();
   }
   setDeleteTask(data) {
     // filter returns a copy of the array, which then replaces the original
