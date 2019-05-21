@@ -3,10 +3,10 @@ import RootElement from './app-rootelement.js';
 import PubSub from '../pubsub/pubsub.js';
 
 class appTask extends RootElement {
-  constructor(person) {
+  constructor(task) {
     super();
     this.pubsub = PubSub;
-    this.person = person;
+    this.task = task;
     this.registerChange = this.registerChange.bind(this);
     this.registerDelete = this.registerDelete.bind(this);
     this.renderData();
@@ -14,11 +14,11 @@ class appTask extends RootElement {
 
   renderData() {
     this.innerHTML = `
-    <input type="checkbox" id="${this.person.id}" />
-    <label for="${this.person.id}" class="label">${this.person.name}</label>
-    <button class="delete">delete ${this.person.name}</button></br>
+    <input type="checkbox" id="${this.task.id}" />
+    <label for="${this.task.id}" class="label">${this.task.name}</label>
+    <button class="delete">delete ${this.task.name}</button></br>
     `;
-    if (this.person.checked) {
+    if (this.task.checked) {
       this.querySelector('input').setAttribute('checked', true);
     }
     this.querySelector('input').addEventListener('change', this.registerChange);
@@ -26,32 +26,32 @@ class appTask extends RootElement {
   }
 
   registerChange() {
-    // publish change to status of person
-    this.person.checked = !this.person.checked;
-    this.pubsub.publish('ChangePerson', this.person);
+    // publish change to status of task
+    this.task.checked = !this.task.checked;
+    this.pubsub.publish('Changetask', this.task);
 
     // generate and publish new message
     let txt = '';
-    if (this.person.checked) {
-      txt = `${this.person.name} is now selected &#128515;`;
+    if (this.task.checked) {
+      txt = `${this.task.name} is now selected &#128515;`;
     } else {
-      txt = `${this.person.name} is now deselected &#128533;`;
+      txt = `${this.task.name} is now deselected &#128533;`;
     }
     this.pubsub.publish('Message', {
-      "component": "app-person",
+      "component": "app-task",
       "text": txt
     });
   }
 
   registerDelete() {
-    this.pubsub.publish('DeletePerson', this.person);
+    this.pubsub.publish('Deletetask', this.task);
     this.pubsub.publish('Message', {
-      "component": "app-person",
-      "text": `deleting ${this.person.name} &#128561`
+      "component": "app-task",
+      "text": `deleting ${this.task.name} &#128561`
     });
   }
 }
 
 export default appTask;
 
-customElements.define('app-person', appTask);
+customElements.define('app-task', appTask);
