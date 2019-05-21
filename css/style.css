@@ -17,4 +17,6 @@ app-task div{
 	margin: 0.5em;
 }
 
-div input, div 
+div input, div button{
+	float: right;
+}
