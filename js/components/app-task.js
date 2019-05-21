@@ -19,11 +19,6 @@ class appTask extends RootElement {
     <label for="${this.task.id}" class="label">${this.task.taskname}</label>
     <button class="delete">&#9746;</button></br>
     `;
-    if (this.task.checked) {
-      this.querySelector('button.checked').innerHTML = '&#9745;';
-    }else{
-      this.querySelector('button.checked').innerHTML = '&#9744;';
-    }
     this.querySelector('input').addEventListener('change', this.registerChange);
     this.querySelector('button').addEventListener('click', this.registerDelete);
   }
