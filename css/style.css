@@ -1,9 +1,12 @@
 html {
-	box-sizing: border-box;
-  }
-  *, *:before, *:after {
-	box-sizing: inherit;
-  }
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
   width: 75%;
@@ -23,16 +26,16 @@ app-task div {
   width: 100%;
 }
 
-.addTask{
-	font-size: 0;
+.addTask {
+  font-size: 0;
 }
 
 .addTask input {
-	font-size: 1em;
+  font-size: 1em;
   width: 80%;
 }
 
 .addTask button {
-	
+  font-size: 1em;
   width: 20%;
 }
