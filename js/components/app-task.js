@@ -17,7 +17,7 @@ class appTask extends RootElement {
     this.innerHTML = `
     <input type="checkbox" id="${this.task.id}" />
     <label for="${this.task.id}" class="label">${this.task.taskname}</label>
-    <button >&#8999;</button></br>
+    <button class="delete">&#8999;</button></br>
     `;
     if (this.task.checked) {
       this.querySelector('input').setAttribute('checked', true);
