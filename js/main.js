@@ -1,6 +1,7 @@
 // import webcomponents
 import './components/app-rootelement.js';
 import './components/app-addtask.js';
+import './components/app-addtask.js';
 
 
 // import './components/app-people.js';
