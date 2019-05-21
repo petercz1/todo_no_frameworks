@@ -22,8 +22,7 @@ body {
 
 .task input,
 .task button,
-.task label,
-.addTask input {
+.task label{
   font-size: 1rem;
 }
 
