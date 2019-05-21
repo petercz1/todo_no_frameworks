@@ -6,7 +6,7 @@ class DataStore {
   }
 
   // getRequest() and setRequest() are the primary getters/setters
-  // they work by appending 'get' or 'set to the 'listener.request' string
+  // they work by appending 'set to the 'listener.request' string
   // and then use that as the function name.
   // I added 'listener.data' in case someone wants to extend the idea
   // by passing a variable eg id (not implemented here)
