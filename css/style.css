@@ -26,7 +26,7 @@ app-task div {
   width: 100%;
 }
 
-.addTask {
+.task, .addTask {
   font-size: 0;
 }
 
