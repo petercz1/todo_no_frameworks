@@ -14,6 +14,7 @@ class appTasks extends RootElement {
 
   // renders all people returned from 'getTasks()'
   renderData(tasks) {
+    console.log(tasks);
     this.innerHTML = `
       <h2>Todo list</h2>
       <p> uncheck to deselect</p>
