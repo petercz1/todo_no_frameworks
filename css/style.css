@@ -14,7 +14,7 @@ body {
 }
 
 .task label {
-  /* font-size: 1rem; */
+  font-size: 1rem;
   display: inline-block;
   width: 20em;
 }
