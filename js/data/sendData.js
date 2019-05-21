@@ -12,7 +12,7 @@ export default new class SendData {
   sendData(files) {
     console.log('sending data');
     // build POST url
-    let url = new URL(`${window.location.origin}/backend/setTask`);
+    let url = new URL(`${window.location.origin}/backend/setTask.php`);
     let data = {};
     // filter for process_video == checked and then extract just the path name
     data = files.filter(data => data.process_video == true).map(data => {
