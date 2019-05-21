@@ -23,7 +23,7 @@ class appAddTask extends RootElement {
     };
 	this.pubsub.publish('NewTask', task);
 	
-	 // generate new random name
+	 // generate new random task
 	 this.generateName();
   }
 
