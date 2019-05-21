@@ -17,15 +17,7 @@ export default new class SendData {
     // filter for process_video == checked and then extract just the path name
     data = files.filter(data => data.process_video == true).map(data => {
       return {
-        'filepath': data.filepath,
-        'extension': data.extension,
-        'mp41': data.mp41,
-        'basename': data.basename,
-        'dirname': data.dirname,
-        'filename': data.filename,
-        'videoFormat': data.videoFormat.toLowerCase(),
-        'audioFormat': data.audioFormat.toLowerCase(),
-        'delete_on_conversion': document.getElementById('delete_on_conversion').checked
+       
       };
     });
 
