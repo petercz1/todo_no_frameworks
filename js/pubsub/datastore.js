@@ -10,7 +10,7 @@ class DataStore {
     return this[subscriber.request](subscriber.parameters);
   }
 
-  // setRequest() work by appending 'set to the 'listener.request' string
+  // setRequest() works by appending 'set to the 'listener.request' string
   // and then use that as the function name.
   // I added 'listener.data' in case someone wants to extend the idea
   // by passing a variable eg id (not implemented here)
