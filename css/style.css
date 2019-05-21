@@ -7,7 +7,7 @@ body {
   margin: auto;
 }
 
-app-add {
+app-addtask, app-tasks {
   margin: 2em;
   font-size: 0;
 }
