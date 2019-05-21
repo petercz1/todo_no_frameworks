@@ -22,14 +22,14 @@ body {
 
 .task input,
 .task button,
-.task label{
+.task label {
   font-size: 1rem;
 }
 
 .task label {
-	display: inline-block;
-	width: 80%;
-  }
+  display: inline-block;
+  width: 80%;
+}
 
 .task input[type="checkbox"],
 .task button {
