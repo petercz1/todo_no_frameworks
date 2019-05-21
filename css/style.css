@@ -24,6 +24,9 @@ body {
   font-size: 1rem;
 }
 
+.task *{
+	
+}
 .task label {
   display: inline-block;
   width: 80%;
