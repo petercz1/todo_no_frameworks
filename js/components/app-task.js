@@ -1,5 +1,4 @@
 import RootElement from './app-rootelement.js';
-
 import PubSub from '../data/pubsub.js';
 
 class appTask extends RootElement {
