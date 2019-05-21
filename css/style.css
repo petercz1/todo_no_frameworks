@@ -24,7 +24,6 @@ body {
 
 .task input,
 .task button {
-	font-size: 1rem;
   width: 10%;
   border: 1px solid lightgray;
 }
