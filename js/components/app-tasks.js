@@ -16,7 +16,6 @@ class appTasks extends RootElement {
     console.log(tasks);
     this.innerHTML = `
       <h2>Todo list</h2>
-      <p> uncheck to deselect</p>
       <div id="tasks"></div>
     `;
     tasks.forEach(task => {
