@@ -41,6 +41,7 @@ class DataStore {
     // add task to tasks
     this.tasks.push(data);
     this.updateMeta();
+    console.log(this.meta);
     //}
   }
   setChangeTask(data) {
