@@ -22,4 +22,4 @@ class appConsole extends RootElement {
 
 customElements.define('app-console', appConsole);
 
-export default appAddTask;
+export default appConsole;
