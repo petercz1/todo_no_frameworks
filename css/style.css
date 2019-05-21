@@ -12,6 +12,7 @@ app-tasks, app-add-task{
 	font-size: 0;
 	border: 1px solid white;
 }
+
 .task,
 .tasks,
 .addTask {
