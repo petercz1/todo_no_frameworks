@@ -23,5 +23,6 @@ app-task div{
 }
 
 .addTask button{
+	box-sizing:border-box
 	width: 20%;
 }
