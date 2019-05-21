@@ -14,9 +14,9 @@ class appTasks extends RootElement {
   // renders all people returned from 'getTasks()'
   renderData(tasks) {
     this.setAttribute('id', 'tasks');
-    // this.innerHTML = `
-    //   <div id="tasks"></div>
-    // `;
+    this.innerHTML = `
+      <div id="tasks"></div>
+    `;
     // append task elements
     tasks.forEach(task => {
       this.querySelector('#tasks').append(new AppTask(task));
