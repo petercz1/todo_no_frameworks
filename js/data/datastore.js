@@ -27,6 +27,7 @@ class DataStore {
   }
   getCheckedTotal() {
     return (this.tasks.filter(task => (task.checked == true)).length);
+    
   }
   getTaskTotal() {
     return this.tasks.length;
