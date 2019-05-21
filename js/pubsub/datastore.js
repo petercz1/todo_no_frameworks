@@ -44,8 +44,9 @@ class DataStore {
     //}
   }
 
-  setChangeTask(data){
-
+  setChangeTask(data) {
+    console.log(data);
+    
   }
 
   setDeletetask(data) {
