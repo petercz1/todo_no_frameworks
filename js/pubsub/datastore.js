@@ -44,10 +44,10 @@ class DataStore {
     //}
   }
 
-  setChangeTask(){
+  setChangeTask(data){
 
   }
-  
+
   setDeletetask(data) {
     // filter returns a copy of the array, which then replaces the original
     this.tasks = this.tasks.filter(task => {
