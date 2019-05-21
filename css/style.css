@@ -5,11 +5,11 @@
 body {
   width: 75%;
   margin: auto;
+  font-size: 0;
 }
 
 app-tasks, app-task, app-addtask{
 	margin: 2em;
-	font-size: 0;
 }
 
 /* .task,
