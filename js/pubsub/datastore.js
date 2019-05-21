@@ -22,6 +22,7 @@ class DataStore {
   }
 
   getTasks() {
+    console.log();
     return this.tasks
   }
 
