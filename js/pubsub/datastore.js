@@ -55,9 +55,6 @@ class DataStore {
     this.tasks.push(data);
     //}
   }
-  setChangetask(data) {
-    this.getTasks().filter(task => (task.id == data.id)).checked = data.checked;
-  }
   setDeletetask(data) {
     // filter returns a copy of the array, which then replaces the original
     this.tasks = this.tasks.filter(task => {
