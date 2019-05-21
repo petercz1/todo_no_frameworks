@@ -20,7 +20,7 @@ body {
   width: 80%;
 }
 
-.task input[type=],
+.task input[type="checkbox"],
 .task button {
   width: 10%;
 }
