@@ -2,6 +2,7 @@
 declare(strict_types=1);
 namespace chipbug\todo;
 
-class DeleteTask{
-// code
+class DeleteTask
+{
+    // code
 }
