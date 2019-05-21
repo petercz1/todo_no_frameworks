@@ -32,7 +32,7 @@ class appTask extends RootElement {
 
   registerDelete() {
     console.log('deleting' + this.task.taskname);
-    this.pubsub.publish('Deletetask', this.task);
+    this.pubsub.publish('DeleteTask', this.task);
   }
 }
 
