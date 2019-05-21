@@ -29,14 +29,6 @@ class appTask extends RootElement {
     // publish change to status of task
     this.task.checked = !this.task.checked;
     this.pubsub.publish('Changetask', this.task);
-
-    // generate and publish new message
-    let txt = '';
-    if (this.task.checked) {
-      txt = `${this.task.name} is now selected &#128515;`;
-    } else {
-      txt = `${this.task.name} is now deselected &#128533;`;
-    }
   }
 
   registerDelete() {
