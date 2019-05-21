@@ -13,7 +13,7 @@ class DataStore {
   // setRequest() works by appending 'set to the 'request.newInfo' string
   // and then uses that as the function name
   // eg 'NewTask' becomes 'setNewTask'
-  // I added 'listener.data' in case someone wants to extend the idea
+  // I added 'request.data' in case someone wants to extend the idea
   // by passing a variable eg id (not implemented here)
   setRequest(request) {
     let req = 'set' + request.newInfo;
