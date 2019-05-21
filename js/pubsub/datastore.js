@@ -2,7 +2,7 @@ class DataStore {
 
   constructor() {
     // create datastores
-    this.people = [];
+    this.t = [];
     this.message = {};
   }
 
@@ -23,19 +23,19 @@ class DataStore {
   }
 
   // get data of various types
-  getPeople() {
-    return this.people
+  gett() {
+    return this.t
   }
 
-  getChosenPeople() {
-    return (this.people.filter(person => (person.checked == true)));
+  getChosent() {
+    return (this.t.filter(person => (person.checked == true)));
   }
 
   getCheckedTotal() {
-    return (this.people.filter(person => (person.checked == true)).length);
+    return (this.t.filter(person => (person.checked == true)).length);
   }
   getCount() {
-    return this.people.length;
+    return this.t.length;
   }
 
   // get and set messages
@@ -50,19 +50,19 @@ class DataStore {
 
   setNewPerson(data) {
     // find max id
-    let max = Math.max(...this.people.map(obj => obj.id), 0);
+    let max = Math.max(...this.t.map(obj => obj.id), 0);
     // increment it
     data.id = max + 1;
     // add it
-    this.people.push(data);
+    this.t.push(data);
     //}
   }
   setChangePerson(data) {
-    this.getPeople().filter(person => (person.id == data.id)).checked = data.checked;
+    this.gett().filter(person => (person.id == data.id)).checked = data.checked;
   }
   setDeletePerson(data) {
     // filter returns a copy of the array, which then replaces the original
-    this.people = this.people.filter(person => {
+    this.t = this.t.filter(person => {
       return person.id != data.id;
     })
   }
