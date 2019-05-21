@@ -18,6 +18,7 @@ class appTasks extends RootElement {
       <h2>Todo list</h2>
       <div id="tasks"></div>
     `;
+    // add
     tasks.forEach(task => {
       this.querySelector('#tasks').append(new AppTask(task));
     });
