@@ -16,7 +16,7 @@ class appTask extends RootElement {
     console.log(this.task);
     this.innerHTML = `
     <input type="checkbox" id="${this.task.id}" />
-    <label for="${this.task.id}" class="label">${this.task.name}</label>
+    <label for="${this.task.id}" class="label">${this.task.taskname}</label>
     <button class="delete">delete ${this.task.name}</button></br>
     `;
     if (this.task.checked) {
