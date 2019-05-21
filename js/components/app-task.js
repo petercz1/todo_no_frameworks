@@ -18,7 +18,7 @@ class appTask extends RootElement {
       <input type="checkbox" id="${this.task.id}" />
       <span>&#128465;</span>
     `;
-    this.querySelector('input').checked = this.task.;
+    this.querySelector('input').checked = this.task.checked;
     this.querySelector('input').addEventListener('change', this.registerChange);
     this.querySelector('span').addEventListener('click', this.registerDelete);
   }
