@@ -7,6 +7,9 @@ body {
   margin: auto;
 }
 
+app-tasks, app-add-task{
+	
+}
 .task,
 .tasks,
 .addTask {
