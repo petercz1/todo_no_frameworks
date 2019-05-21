@@ -2,7 +2,7 @@ class DataStore {
 
   constructor() {
     // create datastores
-    this.tasks = [];
+    this.data = [];
   }
 
   // getRequest() and setRequest() are the primary getters/setters
