@@ -13,6 +13,7 @@ class appTask extends RootElement {
 
   renderData() {
     this.innerHTML = `
+    <div>
     <input type="checkbox" id="${this.task.id}" />
     <label for="${this.task.id}" class="label">${this.task.taskname}</label>
     <button class="delete">&#128465;</button></br>
