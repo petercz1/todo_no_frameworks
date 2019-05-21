@@ -14,7 +14,7 @@ app-tasks, app-task, app-addtask{
 	background-color: lightblue;
 }
 
-app-task label,
+app-task *,
 app-task input,
 app-task span,
 app-addtask input,
