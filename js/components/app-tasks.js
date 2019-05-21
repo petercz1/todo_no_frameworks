@@ -13,6 +13,7 @@ class appTasks extends RootElement {
 
   // renders all people returned from 'getTasks()'
   renderData(tasks) {
+    this.setAttribute('')
     this.innerHTML = `
       <div id="tasks"></div>
     `;
