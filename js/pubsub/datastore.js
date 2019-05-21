@@ -58,7 +58,6 @@ class DataStore {
       return task.id != data.id;
     })
     console.log(this.tasks);
-
   }
 }
 
