@@ -30,9 +30,6 @@ class DataStore {
     this.meta.tasklength =  this.tasks.length;
     return this.meta;
   }
-  getTaskTotal() {
-    return this.meta;
-  }
 
   setNewTask(data) {
     // simple id field: find max id and increment it
