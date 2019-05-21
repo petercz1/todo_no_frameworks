@@ -37,14 +37,6 @@ class DataStore {
     return this.tasks.length;
   }
 
-  // get and set messages
-  getMessage() {
-    return this.message;
-  }
-  setMessage(data) {
-    this.message = data;
-  }
-
   // create/change data
   setNewTask(data) {
     // find max id
