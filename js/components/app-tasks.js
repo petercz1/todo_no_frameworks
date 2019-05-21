@@ -14,7 +14,6 @@ class appTasks extends RootElement {
   // renders all people returned from 'getTasks()'
   renderData(tasks) {
     this.innerHTML = `
-      <h2>Todo list</h2>
       <div id="tasks"></div>
     `;
     // append task elements
