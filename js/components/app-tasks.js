@@ -8,7 +8,7 @@ class appTasks extends RootElement {
     super();
     this.pubsub = PubSub;
     this.renderData(this.pubsub.getData('getTasks',null));
-    this.pubsub.subscribe('NewPerson', 'getTasks', null, this.renderData);
+    this.pubsub.subscribe('NewTask', 'getTasks', null, this.renderData);
     this.pubsub.subscribe('DeletePerson', 'getTasks', null, this.renderData);
   }
 
