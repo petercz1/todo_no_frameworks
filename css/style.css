@@ -17,7 +17,6 @@ app-task div{
 	width:100%;
 }
 .addTask input{
-	box-sizing:border-box;
 	width: 80%;
 }
 
