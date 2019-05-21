@@ -32,7 +32,7 @@ class appAddTask extends RootElement {
   // random task generator for testing, saves having to type a value into the input box
   generateTask() {
 	
-	let item = this.tasks[Math.floor(Math.random() * tasks.length)];
+	let item = this.tasks[Math.floor(Math.random() * this.tasks.length)];
 	this.querySelector('#taskname').value = item;
 	
   }
