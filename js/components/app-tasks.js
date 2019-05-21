@@ -21,7 +21,7 @@ class appTasks extends RootElement {
     // append task elements
     tasks.forEach(task => {
       // this.querySelector('#tasks').append(new AppTask(task));
-      
+      sinfgle
       this.append(new AppTask(task));
     });
   }
