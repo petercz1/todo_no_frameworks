@@ -17,7 +17,7 @@ body {
 .task label {
   font-size: 1rem;
   display: inline-block;
-  width: 80%;
+  width: 79%;
 }
 
 .task input,
