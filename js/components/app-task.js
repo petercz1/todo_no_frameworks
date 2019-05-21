@@ -19,7 +19,7 @@ class appTask extends RootElement {
       <p>&#128465;</p>
     `;
     this.querySelector('input').addEventListener('change', this.registerChange);
-    this.querySelector('p').addEventListener('click', this.registerDelete);
+    this.querySelector('span').addEventListener('click', this.registerDelete);
   }
 
   registerChange() {
