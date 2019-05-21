@@ -16,7 +16,3 @@ input[type="text"]{
 app-task div{
 	margin: 0.5em;
 }
-
-.label, div button{
-	float: right;
-}
