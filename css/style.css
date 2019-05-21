@@ -10,9 +10,7 @@ body {
 app-tasks,
 app-task,
 app-addtask {
-  margin: 2em;
   font-size: 0;
-
 }
 
 app-task *,
