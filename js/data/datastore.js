@@ -55,7 +55,6 @@ class DataStore {
       return task.id != data.id;
     });
     this.updateMeta();
-
   }
 }
 
