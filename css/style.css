@@ -7,9 +7,9 @@ body {
   margin: auto;
 }
 
-.console{
-	background-color: lightblue;
-	padding: 0.5em;
+.console {
+  background-color: lightblue;
+  padding: 0.5em;
 }
 
 /* setting font-size to zero kills all spaces between elements and allows box-sizing/width to work properly */
@@ -21,7 +21,7 @@ app-addtask {
 
 app-task *,
 app-addtask * {
-	margin: 0.5em 0;
+  margin: 0.5em 0;
   box-sizing: border-box;
   font-size: 1rem;
 }
