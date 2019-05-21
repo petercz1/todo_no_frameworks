@@ -29,10 +29,10 @@ body {
   width: 80%;
 }
 
-.task input,
+/* .task input,
 .task p {
   margin: 0 0.5rem;
-}
+} */
 
 .addTask input {
   width: 80%;
