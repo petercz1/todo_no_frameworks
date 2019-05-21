@@ -33,12 +33,6 @@ body {
   width: 10%;
 }
 
-.task,
-.addTask {
-  margin: 0.5em;
-  font-size: 0;
-}
-
 .addTask input {
   width: 80%;
 }
