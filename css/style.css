@@ -21,9 +21,9 @@ app-tasks, app-task, app-addtask{
   border: 1px solid white;
 } */
 
-.task label,
-.task input,
-.task span,
+app-task label,
+app-task input,
+app-task span,
 .addTask input,
 .addTask button {
   box-sizing: border-box;
