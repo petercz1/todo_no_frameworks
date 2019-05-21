@@ -27,7 +27,7 @@ class appTask extends RootElement {
     // publish change to status of task
     console.log('clicked');
     this.task.checked = !this.task.checked;
-    this.pubsub.publish('Changetask', this.task);
+    this.pubsub.publish('ChangeTask', this.task);
   }
 
   registerDelete() {
