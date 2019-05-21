@@ -37,10 +37,6 @@ class appTask extends RootElement {
     } else {
       txt = `${this.task.name} is now deselected &#128533;`;
     }
-    this.pubsub.publish('Message', {
-      "component": "app-task",
-      "text": txt
-    });
   }
 
   registerDelete() {
