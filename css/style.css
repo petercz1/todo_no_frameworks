@@ -29,11 +29,6 @@ app-task div {
   margin: 0.5em;
 }
 
-.task,
-.addTask {
-  font-size: 0;
-}
-
 .addTask input {
   font-size: 1rem;
   width: 80%;
