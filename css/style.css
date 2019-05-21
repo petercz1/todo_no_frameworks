@@ -3,6 +3,10 @@ body{
 	margin: auto;
 }
 
+*{
+	box-sizing:border-box
+}
+
 label{
 	display:inline-block;
 	width: 20em;
