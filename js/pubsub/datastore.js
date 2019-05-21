@@ -15,8 +15,6 @@ class DataStore {
   }
 
   setRequest(request) {
-    console.log(request);
-    console.log(this.tasks);
     // adds 'set' to request eg 'setMessage'
     let req = 'set' + request.newInfo;
     let res = this[req](request.data);
@@ -50,7 +48,6 @@ class DataStore {
   // create/change data
 
   setNewTask(data) {
-    console.log(data);
     // find max id
     let max = Math.max(...this.tasks.map(obj => obj.id), 0);
     // increment it
