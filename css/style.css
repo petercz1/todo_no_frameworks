@@ -9,6 +9,7 @@ body {
 
 .console{
 	background-color: lightblue;
+	padding: 0.5em;
 }
 
 app-tasks,
