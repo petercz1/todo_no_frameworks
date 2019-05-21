@@ -14,7 +14,6 @@ export default new class SendData {
     // build POST url
     let url = new URL(`${window.location.origin}/backend/setTask.php`);
     let data = {};
-    // filter for process_video == checked and then extract just the path name
 
 
     data.forEach(async file => {
