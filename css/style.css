@@ -24,9 +24,10 @@ body {
   font-size: 1rem;
 }
 
-.task *{
-	border: 1px solid black;
+.task * {
+  border: 1px solid black;
 }
+
 .task label {
   display: inline-block;
   width: 80%;
@@ -34,7 +35,8 @@ body {
 
 .task input,
 .task span {
-width: 20%;}
+  width: 20%;
+}
 
 .addTask input {
   width: 80%;
