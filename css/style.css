@@ -22,6 +22,13 @@ body {
   font-size: 1rem;
 }
 
+
+.task label {
+	font-size: 1rem;
+	display: inline-block;
+	width: 80%;
+  }
+
 .task input,
 .task button {
   width: 10%;
