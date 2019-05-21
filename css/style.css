@@ -4,7 +4,7 @@ body{
 }
 
 *{
-	box-sizing:border-box
+	box-sizing:border-box;
 }
 
 label{
@@ -18,11 +18,11 @@ app-task div{
 }
 
 .addTask input{
-	box-sizing:border-box
+	box-sizing:border-box;
 	width: 80%;
 }
 
 .addTask button{
-	box-sizing:border-box
+	box-sizing:border-box;
 	width: 20%;
 }
