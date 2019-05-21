@@ -19,7 +19,7 @@ class appTasks extends RootElement {
       <p> uncheck to deselect</p>
       <div id="tasks"></div>
     `;
-    tasks.forEach(person => {
+    tasks.forEach(task => {
       this.querySelector('#tasks').append(new AppTask(task));
     });
   }
