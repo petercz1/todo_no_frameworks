@@ -17,13 +17,11 @@ body {
 .task label {
   font-size: 1rem;
   display: inline-block;
-  box-sizing: border-box;
   width: 80%;
 }
 
 .task input,
 .task button {
-  box-sizing: border-box;
   width: 10%;
 }
 
