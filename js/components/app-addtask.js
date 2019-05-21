@@ -10,9 +10,10 @@ class appAddTask extends RootElement {
 
   renderData() {
 	this.innerHTML = `
-	
+	<div>
       <input type="text" id="taskname" placeholder="your new task" value="check for brain"></input>
-      <button id="newTask">add task</button>
+	  <button id="newTask">add task</button>
+	  
     `;
     document.querySelector('#newTask').addEventListener('click', this.addtask);
   }
