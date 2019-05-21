@@ -34,7 +34,7 @@ class DataStore {
   }
 
   getCheckedTotal() {
-    return (this.Tasks.filter(task => (task.checked == true)).length);
+    return (this.tasks.filter(task => (task.checked == true)).length);
   }
   getCount() {
     return this.Tasks.length;
