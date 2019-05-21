@@ -29,7 +29,7 @@ body {
 
 .task input,
 .task button {
-  padding: 0 0.5rem;
+  margin: 0 0.5rem;
 }
 
 .addTask input {
