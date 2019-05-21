@@ -16,7 +16,7 @@ class DataStore {
   }
 
   setRequest(request) {
-    
+    console.log(this.tasks);
     // adds 'set' to request eg 'setMessage'
     let req = 'set' + request.newInfo;
     let res = this[req](request.data);
