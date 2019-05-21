@@ -10,6 +10,7 @@ body {
 app-addtask, app-tasks {
   margin: 2em;
   font-size: 0;
+  border: 1px solid black;
 }
 
 .task label,
