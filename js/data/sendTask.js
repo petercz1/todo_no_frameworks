@@ -13,8 +13,6 @@ export default new class SendData {
     console.log('sending data');
     // build POST url
     let url = new URL(`${window.location.origin}/backend/setTask.php`);
-    let data = {};
-
 
     data.forEach(async file => {
       let init = {
