@@ -40,9 +40,9 @@ app-task span {
   cursor: pointer;
 }
 
-.addTask input {
+app-addtask input {
   width: 80%;
 }
-.addTask button {
+app-addtask button {
   width: 20%;
 }
