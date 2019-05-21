@@ -17,7 +17,7 @@ body {
 .task label {
   font-size: 1rem;
   display: inline-block;
-  width: 20em;
+  width: 80em;
 }
 
 app-task div,
