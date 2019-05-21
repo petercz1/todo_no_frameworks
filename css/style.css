@@ -21,7 +21,7 @@ body {
 }
 
 .task input,
-.task button, 
+.task button, .task-l
 .task input,
 .task button {
   width: 10%;
