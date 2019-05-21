@@ -14,9 +14,8 @@ body {
   margin: auto;
 }
 
-.block{
-	margin:0.5em;
-	font-size: 0;
+.block {
+  margin: 0.5em;
 }
 
 .task label {
@@ -25,8 +24,10 @@ body {
   width: 20em;
 }
 
-app-task div, app-addtask div {
+app-task div,
+app-addtask div {
   margin: 0.5em;
+  font-size: 0;
 }
 
 .addTask input {
