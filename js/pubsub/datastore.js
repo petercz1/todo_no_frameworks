@@ -15,7 +15,7 @@ class DataStore {
   // I added 'listener.data' in case someone wants to extend the idea
   // by passing a variable eg id (not implemented here)
   setRequest(request) {
-    // adds 'set' to request eg 'NewTask'setMessage'
+    // adds 'set' to request eg 'NewTask' becomes 'setNewTask'
     let req = 'set' + request.newInfo;
     let res = this[req](request.data);
     return res;
