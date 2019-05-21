@@ -51,6 +51,7 @@ class DataStore {
   // create/change data
 
   setNewTask(data) {
+    console.log(data);
     // find max id
     let max = Math.max(...this.Tasks.map(obj => obj.id), 0);
     // increment it
