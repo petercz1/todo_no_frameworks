@@ -26,7 +26,7 @@ body {
 }
 
 .task,
-.addTask div {
+.addTask{
   margin: 0.5em;
   font-size: 0;
 }
