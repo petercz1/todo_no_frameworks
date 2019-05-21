@@ -1,9 +1,5 @@
-html {
-  box-sizing: border-box;
-}
 
-*
-{
+* {
   font-family: Arial, sans-serif;
 }
 
@@ -25,12 +21,13 @@ body {
 }
 
 .task label {
-	display: inline-block;
-	width: 80%;
+  display: inline-block;
+  width: 80%;
 }
 
-.task input, .task button{
-	padding: 0 0.5rem;
+.task input,
+.task button {
+  padding: 0 0.5rem;
 }
 
 
