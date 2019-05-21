@@ -13,18 +13,18 @@ class appTasks extends RootElement {
   }
 
   // renders all people returned from 'getTasks()'
-  renderData(people) {
+  renderData(tasks) {
     this.innerHTML = `
       <h2>Todo list</h2>
       <p> uncheck to deselect</p>
-      <div id="people"></div>
+      <div id="tasks"></div>
     `;
-    people.forEach(person => {
-      this.querySelector('#people').append(new Person(person));
+    tasks.forEach(person => {
+      this.querySelector('#tasks').append(new Person(person));
     });
   }
 }
 
 export default appTasks;
 
-customElements.define('app-people', appTasks);
+customElements.define('app-tasks', appTasks);
