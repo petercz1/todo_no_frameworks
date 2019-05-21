@@ -33,7 +33,6 @@ body {
 
 .task input,
 .task button {
-  display: inline-block;
   width: 10%;
 }
 
