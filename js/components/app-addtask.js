@@ -35,6 +35,7 @@ class appAddTask extends RootElement {
 	let item = this.tasks[Math.floor(Math.random() * this.tasks.length)];
 	this.querySelector('#taskname').value = item;
 	this.tasks = this.tasks.filter(task =>{ return task != item})
+	console.log(this.tasks);
   }
 }
 
