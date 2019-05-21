@@ -46,7 +46,7 @@ class DataStore {
   }
   setDeleteTask(data) {
     // filter returns a copy of the array, which then replaces the original
-    this.data.tasks = this.data.tasks.filter(task => {
+    this.tasks = this.data.filter(task => {
       return task.id != data.id;
     })
   }
