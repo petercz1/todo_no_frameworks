@@ -13,7 +13,6 @@ class appTasks extends RootElement {
 
   // renders all people returned from 'getTasks()'
   renderData(tasks) {
-    this.setAttribute('class', 'tasks');
     this.innerHTML = '';
     tasks.forEach(task => {
       this.append(new AppTask(task));
