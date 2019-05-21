@@ -17,7 +17,6 @@ class appTask extends RootElement {
     this.innerHTML = `
     <input type="checkbox" id="${this.task.id}" />
     <label for="${this.task.id}" class="label">${this.task.taskname}</label>
-    <button class="delete">&#9746;</button></br>
     <button class="checked">&#9746;</button></br>
     <button class="delete">&#9746;</button></br>
     `;
