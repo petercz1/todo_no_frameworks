@@ -21,7 +21,11 @@ body {
 }
 
 .task input,
-.task button, .task label, .addTask input, .addTask button{
+.task button,
+.task label,
+.addTask input,
+.addTask button {
+  font-size: 1rem;
 
 }
 
@@ -31,7 +35,7 @@ body {
 }
 
 .task,
-.addTask{
+.addTask {
   margin: 0.5em;
   font-size: 0;
 }
