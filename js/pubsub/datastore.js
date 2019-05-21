@@ -22,7 +22,6 @@ class DataStore {
   }
 
   getTasks() {
-    console.log(this.tasks);
     return this.tasks
   }
   getCheckedTotal() {
