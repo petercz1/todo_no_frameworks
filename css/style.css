@@ -31,7 +31,7 @@ body {
 	width: 80%;
   }
 
-
+.task input,
 .task button {
   width: 10%;
 }
