@@ -21,7 +21,7 @@ class appTask extends RootElement {
     <button class="delete">&#9746;</button></br>
     `;
     if (this.task.checked) {
-      this.querySelector('.checked').innerHTML('&#9745;');
+      this.querySelector('button.checked').innerHTML('&#9745;');
     }else{
       this.querySelector('.checked').innerHTML('&#9744;');
     }
