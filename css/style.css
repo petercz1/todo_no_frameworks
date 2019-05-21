@@ -13,13 +13,13 @@ app-tasks, app-add-task{
 	border: 1px solid white;
 }
 
-.task,
+/* .task,
 .tasks,
 .addTask {
   margin: 2em;
   font-size: 0;
   border: 1px solid white;
-}
+} */
 
 .task label,
 .task input,
