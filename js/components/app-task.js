@@ -45,10 +45,6 @@ class appTask extends RootElement {
 
   registerDelete() {
     this.pubsub.publish('Deletetask', this.task);
-    this.pubsub.publish('Message', {
-      "component": "app-task",
-      "text": `deleting ${this.task.name} &#128561`
-    });
   }
 }
 
