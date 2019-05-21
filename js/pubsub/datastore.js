@@ -11,6 +11,7 @@ class DataStore {
   // I added 'listener.data' in case someone wants to extend the idea
   // by passing a variable eg id (not implemented here)
   getRequest(subscriber) {
+    cl
     return this[subscriber.request](subscriber.parameters);
   }
 
