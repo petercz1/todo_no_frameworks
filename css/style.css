@@ -26,7 +26,7 @@ body {
 }
 
 app-task div,
-addTask div {
+.addTask div {
   margin: 0.5em;
   font-size: 0;
 }
