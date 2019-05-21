@@ -28,11 +28,11 @@ class DataStore {
   }
 
   getChosenTasks() {
-    return (this.Tasks.filter(person => (person.checked == true)));
+    return (this.Tasks.filter( => (.checked == true)));
   }
 
   getCheckedTotal() {
-    return (this.Tasks.filter(person => (person.checked == true)).length);
+    return (this.Tasks.filter( => (.checked == true)).length);
   }
   getCount() {
     return this.Tasks.length;
@@ -48,7 +48,7 @@ class DataStore {
 
   // create/change data
 
-  setNewPerson(data) {
+  setNew(data) {
     // find max id
     let max = Math.max(...this.Tasks.map(obj => obj.id), 0);
     // increment it
@@ -57,13 +57,13 @@ class DataStore {
     this.Tasks.push(data);
     //}
   }
-  setChangePerson(data) {
-    this.getTasks().filter(person => (person.id == data.id)).checked = data.checked;
+  setChange(data) {
+    this.getTasks().filter( => (.id == data.id)).checked = data.checked;
   }
-  setDeletePerson(data) {
+  setDelete(data) {
     // filter returns a copy of the array, which then replaces the original
-    this.Tasks = this.Tasks.filter(person => {
-      return person.id != data.id;
+    this.Tasks = this.Tasks.filter( => {
+      return .id != data.id;
     })
   }
 }
