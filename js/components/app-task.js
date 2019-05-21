@@ -6,8 +6,6 @@ class appTask extends RootElement {
     super();
     this.pubsub = PubSub;
     this.task = task;
-    // this.registerChange = this.registerChange.bind(this);
-    // this.registerDelete = this.registerDelete.bind(this);
     this.renderData();
   }
 
