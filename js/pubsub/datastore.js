@@ -57,6 +57,8 @@ class DataStore {
     this.tasks = this.tasks.filter(task => {
       return task.id != data.id;
     })
+    console.log(this.tasks);
+
   }
 }
 
