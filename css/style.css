@@ -6,7 +6,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-  font: Arial, sans;
+  font: Arial, sans-serif;
 }
 
 body {
