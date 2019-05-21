@@ -23,6 +23,10 @@ app-task div {
   width: 100%;
 }
 
+.addTask{
+	font-size: 0;
+}
+
 .addTask input {
   width: 80%;
 }
