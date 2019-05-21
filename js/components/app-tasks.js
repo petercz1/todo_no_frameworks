@@ -22,7 +22,7 @@ class appTasks extends RootElement {
     tasks.forEach(task => {
       // this.querySelector('#tasks').append(new AppTask(task));
       singleTask=new AppTask(task);
-      this.append(new AppTask(task));
+      this.append(singleTask);
     });
   }
 }
