@@ -2,6 +2,13 @@ html {
   box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: Arial, sans-serif;
+}
+
 body {
   width: 75%;
   margin: auto;
