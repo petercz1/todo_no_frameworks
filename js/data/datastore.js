@@ -37,7 +37,7 @@ class DataStore {
     data.id = max + 1;
 
     // add task to tasks
-    this.tasks.push(data);
+    this.datatasks.push(data);
     //}
   }
   setChangeTask(data) {
