@@ -28,6 +28,7 @@ class DataStore {
   getMeta() {
     this.meta.tasksChecked = this.tasks.filter(task => (task.checked == true)).length;
     this.meta.taskLength =  this.tasks.length;
+    console.log(this.meta);
     return this.meta;
   }
 
