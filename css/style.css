@@ -19,7 +19,7 @@ body {
 .task input,
 .task button,
 .addTask input,
-.addTask p {
+.addTask button {
   box-sizing: border-box;
   font-size: 1rem;
 }
