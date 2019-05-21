@@ -15,7 +15,7 @@ app-addtask {
 
 app-task *,
 app-addtask * {
-	margin: 0 1em;
+	margin: 1em;
   box-sizing: border-box;
   font-size: 1rem;
 }
