@@ -9,7 +9,7 @@ export default new class SendData {
     this.pubsub.subscribe('SendLocalData', 'getLocalData', null, this.sendData);
   }
 
-  sendData(files) {
+  sendData(task) {
     console.log('sending data');
     // build POST url
     let url = new URL(`${window.location.origin}/backend/setTask.php`);
