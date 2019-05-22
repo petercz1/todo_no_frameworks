@@ -14,7 +14,6 @@ export default new class SendData {
     // build POST url
     let url = new URL(`${window.location.origin}/backend/setTask.php`);
 
-    data.forEach(async file => {
       let init = {
         method: 'POST',
         headers: new Headers({
@@ -37,6 +36,5 @@ export default new class SendData {
       } else {
         this.pubsub.publish('ServerResult', json);
       }
-    });
   }
 }
