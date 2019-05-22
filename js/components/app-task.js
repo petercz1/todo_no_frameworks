@@ -20,7 +20,6 @@ class appTask extends RootElement {
     this.querySelector('input').checked = this.task.checked;
     this.querySelector('input').addEventListener('change', this.registerChange);
     this.querySelector('span').addEventListener('click', this.registerDelete);
-    this.querySelector('div').setAttribute('class', this.task.css);
   }
 
   // setTimeout needed because connectedCallback doesn't wait for child elements to render
