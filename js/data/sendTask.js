@@ -30,8 +30,9 @@ export default new class SendData {
       throw new Error('HTTP error, status = ' + response.status);
     }
     let json = await response.json();
+    console.log(json);
     if (json.source == "server error") {
-      console.log(json);
+      
     } else {
       this.pubsub.publish('ServerResult', json);
     }
