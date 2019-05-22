@@ -6,5 +6,6 @@ class SetTask{
 
 	function __construct(){
 		$data = $_POST;
+		echo 
 	}
 }
