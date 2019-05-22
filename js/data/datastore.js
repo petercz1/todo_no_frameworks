@@ -64,6 +64,7 @@ class DataStore {
 
   setDisplayedTask(data) {
     console.log('displayed task ' + data.taskname);
+    
   }
 }
 
