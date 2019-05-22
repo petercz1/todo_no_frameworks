@@ -50,7 +50,7 @@ app-addtask button {
   color: white;
   max-height: 0;
   overflow: hidden;
-  transition: all 3s ease;
+  transition: all 1s ease;
   transition-property: max-height, color;
 }
 
@@ -58,6 +58,6 @@ app-addtask button {
   font-size: 1rem;
   color: black;
   max-height: 500px;
-  transition: all 3s ease;
+  transition: all 1s ease;
   transition-property: max-height, color;
 }
