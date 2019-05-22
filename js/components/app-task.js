@@ -28,6 +28,7 @@ class appTask extends RootElement {
       setTimeout(() => {
         this.querySelector('div').classList.replace('closed','open');
       }, 100);
+      
     }
   }
 
