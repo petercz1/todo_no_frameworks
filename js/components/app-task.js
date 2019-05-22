@@ -26,7 +26,7 @@ class appTask extends RootElement {
   connectedCallback() {
     if (this.task.css) {
       setTimeout(() => {
-        this.querySelector('div').classList.replace('closed','open');
+        this.querySelector('div').classList.replace('closed', 'open');
       }, 100);
       this.task.displayedTask = true;
       this.pubsub.publish('DisplayedTask', this.task);
@@ -40,7 +40,7 @@ class appTask extends RootElement {
   }
 
   registerDelete() {
-      this.querySelector('div').classList.add('closed');
+    this.querySelector('div').classList.add('closed');
     this.task.deleted = true;
     this.pubsub.publish('DeleteTask', this.task);
   }
