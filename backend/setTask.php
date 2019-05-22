@@ -6,7 +6,7 @@ class SetTask{
 
 	public function __construct(){
 		echo "{'server':'working'}";
-		error_log()
+		error_log($_POST, 'debug.log')
 		$data = $_POST;
 		//echo json_encode($data);
 	}
