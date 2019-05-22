@@ -12,9 +12,9 @@ class appTask extends RootElement {
   renderData() {
     this.innerHTML = `
     <div class="${this.task.css}">
-    <label for="${this.task.id}" class="label">${this.task.taskname}</label>
-    <input type="checkbox" id="${this.task.id}" />
-    <span>&#128465;</span>
+      <label for="${this.task.id}" class="label">${this.task.taskname}</label>
+      <input type="checkbox" id="${this.task.id}" />
+      <span>&#128465;</span>
     </div>
     `;
     this.querySelector('input').checked = this.task.checked;
