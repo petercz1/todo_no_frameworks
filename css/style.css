@@ -44,3 +44,18 @@ app-addtask input {
 app-addtask button {
   width: 20%;
 }
+
+.closed{
+  font-size: 0;
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.open{
+  font-size: 1rem;
+  color: black;
+  max-height: 500px;
+  transition: all 3s ease;
+  transition-property: max-height, color;
+}

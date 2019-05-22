@@ -11,13 +11,23 @@ class appTask extends RootElement {
 
   renderData() {
     this.innerHTML = `
-      <label for="${this.task.id}" class="label">${this.task.taskname}</label>
-      <input type="checkbox" id="${this.task.id}" />
-      <span>&#128465;</span>
+    <div>
+    <label for="${this.task.id}" class="label">${this.task.taskname}</label>
+    <input type="checkbox" id="${this.task.id}" />
+    <span>&#128465;</span>
+    </div>
     `;
     this.querySelector('input').checked = this.task.checked;
     this.querySelector('input').addEventListener('change', this.registerChange);
     this.querySelector('span').addEventListener('click', this.registerDelete);
+    this.querySelector('div').setAttribute('class', this.task.css);
+  }
+
+  // setTimeout needed because connectedCallback doesn't wait for child elements to render
+  connectedCallback() {
+    setTimeout(() => {
+      this.querySelector('div').classList.toggle('open');
+    }, 100)
   }
 
   registerChange() {
