@@ -6,6 +6,6 @@ class SetTask{
 
 	function __construct(){
 		$data = $_POST;
-		echo 
+		echo json_encode($data)
 	}
 }
