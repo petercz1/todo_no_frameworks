@@ -50,6 +50,8 @@ app-addtask button {
   color: white;
   max-height: 0;
   overflow: hidden;
+  transition: all 3s ease;
+  transition-property: max-height, color;
 }
 
 .open{
