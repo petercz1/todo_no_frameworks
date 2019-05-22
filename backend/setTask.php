@@ -5,7 +5,7 @@ namespace chipbug\todo;
 class SetTask{
 
 	public function __construct(){
-		echo '{'
+		echo "{"
 		$data = $_POST;
 		echo json_encode($data);
 	}
