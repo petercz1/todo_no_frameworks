@@ -5,6 +5,6 @@ namespace chipbug\todo;
 class SetTask{
 
 	function __construct(){
-		$data = 
+		$data = $_POST;
 	}
 }
