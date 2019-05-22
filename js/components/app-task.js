@@ -26,7 +26,7 @@ class appTask extends RootElement {
   connectedCallback() {
     if (this.task.css) {
       setTimeout(() => {
-        this.querySelector('div').classList.add('open');
+        this.querySelector('div').classList.replace('open');
       }, 100)
     }
   }
