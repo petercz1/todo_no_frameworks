@@ -29,7 +29,7 @@ class DataStore {
     return this.tasks
   }
   getMeta() {
-    
+    console.log(this.meta);
     return this.meta;
   }
   updateMeta() {
