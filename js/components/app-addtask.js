@@ -18,7 +18,6 @@ class appAddTask extends RootElement {
     // generate random new task
     setTimeout(()=>{
       this.generateTask();
-
     }, 500);
     document.querySelector('#newTask').addEventListener('click', this.addtask);
   }
