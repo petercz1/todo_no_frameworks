@@ -63,7 +63,6 @@ class DataStore {
   }
 
   setDisplayedTask(data) {
-    console.log('displayed task ' + data.taskname);
      // clear css field from all tasks
      this.tasks.forEach(task => {
       delete task.css;
