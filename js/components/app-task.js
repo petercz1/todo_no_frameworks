@@ -40,9 +40,7 @@ class appTask extends RootElement {
   }
 
   registerDelete() {
-    setTimeout(() => {
       this.querySelector('div').classList.add('closed');
-    }, 100);
     this.task.deleted = true;
     this.pubsub.publish('DeleteTask', this.task);
   }
