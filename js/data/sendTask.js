@@ -13,28 +13,27 @@ export default new class SendData {
     console.log('sending data');
     // build POST url
     let url = new URL(`${window.location.origin}/backend/setTask.php`);
+    let init = {
+      method: 'POST',
+      headers: new Headers({
+        "Content-Type": "application/json"
+      }),
+      body: JSON.stringify(task)
+    };
 
-      let init = {
-        method: 'POST',
-        headers: new Headers({
-          "Content-Type": "application/json"
-        }),
-        body: JSON.stringify(task)
-      };
+    // FETCH it and deal with any network errors
+    let response = await fetch(url, init);
 
-      // FETCH it and deal with any network errors
-      let response = await fetch(url, init);
-
-      // deal with the response
-      if (!response.ok) {
-        console.log(`${response.status}: ${response.statusText}`);
-        throw new Error('HTTP error, status = ' + response.status);
-      }
-      let json = await response.json();
-      if (json.source == "server error") {
-        console.log(json);
-      } else {
-        this.pubsub.publish('ServerResult', json);
-      }
+    // deal with the response
+    if (!response.ok) {
+      console.log(`${response.status}: ${response.statusText}`);
+      throw new Error('HTTP error, status = ' + response.status);
+    }
+    let json = await response.json();
+    if (json.source == "server error") {
+      console.log(json);
+    } else {
+      this.pubsub.publish('ServerResult', json);
+    }
   }
 }
