@@ -32,7 +32,7 @@ export default new class SendData {
     let json = await response.json();
     console.log(json);
     if (json.source == "server error") {
-      
+      console.log('blow up');
     } else {
       this.pubsub.publish('ServerResult', json);
     }
