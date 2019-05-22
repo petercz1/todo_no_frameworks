@@ -27,7 +27,7 @@ class appTask extends RootElement {
     if (this.task.css) {
       setTimeout(() => {
         this.querySelector('div').classList.replace('closed','open');
-      }, 100)
+      }, 100);
     }
   }
 
