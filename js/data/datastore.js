@@ -61,6 +61,10 @@ class DataStore {
     });
     this.updateMeta();
   }
+
+  setDisplayedTask(data){
+
+  }
 }
 
 export default new DataStore();
