@@ -19,7 +19,7 @@ class appAddTask extends RootElement {
     setTimeout(()=>{
       this.generateTask();
 
-    });
+    }, 500);
     document.querySelector('#newTask').addEventListener('click', this.addtask);
   }
 
