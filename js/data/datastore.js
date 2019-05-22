@@ -63,7 +63,7 @@ class DataStore {
   }
 
   setDisplayedTask(data){
-console.log('displayed task');
+console.log('displayed task ' + data.);
   }
 }
 
