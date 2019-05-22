@@ -35,8 +35,8 @@ class appAddTask extends RootElement {
   generateTask() {
     let item = this.tasks[Math.floor(Math.random() * this.tasks.length)];
     setTimeout(()=>{
-      this.querySelector('#taskname').value = item, 500);
-    }
+      this.querySelector('#taskname').value = item, 500;
+    });
     this.tasks = this.tasks.filter(task => {
       return task != item
     })
