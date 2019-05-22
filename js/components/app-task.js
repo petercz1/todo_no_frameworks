@@ -24,11 +24,11 @@ class appTask extends RootElement {
 
   // setTimeout needed because connectedCallback doesn't wait for child elements to render
   connectedCallback() {
-    if(this.task.css){
-    setTimeout(() => {
-      this.querySelector('div').classList.toggle('open');
-    }, 100)
-  }
+    if (this.task.css) {
+      setTimeout(() => {
+        this.querySelector('div').classList.toggle('open');
+      }, 100)
+    }
   }
 
   registerChange() {
