@@ -62,8 +62,8 @@ class DataStore {
     this.updateMeta();
   }
 
-  setDisplayedTask(data){
-console.log('displayed task ' + data.);
+  setDisplayedTask(data) {
+    console.log('displayed task ' + data.taskname);
   }
 }
 
