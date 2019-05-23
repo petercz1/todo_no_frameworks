@@ -31,6 +31,7 @@ class appAddTask extends RootElement {
 
   // random task generator for testing, saves having to make up a task and type it into the input box
   generateNewTask() {
+    //  list of tasks
     let tasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee', 'google "pimp my noodles"', 'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list', 'beat personal best on snake'];
     // randomly select a task
     let item = tasks[Math.floor(Math.random() * tasks.length)];
