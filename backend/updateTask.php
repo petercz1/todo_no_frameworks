@@ -11,9 +11,8 @@ class UpdateTask
 {
     public function init()
     {
-        $body = file_get_contents('php://input');
-        error_log(print_r($body, true));
-        $this->updateTask($body);
+        $body = json_decode(file_get_contents('php://input'), true);
+        $this->addTask($body);
     }
 
     public function updateTask($data)
