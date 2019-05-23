@@ -7,7 +7,7 @@ export default new class SendData {
     this.pubsub = PubSub;
     this.sendData = this.sendData.bind(this);
     this.pubsub.subscribe('NewTask', 'getNewTask', null, this.sendData);
-    this.pubsub.subscribe('ChangeTask', 'getTasks', null, this.sendData);
+    this.pubsub.subscribe('ChangeTask', 'getChangeTasks', null, this.sendData);
     this.pubsub.subscribe('DeleteTask', 'getTasks', null, this.sendData);
   }
 
