@@ -18,7 +18,7 @@ class AddTask
             $this->addTask($body);
             break;
             case 'update':
-            updateTask($body);
+            $this->updateTask($body);
             break;
             case 'delete':;
             delete($body);
