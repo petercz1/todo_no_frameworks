@@ -22,7 +22,7 @@ class AddTask
         array_unshift($tasks, $data);
         \error_log(print_r($tasks, true));
         file_put_contents('tasks.json', json_encode($tasks));
-        $taskname = data=>taskname;
+        $taskname = data['taskname'];
         error_log($taskname);
         echo "{'server':'added $taskname'}";
         //echo json_encode($tasks);
