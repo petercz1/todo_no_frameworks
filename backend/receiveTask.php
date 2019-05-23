@@ -12,7 +12,7 @@ class AddTask
     public function init()
     {
         $body = json_decode(file_get_contents('php://input'), true);
-        err
+        error_l
         $this->addTask($body);
     }
 
