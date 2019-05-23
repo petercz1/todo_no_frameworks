@@ -24,5 +24,6 @@ class SetTask
         array_unshift($tasks, $data);
         \error_log(print_r($tasks, true));
         file_put_contents('tasks.json', json_encode($tasks));
+        
     }
 }
