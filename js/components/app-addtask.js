@@ -42,7 +42,7 @@ class appAddTask extends RootElement {
       if (counter > item.length - 1) {
         clearInterval(timer)
       }
-    }, 100)
+    }, 50)
     //this.querySelector('#taskname').value = item;
 
     // remove item from random tasklist
