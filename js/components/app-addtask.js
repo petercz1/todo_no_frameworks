@@ -40,7 +40,7 @@ class appAddTask extends RootElement {
       if(counter < item.length){
         this.querySelector('#taskname').value += item.charAt(counter);
         counter ++;
-        setTimeout()
+        setTimeout(type, 50)
       }
     })();
     for (let counter = 0; counter < item.length; counter++) {
