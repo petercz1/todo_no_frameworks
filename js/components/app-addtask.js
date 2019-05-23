@@ -45,7 +45,7 @@ class appAddTask extends RootElement {
       }
     })();
 
-    // remove item from tasklist
+    // remove item from random tasklist
     tasks = tasks.filter(task => {
       return task != item
     })
