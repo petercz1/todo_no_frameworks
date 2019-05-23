@@ -46,8 +46,8 @@ class appAddTask extends RootElement {
     })
   }
 
-  typeit(){
-    
+  typeit(data){
+
   }
 }
 
