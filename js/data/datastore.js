@@ -11,7 +11,6 @@ class DataStore {
 
   // getRequest() and setRequest() are the primary getters/setters
   getRequest(subscriber) {
-    console.log(subscriber);
     return this[subscriber.request](subscriber.parameters);
   }
 
@@ -72,7 +71,7 @@ class DataStore {
     this.updateMeta();
   }
   getDeleteTask(){
-    
+
   }
 
   setDisplayedTask(data) {
