@@ -60,6 +60,7 @@ class DataStore {
     console.log(this.tasks);
     this.updateMeta();
   }
+  getChangeTask(){}
   setDeleteTask(data) {
     // filter returns a copy of the array, which then replaces the original
     this.tasks = this.tasks.filter(task => {
