@@ -39,6 +39,12 @@ class appAddTask extends RootElement {
     // randomly select a task
     let item = tasks[Math.floor(Math.random() * tasks.length)];
 
+
+    // remove item from random tasklist
+    tasks = tasks.filter(task => {
+      return task != item
+    })
+
     // act like a typewriter, because I was bored
     let counter = 0;
     let typewriter = setInterval(function () {
