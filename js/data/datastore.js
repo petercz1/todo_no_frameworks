@@ -55,8 +55,6 @@ class DataStore {
   }
 
   setChangeTask(data) {
-    console.log('changing...');
-    console.log(this.tasks);
     this.updateMeta();
   }
   getChangeTask(){
