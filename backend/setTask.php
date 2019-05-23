@@ -17,10 +17,11 @@ class SetTask
         $this->setTask($body);
     }
 
-    public function setTask(data)
+    public function setTask($data)
     {
         // sort it!
         $tasks = json_decode(\file_get_contents('tasks.json'));
+        
 
     }
 }
