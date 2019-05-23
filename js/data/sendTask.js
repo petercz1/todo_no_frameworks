@@ -6,12 +6,12 @@ export default new class SendData {
   constructor() {
     this.pubsub = PubSub;
     this.sendData = this.sendData.bind(this);
-    this.pubsub.subscribe('NewTask', 'getTasks', null, this.sendData);
+    this.pubsub.subscribe('NewTask', 'getNewTask', null, this.sendData);
     this.pubsub.subscribe('ChangeTask', 'getTasks', null, this.sendData);
     this.pubsub.subscribe('DeleteTask', 'getTasks', null, this.sendData);
   }
 
-  async sendData(task) {
+  async sendData(tasks) {
     console.log('sending data');
     // build POST url
     let url = new URL(`${window.location.origin}/backend/setTask.php`);
@@ -20,7 +20,7 @@ export default new class SendData {
       headers: new Headers({
         "Content-Type": "application/json"
       }),
-      body: JSON.stringify(task)
+      body: JSON.stringify(tasks)
     };
 
     // FETCH it and deal with any network errors

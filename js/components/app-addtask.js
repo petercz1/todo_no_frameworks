@@ -5,8 +5,6 @@ class appAddTask extends RootElement {
   constructor() {
     super();
     this.pubsub = PubSub;
-    // used for generating random tasks for testing
-    this.tasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee', 'google "pimp my noodles"', 'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list', 'beat personal best on snake'];
     this.renderData();
   }
 
@@ -17,7 +15,7 @@ class appAddTask extends RootElement {
     `;
     document.querySelector('#newTask').addEventListener('click', this.addtask);
     // generate random new task
-    this.generateTask();
+    this.generateNewTask();
   }
 
   addtask() {
@@ -27,18 +25,28 @@ class appAddTask extends RootElement {
       css: 'closed'
     };
     // generate new random task
-    this.generateTask();
     this.pubsub.publish('NewTask', task);
+    this.generateNewTask();
   }
 
   // random task generator for testing, saves having to make up a task and type it into the input box
-  generateTask() {
-    let item = this.tasks[Math.floor(Math.random() * this.tasks.length)];
-    this.querySelector('#taskname').value = item;
-    this.tasks = this.tasks.filter(task => {
+  generateNewTask() {
+    this.querySelector('#taskname').value = '';
+    let tasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee', 'google "pimp my noodles"', 'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list', 'beat personal best on snake'];
+    let item = tasks[Math.floor(Math.random() * tasks.length)];
+    // pseudo-typewriter effect, because I was bored
+    for (let counter = 0; counter < item.length; counter++) {
+      setTimeout(() => {
+        console.log(item.charAt(counter));
+        this.querySelector('#taskname').value += item.charAt(counter);
+      }, 500);
+    }
+    tasks = tasks.filter(task => {
       return task != item
     })
   }
+
+  
 }
 
 customElements.define('app-addtask', appAddTask);

@@ -12,6 +12,11 @@ body {
   padding: 0.5em;
 }
 
+.bold{
+  font-weight: bold;
+  color: darkred;
+}
+
 /* setting font-size to zero kills all spaces between elements and allows box-sizing/width to work properly */
 app-tasks,
 app-task,

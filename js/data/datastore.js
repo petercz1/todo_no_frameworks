@@ -50,6 +50,10 @@ class DataStore {
     this.tasks.unshift(data);
     this.updateMeta();
   }
+  getNewTask() {
+    return this.tasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
+  }
+
   setChangeTask(data) {
     this.updateMeta();
   }
@@ -62,8 +66,8 @@ class DataStore {
   }
 
   setDisplayedTask(data) {
-     // clear css field from all tasks
-     this.tasks.forEach(task => {
+    // clear css field from all tasks
+    this.tasks.forEach(task => {
       delete task.css;
     });
   }

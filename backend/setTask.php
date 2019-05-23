@@ -2,12 +2,22 @@
 declare(strict_types=1);
 namespace chipbug\todo;
 
-class SetTask{
+ini_set("log_errors", "1");
+ini_set("error_log", getcwd() . "/debug.log");
 
-	public function __construct(){
-		echo "{'server':'working'}";
-		error_log($_POST, 'debug.log');
-		$data = $_POST;
-		//echo json_encode($data);
-	}
+(new SetTask)->init();
+
+class SetTask
+{
+    public function init()
+    {
+        $body = file_get_contents('php://input');
+        error_log(print_r($body, true));
+        echo json_encode($body);
+    }
+
+    public function setTask()
+    {
+        // sort it!
+    }
 }
