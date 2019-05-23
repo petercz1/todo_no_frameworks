@@ -11,6 +11,7 @@ class DataStore {
 
   // getRequest() and setRequest() are the primary getters/setters
   getRequest(subscriber) {
+    console.log();
     return this[subscriber.request](subscriber.parameters);
   }
 
