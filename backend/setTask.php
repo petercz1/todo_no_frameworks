@@ -13,7 +13,7 @@ class SetTask
     {
         $body = file_get_contents('php://input');
         error_log(print_r($body, true));
-        echo json_encode($body);
+        //echo json_encode($body);
         $this->setTask($body);
     }
 
