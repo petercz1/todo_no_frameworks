@@ -22,7 +22,7 @@ class SetTask
         // sort it!
         $tasks = json_decode(\file_get_contents('tasks.json'));
         array_unshift($tasks, $data);
-        file_put_contents(json_encode())
+        file_put_contents(json_encode($tasks))
 
     }
 }
