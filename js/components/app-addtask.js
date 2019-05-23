@@ -22,7 +22,8 @@ class appAddTask extends RootElement {
     let task = {
       taskname: document.querySelector('#taskname').value,
       checked: false,
-      css: 'closed'
+      css: 'closed',
+      
     };
     // generate new random task
     this.pubsub.publish('NewTask', task);
