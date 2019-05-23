@@ -11,7 +11,7 @@ class AddTask
 {
     public function init()
     {
-        $body = json_decode(file_get_contents('php://input'));
+        $body = file_get_contents('php://input');
         error_log(print_r($body, true));
         $this->addTask($body);
     }
@@ -24,7 +24,7 @@ class AddTask
         \error_log(print_r($tasks, true));
         file_put_contents('tasks.json', json_encode($tasks));
         $taskname = data['taskname'];
-        error_log($taskname);
+        error_log($taskname)
         echo "{'server':'added $taskname'}";
         //echo json_encode($tasks);
     }
