@@ -21,7 +21,7 @@ class ReceiveTask
             $this->updateTask($body);
             break;
             case 'delete':;
-            $thi->delete($body);
+            $this->delete($body);
             break;
         }
     }
