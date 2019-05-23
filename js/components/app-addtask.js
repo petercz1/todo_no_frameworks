@@ -47,7 +47,7 @@ class appAddTask extends RootElement {
   }
 
   typeit(data){
-
+if()
   }
 }
 
