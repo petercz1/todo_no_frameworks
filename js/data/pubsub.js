@@ -16,7 +16,7 @@ class PubSub {
   }
 
   unsubscribe(callback) {
-    // TODO implement!
+    // TODO implementi!
   }
 
   publish(newInfo, data) {
