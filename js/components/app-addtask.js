@@ -38,13 +38,13 @@ class appAddTask extends RootElement {
     let counter = 0;
     (function type(){
       if(counter < item.length){
+        this.querySelector('#taskname').value += item.charAt(counter);
 
       }
     })();
     for (let counter = 0; counter < item.length; counter++) {
       setTimeout(() => {
         console.log(item.charAt(counter));
-        this.querySelector('#taskname').value += item.charAt(counter);
       }, 500);
     }
     tasks = tasks.filter(task => {
