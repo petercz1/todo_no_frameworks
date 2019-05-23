@@ -69,7 +69,7 @@ class DataStore {
     this.updateMeta();
   }
   getDeleteTask() {
-
+    // stubbed out - handled asynchronously in sendData()
   }
 
   setDisplayedTask(data) {
