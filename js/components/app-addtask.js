@@ -37,6 +37,7 @@ class appAddTask extends RootElement {
 
     // pseudo-typewriter effect, because I was bored
     let counter = 0;
+    type();
     function type(){
       if(counter < item.length){
         this.querySelector('#taskname').value += item.charAt(counter);
