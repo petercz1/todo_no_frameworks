@@ -24,7 +24,7 @@ class AddTask
             $thi->delete($body);
             break;
         }
-        $this->addTask($body);
+        //$this->addTask($body);
     }
 
     public function addTask($data)
