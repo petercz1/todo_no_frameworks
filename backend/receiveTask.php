@@ -37,14 +37,14 @@ class ReceiveTask
     public function updateTask($data)
     {
 
-        echo '{"server":"updated  task"}';
+        echo '{"server":"updated task"}';
 
     }
 
     public function deleteTask($data)
     {
 
-        echo '{"server":"added task"}';
+        echo '{"server":"deleted task"}';
 
     }
 }
