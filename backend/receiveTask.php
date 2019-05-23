@@ -36,7 +36,7 @@ class ReceiveTask
 
     public function updateTask($data)
     {
-ech $data;    }
+echo $data;    }
 
     public function deleteTask($data)
     {
