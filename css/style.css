@@ -13,7 +13,7 @@ body {
 }
 
 .console {
-  background-color: lightblue;
+  background-color: var(--main-color);
   padding: 0.5em;
 }
 
