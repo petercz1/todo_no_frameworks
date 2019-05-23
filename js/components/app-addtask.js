@@ -37,7 +37,9 @@ class appAddTask extends RootElement {
     // pseudo-typewriter effect, because I was bored
     let counter = 0;
     (type()=>{
-      if(counter < item.length)
+      if(counter < item.length){
+        
+      }
     })();
     for (let counter = 0; counter < item.length; counter++) {
       setTimeout(() => {
