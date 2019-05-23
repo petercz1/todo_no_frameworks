@@ -21,7 +21,7 @@ body {
 .bold{
   font-weight: bold;
   color:var(--warning);
-  font-size: 
+  font-size: var(--warning);
 }
 
 /* setting font-size to zero kills all spaces between elements inside components and allows box-sizing/width to work properly */
