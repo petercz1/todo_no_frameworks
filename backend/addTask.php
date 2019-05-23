@@ -7,7 +7,7 @@ ini_set("error_log", getcwd() . "/debug.log");
 
 (new AddTask)->init();
 
-class SetTask
+class AddTask
 {
     public function init()
     {
