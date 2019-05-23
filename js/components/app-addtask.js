@@ -34,17 +34,7 @@ class appAddTask extends RootElement {
     this.querySelector('#taskname').value = '';
     let tasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee', 'google "pimp my noodles"', 'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list', 'beat personal best on snake'];
     let item = tasks[Math.floor(Math.random() * tasks.length)];
-    .this.querySelector('#taskname').value += item.charAt(counter);
-
-    // pseudo-typewriter effect, because I was bored
-    let counter = 0;
-    type();
-    function type(){
-      if(counter < item.length){
-        counter ++;
-        setTimeout(type, 50)
-      }
-    }
+    this.querySelector('#taskname').value += item.charAt(counter);
 
     // remove item from random tasklist
     tasks = tasks.filter(task => {
