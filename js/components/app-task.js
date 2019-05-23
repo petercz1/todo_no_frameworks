@@ -38,13 +38,13 @@ class appTask extends RootElement {
   registerChange() {
     // publish change if task is checked
     this.task.checked = !this.task.checked;
-    this.taskstatus = 'updated'
+    this.taskstatus = 'updated';
     this.renderData();
     this.pubsub.publish('ChangeTask', this.task);
   }
 
   registerDelete() {
-    this.task.status = 'delete'
+    this.task.status = 'delete';
     this.pubsub.publish('DeleteTask', this.task);
   }
 }
