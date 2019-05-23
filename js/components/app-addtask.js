@@ -39,7 +39,7 @@ class appAddTask extends RootElement {
     let timer = setInterval(function () {
       document.getElementById("taskname").value += item[counter];
       i++;
-      if (i > item.length - 1) {
+      if (counter > item.length - 1) {
         clearInterval(timer)
       }
     }, 100)
