@@ -11,7 +11,7 @@ class AddTask
 {
     public function init()
     {
-        $body = json_decodefile_get_contents('php://input');
+        $body = json_decode(file_get_contents('php://input'));
         error_log(print_r($body, true));
         $this->addTask($body);
     }
