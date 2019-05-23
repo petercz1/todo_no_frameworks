@@ -16,8 +16,7 @@ class UpdateTask
     }
 
     public function updateTask($data)
-    {
-       
+    {     
         $tasks = json_decode(\file_get_contents('tasks.json'));
         array_unshift($tasks, $data);
         file_put_contents('tasks.json', json_encode($tasks));
