@@ -36,7 +36,7 @@ class appAddTask extends RootElement {
     let item = tasks[Math.floor(Math.random() * tasks.length)];
     // pseudo-typewriter effect, because I was bored
     let counter = 0;
-    (type(){
+    (function type(){
       if(counter < item.length){
 
       }
