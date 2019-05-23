@@ -18,7 +18,6 @@ class AddTask
 
     public function addTask($data)
     {
-        // sort it!
         $tasks = json_decode(\file_get_contents('tasks.json'));
         array_unshift($tasks, $data);
         \error_log(print_r($tasks, true));
