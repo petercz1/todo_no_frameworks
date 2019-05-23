@@ -37,7 +37,7 @@ class appAddTask extends RootElement {
     // randomly select a task
     let item = tasks[Math.floor(Math.random() * tasks.length)];
     let counter = 0;
-    let timer = setInterval(function () {
+    let typewriter = setInterval(function () {
       document.getElementById("taskname").value += item[counter];
       counter++;
       if (counter > item.length - 1) {
