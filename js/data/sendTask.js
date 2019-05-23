@@ -11,7 +11,7 @@ export default new class SendData {
     this.pubsub.subscribe('DeleteTask', 'getDeleteTask', null, this.sendData);
   }
 
-  async sendData(tasks) {
+  async sendData(task) {
     console.log('sending data');
     // build POST url
     let url = new URL(`${window.location.origin}/backend/addTask.php`);
@@ -20,7 +20,7 @@ export default new class SendData {
       headers: new Headers({
         "Content-Type": "application/json"
       }),
-      body: JSON.stringify(tasks)
+      body: JSON.stringify(task)
     };
 
     // FETCH it and deal with any network errors
