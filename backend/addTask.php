@@ -13,10 +13,10 @@ class AddTask
     {
         $body = file_get_contents('php://input');
         error_log(print_r($body, true));
-        $this->setTask($body);
+        $this->addTask($body);
     }
 
-    public function setTask($data)
+    public function addTask($data)
     {
         // sort it!
         $tasks = json_decode(\file_get_contents('tasks.json'));
