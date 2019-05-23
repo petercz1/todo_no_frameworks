@@ -5,9 +5,9 @@ namespace chipbug\todo;
 ini_set("log_errors", "1");
 ini_set("error_log", getcwd() . "/debug.log");
 
-(new RecieveTask)->init();
+(new ReceiveTask)->init();
 
-class RecieveTask
+class ReceiveTask
 {
     public function init()
     {
