@@ -61,7 +61,7 @@ class DataStore {
     this.updateMeta();
   }
   getChangeTask(){
-    
+
   }
 
   setDeleteTask(data) {
@@ -71,7 +71,9 @@ class DataStore {
     });
     this.updateMeta();
   }
-  getDeleteTask(){}
+  getDeleteTask(){
+    
+  }
 
   setDisplayedTask(data) {
     // clear css field from all tasks
