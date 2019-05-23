@@ -50,10 +50,6 @@ class appAddTask extends RootElement {
       return task != item
     })
   }
-
-  typeit(data){
-if()
-  }
 }
 
 customElements.define('app-addtask', appAddTask);
