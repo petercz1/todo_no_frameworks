@@ -69,3 +69,7 @@ app-addtask button {
   transition: all 1s ease;
   transition-property: max-height, color;
 }
+
+.checked{
+  
+}
