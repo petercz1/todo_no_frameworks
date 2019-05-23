@@ -16,7 +16,7 @@ class UpdateTask
         $this->addTask($body);
     }
 
-    public function addTask($data)
+    public function updateTask($data)
     {
         // sort it!
         $tasks = json_decode(\file_get_contents('tasks.json'));
