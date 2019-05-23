@@ -41,6 +41,6 @@ class ReceiveTask
 
     public function deleteTask($data)
     {
-        
+        echo $data;
     }
 }
