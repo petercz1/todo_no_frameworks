@@ -20,8 +20,6 @@ class AddTask
         $tasks = json_decode(\file_get_contents('tasks.json'));
         array_unshift($tasks, $data);
         file_put_contents('tasks.json', json_encode($tasks));
-        $taskname = $data['taskname'];
-        error_log($taskname);
         echo '{"server":"added task"}';
     }
 }
