@@ -13,7 +13,7 @@ class UpdateTask
     {
         $body = file_get_contents('php://input');
         error_log(print_r($body, true));
-        $this->addTask($body);
+        $this->updateTask($body);
     }
 
     public function updateTask($data)
