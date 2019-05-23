@@ -17,7 +17,6 @@ class GetTasks
     public function getTask($data)
     {
         // sort it!
-        $tasks = json_decode(\file_get_contents('tasks.json'));
-        echo json_encode($tasks);
+        echo \file_get_contents('tasks.json');
     }
 }
