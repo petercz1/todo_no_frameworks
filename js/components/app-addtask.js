@@ -37,7 +37,7 @@ class appAddTask extends RootElement {
     let item = tasks[Math.floor(Math.random() * tasks.length)];
     let counter = 0;
     let timer = setInterval(function () {
-      document.getElementById("taskname").innerHTML += word[i];
+      document.getElementById("taskname").value += word[i];
       i++;
       if (i > word.length - 1) {
         clearInterval(timer)
