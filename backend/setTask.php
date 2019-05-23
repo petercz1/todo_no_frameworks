@@ -19,7 +19,7 @@ class SetTask
     public function setTask()
     {
         // sort it!
-        $tasks = \file_get_contents('tasks.json');
-        
+        $tasks = json\file_get_contents('tasks.json');
+
     }
 }
