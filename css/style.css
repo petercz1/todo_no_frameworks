@@ -22,7 +22,7 @@ body {
   color:var(--warning);
 }
 
-/* setting font-size to zero kills all spaces between elements and allows box-sizing/width to work properly */
+/* setting font-size to zero kills all spaces between elements inside components and allows box-sizing/width to work properly */
 app-tasks,
 app-task,
 app-addtask {
