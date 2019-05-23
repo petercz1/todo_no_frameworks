@@ -43,11 +43,7 @@ class appAddTask extends RootElement {
         setTimeout(type, 50)
       }
     })();
-    for (let counter = 0; counter < item.length; counter++) {
-      setTimeout(() => {
-        console.log(item.charAt(counter));
-      }, 500);
-    }
+
     tasks = tasks.filter(task => {
       return task != item
     })
