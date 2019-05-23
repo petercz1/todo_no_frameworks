@@ -16,7 +16,7 @@ class SetTask
         echo json_encode($body);
     }
 
-    public function setTask()
+    public function setTask(da)
     {
         // sort it!
         $tasks = json_decode(\file_get_contents('tasks.json'));
