@@ -18,9 +18,6 @@ class GetTasks
     {
         // sort it!
         $tasks = json_decode(\file_get_contents('tasks.json'));
-        array_unshift($tasks, $data);
-        \error_log(print_r($tasks, true));
-        file_put_contents('tasks.json', json_encode($tasks));
         echo json_encode($tasks);
     }
 }
