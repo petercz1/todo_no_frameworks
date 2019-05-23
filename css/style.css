@@ -71,5 +71,5 @@ app-addtask button {
 }
 
 .checked{
-  
+  text-decoration: line-through;
 }
