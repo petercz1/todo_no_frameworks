@@ -21,7 +21,7 @@ class AddTask
             $this->updateTask($body);
             break;
             case 'delete':;
-            delete($body);
+            $this_.delete($body);
             break;
         }
         $this->addTask($body);
