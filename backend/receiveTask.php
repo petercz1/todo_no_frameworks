@@ -17,7 +17,7 @@ class AddTask
             case 'new':
             addTask($body);
             break;
-            
+            case 
         }
         $this->addTask($body);
     }
