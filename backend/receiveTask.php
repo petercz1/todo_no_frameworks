@@ -33,4 +33,9 @@ class ReceiveTask
         file_put_contents('tasks.json', json_encode($tasks));
         echo '{"server":"added task"}';
     }
+
+    public function FunctionName(Type $var = null)
+    {
+        # code...
+    }
 }
