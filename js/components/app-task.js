@@ -38,7 +38,7 @@ class appTask extends RootElement {
   registerChange() {
     // publish change if task is checked
     this.task.checked = !this.task.checked;
-    this.taskstatus = 
+    this.taskstatus = 'updated'
     this.renderData();
     this.pubsub.publish('ChangeTask', this.task);
   }
