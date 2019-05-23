@@ -46,7 +46,9 @@ class appAddTask extends RootElement {
     })
   }
 
-  
+  typeit(){
+    
+  }
 }
 
 customElements.define('app-addtask', appAddTask);
