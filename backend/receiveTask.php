@@ -38,4 +38,9 @@ class ReceiveTask
     {
         # code...
     }
+
+    public function FunctionName(Type $var = null)
+    {
+        # code...
+    }
 }
