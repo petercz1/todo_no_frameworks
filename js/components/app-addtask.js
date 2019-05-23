@@ -37,13 +37,13 @@ class appAddTask extends RootElement {
 
     // pseudo-typewriter effect, because I was bored
     let counter = 0;
-    (function type(){
+    function type(){
       if(counter < item.length){
         this.querySelector('#taskname').value += item.charAt(counter);
         counter ++;
         setTimeout(type, 50)
       }
-    })();
+    }
 
     // remove item from random tasklist
     tasks = tasks.filter(task => {
