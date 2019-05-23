@@ -37,7 +37,8 @@ class appTask extends RootElement {
     this.task.checked = !this.task.checked;
     if(this.task.checked){
       this.querySelector('label').classList.add('checked');
-
+    }else{
+      
     }
     this.pubsub.publish('ChangeTask', this.task);
   }
