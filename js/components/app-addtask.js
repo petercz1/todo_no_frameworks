@@ -41,7 +41,7 @@ class appAddTask extends RootElement {
       document.getElementById("taskname").value += item[counter];
       counter++;
       if (counter > item.length - 1) {
-        clearInterval(timer)
+        clearInterval(typewriter)
       }
     }, 50)
     //this.querySelector('#taskname').value = item;
