@@ -1,7 +1,7 @@
 :root{
   --main-color: powderblue;
   --warning: red;
-  --warning: 
+  --warning: 1.2em;
 }
 
 * {
