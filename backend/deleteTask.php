@@ -13,10 +13,10 @@ class DeleteTask
     {
         $body = file_get_contents('php://input');
         error_log(print_r($body, true));
-        $this->updateTask($body);
+        $this->deleteTask($body);
     }
 
-    public function updateTask($data)
+    public function deleteTask($data)
     {
         // sort it!
         $tasks = json_decode(\file_get_contents('tasks.json'));
