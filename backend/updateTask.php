@@ -12,7 +12,7 @@ class UpdateTask
     public function init()
     {
         $body = json_decode(file_get_contents('php://input'), true);
-        $this->addTask($body);
+        $this->updateTask($body);
     }
 
     public function updateTask($data)
