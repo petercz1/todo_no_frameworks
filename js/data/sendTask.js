@@ -14,7 +14,7 @@ export default new class SendData {
   async sendData(task) {
     console.log('sending data');
     // build POST url
-    let url = new URL(`${window.location.origin}/backend/addTask.php`);
+    let url = new URL(`${window.location.origin}/backend/receiveTask.php`);
     let init = {
       method: 'POST',
       headers: new Headers({
