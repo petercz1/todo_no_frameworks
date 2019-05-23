@@ -15,7 +15,7 @@ class AddTask
         \error_log(print_r($body, true));
         switch ($body['status']) {
             case 'new':
-            addTask($body);
+            $this->addTask($body);
             break;
             case 'update':
             updateTask($body);
