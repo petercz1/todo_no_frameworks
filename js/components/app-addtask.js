@@ -36,7 +36,13 @@ class appAddTask extends RootElement {
     // randomly select a task
     let item = tasks[Math.floor(Math.random() * tasks.length)];
     let counter = 0;
-
+    let timer = setInterval(function () {
+      document.getElementById("tr").innerHTML += word[i];
+      i++;
+      if (i > word.length - 1) {
+        clearInterval(timer)
+      }
+    }, 100)
     this.querySelector('#taskname').value = item;
 
     // remove item from random tasklist
