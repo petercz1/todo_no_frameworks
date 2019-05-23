@@ -16,7 +16,6 @@ class GetTasks
 
     public function getTask($data)
     {
-        // sort it!
         echo \file_get_contents('tasks.json');
     }
 }
