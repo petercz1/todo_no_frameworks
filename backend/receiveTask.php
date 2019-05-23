@@ -34,7 +34,7 @@ class ReceiveTask
         echo '{"server":"added task"}';
     }
 
-    public function FunctionName(Type $var = null)
+    public function updateTask(Type $var = null)
     {
         # code...
     }
