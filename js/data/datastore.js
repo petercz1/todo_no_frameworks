@@ -58,7 +58,6 @@ class DataStore {
     this.updateMeta();
   }
   getChangeTask() {
-    // stubbed out - handled asynchronously in sendData()
     return this.tasks.filter(task=>task.status == 'update');
   }
 
@@ -70,8 +69,7 @@ class DataStore {
     this.updateMeta();
   }
   getDeleteTask() {
-    // stubbed out - handled asynchronously in sendData()
-    return this.tasks.filter(task=>task.status == 'update');
+    return this.tasks.filter(task=>task.status == 'delete');
 
   }
 
