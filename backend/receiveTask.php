@@ -28,7 +28,7 @@ class ReceiveTask
         }
     }
 
-    public function sw(Type $var = null)
+    public function switcher(Type $var = null)
     {
         # code...
     }
