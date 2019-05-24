@@ -71,6 +71,8 @@ class DataStore {
   }
   getDeleteTask() {
     // stubbed out - handled asynchronously in sendData()
+    return this.tasks.filter(task=>task.status == 'update');
+
   }
 
   setDisplayedTask(data) {
