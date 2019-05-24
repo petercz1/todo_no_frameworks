@@ -59,6 +59,7 @@ class DataStore {
   }
   getChangeTask() {
     // stubbed out - handled asynchronously in sendData()
+    return this.tasks.
   }
 
   setDeleteTask(data) {
