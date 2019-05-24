@@ -69,8 +69,6 @@ class DataStore {
       if (task.id == data.id) {
         task.status = 'delete';
         return task;
-      }else{
-        return
       }
     });
   }
