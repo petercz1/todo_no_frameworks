@@ -63,7 +63,7 @@ class DataStore {
   }
 
   setDeleteTask(data) {
-     this.tasks.filter(task => task.status == 'delete').status = data.status;
+     this.tasks.filter(task => task.id == data.id).status = data.status;
     
   }
   getDeleteTask() {
