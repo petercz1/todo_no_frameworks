@@ -13,7 +13,7 @@ class ReceiveTask
     {
         $body = json_decode(file_get_contents('php://input'), true);
         \error_log(print_r($body, true));
-foreach()
+foreach($body as )
 
         switch ($body['status']) {
             case 'new':
