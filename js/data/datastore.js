@@ -69,7 +69,7 @@ class DataStore {
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
     this.tasks = this.tasks.filter(task => {
-      return task.status == 'delet';
+      return task.status == 'delete';
     });
     this.updateMeta();
   }
