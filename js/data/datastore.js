@@ -67,7 +67,7 @@ class DataStore {
     console.log(this.tasks.filter(task => task.id == data.id));
     this.tasks = this.tasks.map(task => {
       if (task.id == data.id) {
-task.status
+        task.status = 'delete';
       }
     });
   }
