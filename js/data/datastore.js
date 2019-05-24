@@ -68,6 +68,7 @@ class DataStore {
     // this.tasks[taskIndex].status == 'delete';
     // console.log(this.tasks);
     this.updateMeta();
+    console.log(this.);
   }
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
