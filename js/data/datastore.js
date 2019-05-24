@@ -34,6 +34,7 @@ class DataStore {
   updateMeta() {
     this.meta.tasksChecked = this.tasks.filter(task => (task.checked == true)).length;
     this.meta.taskLength = this.tasks.length;
+    console.log(this.tasks);
   }
 
   setNewTask(data) {
