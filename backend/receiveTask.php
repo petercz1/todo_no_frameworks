@@ -28,9 +28,10 @@ class ReceiveTask
         }
     }
 
-    public function router($)
+    public function router($task)
     {
         # code...
+        
     }
 
     public function addTask($data)
