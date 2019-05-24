@@ -25,8 +25,17 @@ class ReceiveTask
 
     public function router($task)
     {
-        # code...
-
+        switch ($task['status']) {
+            case 'new':
+            $this->addTask($task);
+            break;
+            case 'update':
+            $this->updateTask($task);
+            break;
+            case 'delete':;
+            $this->deleteTask($task);
+            break;
+        }
     }
 
     public function addTask($data)
