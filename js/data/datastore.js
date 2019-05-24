@@ -64,6 +64,7 @@ class DataStore {
 
   setDeleteTask(data) {
     console.log(data);
+    
   }
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
