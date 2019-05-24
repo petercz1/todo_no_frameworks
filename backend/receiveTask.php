@@ -18,7 +18,7 @@ class ReceiveTask
                 $this->router($task);
             }
         }else{
-            $this->router($task);
+            $this->router($data);
         }
     }
 
