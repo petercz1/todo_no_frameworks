@@ -58,6 +58,7 @@ class DataStore {
     this.updateMeta();
   }
   getChangeTask() {
+    // stubbed out - handled asynchronously in sendData()
     return this.tasks.filter(task=>task.status == 'update');
   }
 
