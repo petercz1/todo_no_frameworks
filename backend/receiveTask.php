@@ -19,6 +19,7 @@ class ReceiveTask
                 $this->router($task);
             }
         }else{
+            error_log();
             $this->router($data);
         }
     }
