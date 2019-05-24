@@ -17,6 +17,8 @@ class ReceiveTask
             foreach ($data as $task){
                 $this->router($task);
             }
+        }else{
+            $this->router($task);
         }
         foreach ($tasks as $task) {
             
