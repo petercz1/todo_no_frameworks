@@ -14,13 +14,14 @@ class ReceiveTask
         $data = json_decode(file_get_contents('php://input'), true);
         error_log(print_r($data, true));
         if(array_key_exists($data['status'])){
+            
+        }else{
+            error_log('data is single task');
+            $this->router($data);
             foreach ($data as $task){
                 error_log('data is array of tasks');
                 $this->router($task);
             }
-        }else{
-            error_log('data is single task');
-            $this->router($data);
         }
     }
 
