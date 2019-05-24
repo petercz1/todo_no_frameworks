@@ -28,7 +28,7 @@ class ReceiveTask
         }
     }
 
-    public function switcher(Type $var = null)
+    public function router($)
     {
         # code...
     }
