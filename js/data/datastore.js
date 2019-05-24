@@ -70,6 +70,7 @@ class DataStore {
     // filter returns a copy of the array, which then replaces the original
     let deleted = this.tasks.filter(task => task.status == 'delete');
     this.tasks = this.tasks.filter(task => task.status != 'delete');
+    
     return deleted;
   }
 
