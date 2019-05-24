@@ -63,7 +63,7 @@ class DataStore {
   }
 
   setDeleteTask(data) {
-    console.log(data);
+    console.log(this.tasks);
     let taskIndex = this.tasks.findIndex(task => task.id == data.id);
     this.tasks[taskIndex].status == 'delete';
     console.log(this.tasks);
