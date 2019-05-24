@@ -20,9 +20,6 @@ class ReceiveTask
         }else{
             $this->router($task);
         }
-        foreach ($tasks as $task) {
-            
-        }
     }
 
     public function router($task)
