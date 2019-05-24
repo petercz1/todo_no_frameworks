@@ -72,7 +72,6 @@ class DataStore {
   }
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
-    this.updateMeta();
   }
 
   setDisplayedTask(data) {
