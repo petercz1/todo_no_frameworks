@@ -15,15 +15,15 @@ class ReceiveTask
         \error_log(print_r($tasks, true));
 foreach($tasks as $task)
 
-        switch ($body['status']) {
+        switch ($task['status']) {
             case 'new':
-            $this->addTask($body);
+            $this->addTask($task);
             break;
             case 'update':
-            $this->updateTask($body);
+            $this->updateTask($task);
             break;
             case 'delete':;
-            $this->deleteTask($body);
+            $this->deleteTask($task);
             break;
         }
     }
