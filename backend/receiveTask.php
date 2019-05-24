@@ -28,7 +28,10 @@ class ReceiveTask
         }
     }
 
-    
+    public function sw(Type $var = null)
+    {
+        # code...
+    }
 
     public function addTask($data)
     {
