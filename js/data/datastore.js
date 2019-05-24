@@ -63,10 +63,10 @@ class DataStore {
   }
 
   setDeleteTask(data) {
-    return this.tasks.filter(task => task.status == 'delete');
-
+    
   }
   getDeleteTask() {
+    return this.tasks.filter(task => task.status == 'delete');
     // filter returns a copy of the array, which then replaces the original
     this.tasks = this.tasks.filter(task => {
       return task.id != data.id;
