@@ -13,7 +13,7 @@ class ReceiveTask
     {
         $data = json_decode(file_get_contents('php://input'), true);
         error_log(print_r($data, true));
-        if (array_key_exists('status', $data['status'])) {
+        if (array_key_exists('status', $data)) {
             error_log('data is single task');
             $this->router($data);
         } else {
