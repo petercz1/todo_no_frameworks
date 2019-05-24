@@ -65,7 +65,7 @@ class DataStore {
   setDeleteTask(data) {
     console.log(data);
     console.log(this.tasks.filter(task => task.id == data.id));
-    this.tasks = this.tasks.filter( (task.id == data.id)=> {
+    this.tasks = this.tasks.filter( (task=> {
       task.status = data.status
     });
   }
