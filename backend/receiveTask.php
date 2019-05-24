@@ -11,9 +11,9 @@ class ReceiveTask
 {
     public function init()
     {
-        $body = json_decode(file_get_contents('php://input'), true);
-        \error_log(print_r($body, true));
-foreach($body as $task)
+        $tasks = json_decode(file_get_contents('php://input'), true);
+        \error_log(print_r($tasks, true));
+foreach($tasks as $task)
 
         switch ($body['status']) {
             case 'new':
