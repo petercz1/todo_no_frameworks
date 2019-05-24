@@ -28,6 +28,8 @@ class ReceiveTask
         }
     }
 
+    
+
     public function addTask($data)
     {
         $tasks = json_decode(\file_get_contents('tasks.json'));
