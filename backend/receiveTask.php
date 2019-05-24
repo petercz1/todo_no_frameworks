@@ -15,7 +15,7 @@ class ReceiveTask
         \error_log(print_r($data, true));
         if(is_array($data)){
             foreach ($data as $task){
-                
+                $this->router
             }
         }
         foreach ($tasks as $task) {
