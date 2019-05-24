@@ -24,6 +24,11 @@ class ReceiveTask
 
     public function router($task)
     {
+        class ClassName extends AnotherClass implements Interface
+        {
+            
+        }
+        
         switch ($task['status']) {
             case 'new':
             $this->addTask($task);
