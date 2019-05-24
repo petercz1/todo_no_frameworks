@@ -72,7 +72,8 @@ class DataStore {
   }
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
-    
+    let deleted = this.tasks.filter(task => task.status == 'update');
+
   }
 
   setDisplayedTask(data) {
