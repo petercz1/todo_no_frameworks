@@ -44,7 +44,6 @@ class appTask extends RootElement {
   }
 
   registerDelete() {
-    this.task.status = 'delete';
     console.log(this.task);
     this.pubsub.publish('DeleteTask', this.task);
   }
