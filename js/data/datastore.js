@@ -59,19 +59,19 @@ class DataStore {
   }
   getChangeTask() {
     // stubbed out - handled asynchronously in sendData()
-    return this.tasks.filter(task=>task.status == 'update');
+    return this.tasks.filter(task => task.status == 'update');
   }
 
   setDeleteTask(data) {
-   
+
   }
   getDeleteTask() {
-    return this.tasks.filter(task=>task.status == 'delete');
- // filter returns a copy of the array, which then replaces the original
- this.tasks = this.tasks.filter(task => {
-  return task.id != data.id;
-});
-this.updateMeta();
+    return this.tasks.filter(task => task.status == 'delete');
+    // filter returns a copy of the array, which then replaces the original
+    this.tasks = this.tasks.filter(task => {
+      return task.id != data.id;
+    });
+    this.updateMeta();
   }
 
   setDisplayedTask(data) {
