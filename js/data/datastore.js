@@ -64,7 +64,6 @@ class DataStore {
 
   setDeleteTask(data) {
      this.tasks.filter(task => task.id == data.id).status = data.status;
-    
   }
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
