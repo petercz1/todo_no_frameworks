@@ -15,7 +15,7 @@ class ReceiveTask
         error_log(print_r($task, true));
         if(is_array($data)){
             foreach ($data as $task){
-                error_log('');
+                error_log('data is arr');
                 $this->router($task);
             }
         }else{
