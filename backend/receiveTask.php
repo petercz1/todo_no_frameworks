@@ -14,7 +14,7 @@ class ReceiveTask
         $data = json_decode(file_get_contents('php://input'), true);
         \error_log(print_r($data, true));
         if(is_array($data)){
-            
+            foreach ($data as $task)
         }
         foreach ($tasks as $task) {
             switch ($task['status']) {
