@@ -13,7 +13,7 @@ class ReceiveTask
     {
         $tasks = json_decode(file_get_contents('php://input'), true);
         \error_log(print_r($tasks, true));
-        if
+        if(is_array($tasks))
         foreach ($tasks as $task) {
             switch ($task['status']) {
             case 'new':
