@@ -13,9 +13,8 @@ class ReceiveTask
     {
         $tasks = json_decode(file_get_contents('php://input'), true);
         \error_log(print_r($tasks, true));
-foreach($tasks as $task)
-
-        switch ($task['status']) {
+        foreach ($tasks as $task) {
+            switch ($task['status']) {
             case 'new':
             $this->addTask($task);
             break;
@@ -25,6 +24,7 @@ foreach($tasks as $task)
             case 'delete':;
             $this->deleteTask($task);
             break;
+        }
         }
     }
 
@@ -38,15 +38,11 @@ foreach($tasks as $task)
 
     public function updateTask($data)
     {
-
         echo '{"server":"updated task"}';
-
     }
 
     public function deleteTask($data)
     {
-
         echo '{"server":"deleted task"}';
-
     }
 }
