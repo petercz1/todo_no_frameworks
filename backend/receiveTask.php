@@ -19,7 +19,7 @@ class ReceiveTask
                 $this->router($task);
             }
         }else{
-            error_log('data is si task');
+            error_log('data is single task');
             $this->router($data);
         }
     }
