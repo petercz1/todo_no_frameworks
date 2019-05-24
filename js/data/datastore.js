@@ -63,6 +63,7 @@ class DataStore {
   }
 
   setDeleteTask(data) {
+    console.log(data);
      this.tasks.filter(task => task.id == data.id).status = data.status;
   }
   getDeleteTask() {
