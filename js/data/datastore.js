@@ -64,7 +64,8 @@ class DataStore {
 
   setDeleteTask(data) {
     console.log(data);
-    let task = this.tasks.findIndex(task => task.id == data.id)
+    let task = this.tasks.findIndex(task => task.id == data.id);
+    
   }
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
