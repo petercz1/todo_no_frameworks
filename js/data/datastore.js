@@ -75,7 +75,6 @@ class DataStore {
     this.tasks = this.tasks.filter(task => {
       return task.status == 'delete';
     });
-    console.log(this.tasks);
     this.updateMeta();
   }
 
