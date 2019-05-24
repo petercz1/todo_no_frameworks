@@ -63,6 +63,7 @@ class DataStore {
     return this.tasks.filter(task => task.status == 'update');
   }
 
+  // got to here - set delete task
   setDeleteTask(data) {
     this.updateMeta();
   }
