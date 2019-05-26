@@ -4,6 +4,9 @@ import PubSub from '../data/pubsub.js';
 class appAddTask extends RootElement {
   constructor() {
     super();
+    // list of tasks for random task generator below -  speeds up testing
+    this.tasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee', 'google "pimp my noodles"', 'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list', 'beat personal best on snake'];
+
     this.pubsub = PubSub;
     this.renderData();
   }
@@ -21,9 +24,11 @@ class appAddTask extends RootElement {
   addtask() {
     let task = {
       taskname: document.querySelector('#taskname').value,
+      newTask: true,
+      changeTask: false,
+      deleteTask: false,
       checked: false,
-      css: 'closed',
-      status: 'new'
+      css: 'closed'
     };
     // generate new random task
     this.pubsub.publish('NewTask', task);
@@ -34,16 +39,12 @@ class appAddTask extends RootElement {
   generateNewTask() {
     this.querySelector('#taskname').value = '';
 
-    // list of tasks
-    let tasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee', 'google "pimp my noodles"', 'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list', 'beat personal best on snake'];
-
     // randomly select a task
-    let item = tasks[Math.floor(Math.random() * tasks.length)];
-
+    let item = this.tasks[Math.floor(Math.random() * this.tasks.length)];
 
     // remove item from random tasklist
-    tasks = tasks.filter(task => {
-      return task != item
+    this.tasks = this.tasks.filter(task => {
+      return task != item;
     })
 
     // act like a typewriter, because I was bored

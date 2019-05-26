@@ -12,49 +12,60 @@ class ReceiveTask
     public function init()
     {
         $data = json_decode(file_get_contents('php://input'), true);
-        error_log(print_r($data, true));
-        if (array_key_exists('status', $data)) {
-            error_log('data is single task');
-            $this->router($data);
+        if (array_key_exists('taskname', $data)) {
+            $this->simpleRouter($data);
         } else {
             foreach ($data as $task) {
-                error_log('data is array of tasks');
-                $this->router($task);
+                $this->simpleRouter($task);
             }
         }
     }
 
-    public function router($task)
+    public function simpleRouter($task)
     {
-        error_log(print_r($task, true));
-        switch ($task['status']) {
-            case 'new':
-            $this->addTask($task);
-            break;
-            case 'update':
-            $this->updateTask($task);
-            break;
-            case 'delete':;
-            $this->deleteTask($task);
-            break;
+        if ($task['deleteTask']) {
+            return $this->deleteTask($task);
+        }
+        if ($task['changeTask']) {
+            return $this->changeTask($task);
+        }
+        if ($task['newTask']) {
+            return $this->addTask($task);
         }
     }
 
-    public function addTask($data)
+    public function addTask($task)
     {
-        $tasks = json_decode(\file_get_contents('tasks.json'));
-        array_unshift($tasks, $data);
+        $tasks = json_decode(\file_get_contents('tasks.json'), true);
+        array_unshift($tasks, $task);
         file_put_contents('tasks.json', json_encode($tasks));
         echo '{"server":"added task"}';
     }
 
-    public function updateTask($data)
+    public function changeTask($task)
     {
-        echo '{"server":"updated task"}';
+        $tasks = json_decode(\file_get_contents('tasks.json'), true);
+        foreach ($tasks as &$item) {
+            $item = (array)$item;
+            if ($item['id'] == $task['id']) {
+                $item['changeTask'] = false;
+                $item['checked'] = $task['checked'];
+            }
+        }
+        file_put_contents('tasks.json', json_encode($tasks));
+        echo '{"server":"changed task"}';
     }
 
-    public function deleteTask($data)
+    public function deleteTask($task)
     {
+        $tasks = json_decode(\file_get_contents('tasks.json'), true);
+        $index = array_search($task['id'], array_column($tasks, 'id'));
+        foreach ($tasks as $key => $item) {
+            if ($item['id'] == $task['id']) {
+                unset($tasks[$key]);
+            }
+        }
+        file_put_contents('tasks.json', json_encode($tasks));
         echo '{"server":"deleted task"}';
     }
 }

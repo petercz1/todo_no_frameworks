@@ -26,15 +26,14 @@ class DataStore {
   }
 
   getTasks() {
-    return this.tasks
+    return this.tasks.filter(task => task.deleteTask != true);
   }
   getMeta() {
     return this.meta;
   }
   updateMeta() {
-    this.meta.tasksChecked = this.tasks.filter(task => (task.checked == true)).length;
-    this.meta.taskLength = this.tasks.length;
-    console.log(this.tasks);
+    this.meta.tasksChecked = this.tasks.filter(task => (task.checked == true && task.Task != true)).length;
+    this.meta.taskLength = this.tasks.filter(task => task.deleteTask != true).length;
   }
 
   setNewTask(data) {
@@ -42,7 +41,6 @@ class DataStore {
     this.tasks.forEach(task => {
       delete task.css;
     });
-    data.css = 'closed';
     // simple id field: find max id and increment it
     let max = Math.max(...this.tasks.map(obj => obj.id), 0);
     data.id = max + 1;
@@ -60,17 +58,21 @@ class DataStore {
   }
   getChangeTask() {
     // stubbed out - handled asynchronously in sendData()
-    return this.tasks.filter(task => task.status == 'update');
+    console.log('getting changed task');
+    console.log(this.tasks.filter(task => task.changeTask == true));
+    return this.tasks.filter(task => task.changeTask == true);
   }
 
   // got to here - set delete task, filter?
-  setDeleteTask(data) {
+  setDeleteTask() {
     this.updateMeta();
+    console.log('inside datastore...');
+    console.log(this.tasks);
   }
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
-    let deleted = this.tasks.filter(task => task.delete != true);
-    this.tasks = this.tasks.filter(task => task.status != 'delete');
+    let deleted = this.tasks.filter(task => task.deleteTask == true);
+    this.tasks = this.tasks.filter(task => task.deleteTask != true);
     this.updateMeta();
     return deleted;
   }
