@@ -15,7 +15,6 @@ export default new class FetchTasks {
     let url = new URL(`${window.location.origin}/backend/sendTasks.php`);
    
     // add options as search params to end of url request
-    Object.keys(options).forEach(key => url.searchParams.append(key, options[key]));
     // set request as GET (default but making it clear)
     let init = {
       method: 'GET',
