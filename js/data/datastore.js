@@ -27,7 +27,7 @@ class DataStore {
 
   // fired when serverdata is returned
   setServerData($tasks){
-
+this.
   }
 
   getTasks() {
