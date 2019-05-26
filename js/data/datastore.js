@@ -75,8 +75,7 @@ class DataStore {
     // stringify/parse cheat to pass object by value
     let changedTask = JSON.parse(JSON.stringify(this.tasks.filter(task => task.changeTask == true)));
     this.tasks.find(task => task.changeTask == true).changeTask = false;
-    console.log('after changed task');
-    console.log(this.tasks);
+
     this.updateMeta();
     return changedTask;
   }
