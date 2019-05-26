@@ -14,7 +14,6 @@ export default new class FetchTasks {
     // build GET url
     let url = new URL(`${window.location.origin}/backend/sendTasks.php`);
    
-    // add options as search params to end of url request
     // set request as GET (default but making it clear)
     let init = {
       method: 'GET',
