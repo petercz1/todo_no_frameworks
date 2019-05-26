@@ -61,7 +61,6 @@ class DataStore {
   }
 
   setChangeTask(data) {
-    //this.tasks.find(task => task.changeTask == true).newTask = false;
     this.updateMeta();
   }
   getChangeTask() {
