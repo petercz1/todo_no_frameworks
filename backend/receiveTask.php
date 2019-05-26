@@ -13,6 +13,7 @@ class ReceiveTask
 {
     public function init()
     {
+        // get 
         $data = json_decode(file_get_contents('php://input'), true);
         if (array_key_exists('taskname', $data)) {
             $this->simpleRouter($data);
