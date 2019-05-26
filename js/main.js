@@ -5,6 +5,6 @@ import './components/app-task.js';
 import './components/app-addtask.js';
 import './components/app-console.js';
 import './data/sendTask.js';
-import './data/fetchTasks.js';
+import fetchTasks from './data/fetchTasks.js';
 
 window.onload = 
