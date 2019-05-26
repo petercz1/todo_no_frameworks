@@ -7,4 +7,4 @@ import './components/app-console.js';
 import './data/sendTask.js';
 import './data/fetchTasks.js';
 
-window.onload
+window.onload = 
