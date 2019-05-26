@@ -13,11 +13,7 @@ export default new class FetchTasks {
     console.log('fetching data');
     // build GET url
     let url = new URL(`${window.location.origin}/backend/sendTasks.php`);
-    let options = {
-      file_location_root: document.getElementById('file_location_root').value,
-      delete_on_conversion: document.getElementById('delete_on_conversion').value
-    }
-
+   
     // add options as search params to end of url request
     Object.keys(options).forEach(key => url.searchParams.append(key, options[key]));
     // set request as GET (default but making it clear)
