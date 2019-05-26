@@ -83,7 +83,7 @@ class DataStore {
     return deletedTask;
   }
 
-  // clears rolldown css effect after task is added to list
+  // clears rolldown css effect after task is added to list and displayed
   setDisplayedTask(data) {
     // clear css field from all tasks
     this.tasks.forEach(task => {
