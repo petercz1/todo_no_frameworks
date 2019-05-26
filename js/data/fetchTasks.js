@@ -29,11 +29,11 @@ export default new class FetchTasks {
     }
     let json = await response.json();
     console.log(json);
-    if (json.source == "server error") {
-      console.log(json);
-      this.pubsub.publish('Message', json)
-    } else {
-      this.pubsub.publish('LocalData', json);
-    }
+    // if (json.source == "server error") {
+    //   console.log(json);
+    //   this.pubsub.publish('Message', json)
+    // } else {
+    //   this.pubsub.publish('LocalData', json);
+    // }
   }
 }
