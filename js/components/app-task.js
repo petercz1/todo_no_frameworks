@@ -31,6 +31,7 @@ class appTask extends RootElement {
       setTimeout(() => {
         this.querySelector('div').classList.replace('closed', 'open');
       }, 100);
+      
       this.pubsub.publish('DisplayedTask', this.task);
     }
   }
