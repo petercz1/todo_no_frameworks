@@ -72,7 +72,7 @@ class DataStore {
     // filter returns a copy of the array, which then replaces the original
     console.log('getting changed task');
     console.log(this.tasks);
-    let changedTask = this.tasks.filter(task => task.changeTask == true);
+    let changedTask = jsonthis.tasks.filter(task => task.changeTask == true);
     this.tasks.find(task => task.changeTask == true).changeTask = false;
     console.log('after changed task');
     console.log(this.tasks);
