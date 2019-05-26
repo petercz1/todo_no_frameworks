@@ -30,7 +30,7 @@ class DataStore {
     this.tasks = tasks;
     this.updateMeta();
   }
-  
+
   getMeta() {
     return this.meta;
   }
@@ -55,6 +55,10 @@ class DataStore {
   }
   getNewTask() {
     return this.tasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
+  }
+  getTasks() {
+    console.log(this.tasks);
+    return this.tasks.filter(task => task.deleteTask != true);
   }
 
   setChangeTask(data) {
