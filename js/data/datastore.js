@@ -26,7 +26,9 @@ class DataStore {
   }
 
   // fired when serverdata is returned
-  set
+  setServerData(){
+    
+  }
 
   getTasks() {
     return this.tasks.filter(task => task.deleteTask != true);
