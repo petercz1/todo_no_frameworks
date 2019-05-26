@@ -44,7 +44,6 @@ class DataStore {
   }
 
   setNewTask(data) {
-    console.log('setting new task');
     // clear css field from all tasks
     this.tasks.forEach(task => {
       delete task.css;
@@ -62,7 +61,6 @@ class DataStore {
   }
 
   setChangeTask(data) {
-
     //this.tasks.find(task => task.changeTask == true).newTask = false;
     this.updateMeta();
   }
