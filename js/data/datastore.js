@@ -26,12 +26,13 @@ class DataStore {
   }
 
   // fired when serverdata is returned
-  setServerData($tasks) {
-    this.tasks = $tasks;
+  setServerData(tasks) {
+    this.tasks = tasks;
     this.updateMeta();
   }
 
   getTasks() {
+    console.log(this.tasks);
     return this.tasks.filter(task => task.deleteTask != true);
   }
   getMeta() {
@@ -43,6 +44,7 @@ class DataStore {
   }
 
   setNewTask(data) {
+    console.log('setting new task');
     // clear css field from all tasks
     this.tasks.forEach(task => {
       delete task.css;
@@ -56,31 +58,38 @@ class DataStore {
     this.updateMeta();
   }
   getNewTask() {
+    console.log('getting new task');
     return this.tasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
   }
 
   setChangeTask(data) {
+    console.log('setting changed tasks');
+    console.log(this.tasks);
+    //this.tasks.find(task => task.changeTask == true).newTask = false;
     this.updateMeta();
   }
   getChangeTask() {
-    // stubbed out - handled asynchronously in sendData()
+    // filter returns a copy of the array, which then replaces the original
     console.log('getting changed task');
-    console.log(this.tasks.filter(task => task.changeTask == true));
-    return this.tasks.filter(task => task.changeTask == true);
+    console.log(this.tasks);
+    let changedTask = this.tasks.filter(task => task.changeTask == true);
+    this.tasks.find(task => task.changeTask == true).changeTask = false;
+    console.log('after changed task');
+    console.log(this.tasks);
+    return changedTask;
   }
 
-  // got to here - set delete task, filter?
   setDeleteTask() {
+    console.log('setting delete task');
     this.updateMeta();
-    console.log('inside datastore...');
-    console.log(this.tasks);
   }
   getDeleteTask() {
+    console.log('getting delete task');
     // filter returns a copy of the array, which then replaces the original
-    let deleted = this.tasks.filter(task => task.deleteTask == true);
+    let deletedTask = this.tasks.filter(task => task.deleteTask == true);
     this.tasks = this.tasks.filter(task => task.deleteTask != true);
     this.updateMeta();
-    return deleted;
+    return deletedTask;
   }
 
   // clears rolldown css effect after task is added to list

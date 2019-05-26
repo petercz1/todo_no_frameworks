@@ -26,19 +26,21 @@ class ReceiveTask
 
     public function simpleRouter($task)
     {
+        error_log(print_r($task, true));
         if ($task['deleteTask']) {
             return $this->deleteTask($task);
         }
-        if ($task['changeTask']) {
+        else if ($task['changeTask']) {
             return $this->changeTask($task);
         }
-        if ($task['newTask']) {
+        else {
             return $this->addTask($task);
         }
     }
 
     public function addTask($task)
     {
+        error_log('adding task');
         $tasks = json_decode(\file_get_contents('tasks.json'), true);
         array_unshift($tasks, $task);
         file_put_contents('tasks.json', json_encode($tasks));
@@ -47,7 +49,9 @@ class ReceiveTask
 
     public function changeTask($task)
     {
+        error_log('changing task');
         $tasks = json_decode(\file_get_contents('tasks.json'), true);
+        error_log(print_r($tasks, true));
         foreach ($tasks as &$item) {
             $item = (array)$item;
             if ($item['id'] == $task['id']) {
@@ -55,12 +59,15 @@ class ReceiveTask
                 $item['checked'] = $task['checked'];
             }
         }
+        error_log(print_r($tasks, true));
         file_put_contents('tasks.json', json_encode($tasks));
+        error_log('task changed');
         echo '{"server":"changed task"}';
     }
 
     public function deleteTask($task)
     {
+        error_log('deleting task');
         $tasks = json_decode(\file_get_contents('tasks.json'), true);
         $index = array_search($task['id'], array_column($tasks, 'id'));
         foreach ($tasks as $key => $item) {

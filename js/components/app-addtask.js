@@ -24,7 +24,6 @@ class appAddTask extends RootElement {
   addtask() {
     let task = {
       taskname: document.querySelector('#taskname').value,
-      newTask: true,
       changeTask: false,
       deleteTask: false,
       checked: false,

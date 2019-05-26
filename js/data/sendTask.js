@@ -12,7 +12,7 @@ export default new class SendTask {
   }
 
   async sendData(task) {
-    console.log('sending data');
+    console.log('sending task');
     console.log(task);
     // build POST url
     let url = new URL(`${window.location.origin}/backend/receiveTask.php`);
@@ -33,7 +33,6 @@ export default new class SendTask {
       throw new Error('HTTP error, status = ' + response.status);
     }
     let json = await response.json();
-    console.log(json);
     // if (json.source == "server error") {
     //   console.log('blow up');
     // } else {
