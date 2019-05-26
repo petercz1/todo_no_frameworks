@@ -77,6 +77,7 @@ class DataStore {
     return deleted;
   }
 
+  // 
   setDisplayedTask(data) {
     // clear css field from all tasks
     this.tasks.forEach(task => {
