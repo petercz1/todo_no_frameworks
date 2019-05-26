@@ -28,6 +28,7 @@ export default new class FetchTasks {
       throw new Error('HTTP error, status = ' + response.status);
     }
     let json = await response.json();
+    console.log(json);
     if (json.source == "server error") {
       console.log(json);
       this.pubsub.publish('Message', json)
