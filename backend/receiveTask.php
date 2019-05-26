@@ -8,7 +8,7 @@ ini_set("error_log", getcwd() . "/debug.log");
 (new ReceiveTask)->init();
 
 // receives new task, changed task and deleted task.
-// I woul dprobably split these functions up!
+// I would probably split these functions up!
 class ReceiveTask
 {
     public function init()
