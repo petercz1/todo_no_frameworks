@@ -30,11 +30,7 @@ class DataStore {
     this.tasks = tasks;
     this.updateMeta();
   }
-
-  getTasks() {
-    console.log(this.tasks);
-    return this.tasks.filter(task => task.deleteTask != true);
-  }
+  
   getMeta() {
     return this.meta;
   }
