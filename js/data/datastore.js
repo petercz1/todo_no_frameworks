@@ -25,6 +25,8 @@ class DataStore {
     return res;
   }
 
+  
+
   getTasks() {
     return this.tasks.filter(task => task.deleteTask != true);
   }
