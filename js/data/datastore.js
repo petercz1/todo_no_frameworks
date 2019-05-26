@@ -58,7 +58,6 @@ class DataStore {
     this.updateMeta();
   }
   getNewTask() {
-    console.log('getting new task');
     return this.tasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
   }
 
@@ -78,11 +77,9 @@ class DataStore {
   }
 
   setDeleteTask() {
-    console.log('setting delete task');
     this.updateMeta();
   }
   getDeleteTask() {
-    console.log('getting delete task');
     // filter returns a copy of the array, which then replaces the original
     let deletedTask = this.tasks.filter(task => task.deleteTask == true);
     this.tasks = this.tasks.filter(task => task.deleteTask != true);
