@@ -35,7 +35,7 @@ class DataStore {
     return this.meta;
   }
   updateMeta() {
-    this.meta.tasksChecked = this.tasks.filter(task => (task.checked == true && task.Task != true)).length;
+    this.meta.tasksChecked = this.tasks.filter(task => (task.checked == true)).length;
     this.meta.taskLength = this.tasks.filter(task => task.deleteTask != true).length;
   }
 
