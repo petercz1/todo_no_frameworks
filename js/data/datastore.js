@@ -63,15 +63,12 @@ class DataStore {
   }
 
   setChangeTask(data) {
-    console.log('setting changed tasks');
-    console.log(this.tasks);
+
     //this.tasks.find(task => task.changeTask == true).newTask = false;
     this.updateMeta();
   }
   getChangeTask() {
-    // filter returns a copy of the array, which then replaces the original
-    console.log('getting changed task');
-    console.log(this.tasks);
+
     // stringify/parse cheat to pass object by value
     let changedTask = JSON.parse(JSON.stringify(this.tasks.filter(task => task.changeTask == true)));
     this.tasks.find(task => task.changeTask == true).changeTask = false;
