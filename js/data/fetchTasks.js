@@ -1,7 +1,7 @@
 // fetches videos from server, catches any network/server errors, returns json list of video details
 import PubSub from './pubsub.js';
 
-export default new class FetchData {
+export default new class FetchTasks {
 
   constructor() {
     this.pubsub = PubSub;
