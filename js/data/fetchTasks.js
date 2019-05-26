@@ -12,7 +12,7 @@ export default new class FetchTasks {
   async fetchData() {
     console.log('fetching data');
     // build GET url
-    let url = new URL(`${window.location.origin}/backend/receiveTask.php`);
+    let url = new URL(`${window.location.origin}/backend/sendTasks.php`);
     let options = {
       file_location_root: document.getElementById('file_location_root').value,
       delete_on_conversion: document.getElementById('delete_on_conversion').value
