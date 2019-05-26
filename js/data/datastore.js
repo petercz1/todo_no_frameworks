@@ -77,6 +77,7 @@ class DataStore {
     this.tasks.find(task => task.changeTask == true).changeTask = false;
     console.log('after changed task');
     console.log(this.tasks);
+    this.updateMeta();
     return changedTask;
   }
 
