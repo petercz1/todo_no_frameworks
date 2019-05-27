@@ -24,4 +24,4 @@ export default class appServerMessages extends RootElement {
 	}
 }
 
-customElements.define('app-server', appServerMessages);
+customElements.define('app-servermessages', appServerMessages);
