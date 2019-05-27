@@ -8,7 +8,7 @@ class PubSub {
 
   // this adds to an array everyone interested in some info being published
   // eg app-tasks is interested in any new tasks being published (newInfo - 'NewTask')
-  // if there is a new task, fire 'getTasks()' in the datastore 
+  // if there is a new task, request 'getTasks()' in the datastore 
   subscribe(newInfo, request, parameters, callback) {
     this.subscribers.push({
       newInfo,
