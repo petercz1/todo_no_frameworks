@@ -34,7 +34,7 @@ export default new class SendTask {
     if (json.source == "server error") {
       console.log('blow up');
     } else {
-      this.pubsub.publish('ServerMessage', json);
     }
+    this.pubsub.publish('ServerMessage', json);
   }
 }
