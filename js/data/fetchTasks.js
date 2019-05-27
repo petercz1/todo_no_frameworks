@@ -31,7 +31,7 @@ export default new class FetchTasks {
     console.log(json);
     if (json.source == "server error") {
       console.log(json);
-      this.pubsub.publish('ServerMessage', `{server error: ${response.status}, ${response.sttusText}}`);
+      this.pubsub.publish('ServerMessage', `{server error: ${response.status}, ${response.statusText}}`);
     } else {
       this.pubsub.publish('ServerData', json);
     }
