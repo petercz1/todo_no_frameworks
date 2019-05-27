@@ -38,7 +38,7 @@ class ReceiveTask
      * simplerouter: it is what it is
      * 
      * @param array $task
-     * @return void
+     * @return callable
      */
     public function simpleRouter(array $task):callable
     {
