@@ -18,7 +18,17 @@ export default class appServerMessages extends RootElement {
 		`;
   }
 
-  connected
+  connectedCallback(){
+	  // act like a typewriter, because I was bored
+	  let counter = 0;
+	  let typewriter = setInterval(function () {
+		document.getElementById("taskname").value += item[counter];
+		counter++;
+		if (counter > item.length - 1) {
+		  clearInterval(typewriter)
+		}
+	  }, 50);
+  }
 
 }
 
