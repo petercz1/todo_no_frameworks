@@ -1,6 +1,6 @@
 import DataStore from './datastore.js';
 
-export default class PubSub {
+class PubSub {
   constructor() {
     this.datastore = DataStore
     this.subscribers = [];
@@ -58,3 +58,5 @@ export default class PubSub {
     });
   }
 }
+
+export default new PubSub();
