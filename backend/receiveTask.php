@@ -44,13 +44,13 @@ class ReceiveTask
     {
         error_log(print_r($task, true));
         if ($task['deleteTask']) {
-            return $this->deleteTask($task);
+            echo $this->deleteTask($task);
         }
         else if ($task['changeTask']) {
-            return $this->changeTask($task);
+            echo $this->changeTask($task);
         }
         else {
-            return $this->addTask($task);
+            echo $this->addTask($task);
         }
     }
 
