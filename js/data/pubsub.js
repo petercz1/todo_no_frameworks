@@ -7,7 +7,7 @@ class PubSub {
   }
 
   // this adds to an array everyone interested in some info being published
-  // eg 
+  // eg app-tasks is interested in any new asks 
   subscribe(newInfo, request, parameters, callback) {
     this.subscribers.push({
       newInfo,
