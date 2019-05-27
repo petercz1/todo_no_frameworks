@@ -2,7 +2,7 @@ import RootElement from '../helpers/app-rootelement.js';
 import AppTask from './app-task.js';
 import PubSub from '../data/pubsub.js';
 
-class appTasks extends RootElement {
+export default class appTasks extends RootElement {
   constructor() {
     super();
     this.pubsub = PubSub;
