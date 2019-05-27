@@ -66,7 +66,7 @@ class ReceiveTask
         $tasks = json_decode(\file_get_contents('tasks.json'), true);
         array_unshift($tasks, $task);
         file_put_contents('tasks.json', json_encode($tasks));
-        echo '{"server":"added task"}';
+        return '{"server":"added task"}';
     }
 
     public function changeTask($task)
@@ -84,7 +84,7 @@ class ReceiveTask
         error_log(print_r($tasks, true));
         file_put_contents('tasks.json', json_encode($tasks));
         error_log('task changed');
-        echo '{"server":"changed task"}';
+        return '{"server":"changed task"}';
     }
 
     public function deleteTask($task)
@@ -98,6 +98,6 @@ class ReceiveTask
             }
         }
         file_put_contents('tasks.json', json_encode($tasks));
-        echo '{"server":"deleted task"}';
+        return '{"server":"deleted task"}';
     }
 }
