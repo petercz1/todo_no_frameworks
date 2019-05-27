@@ -15,7 +15,7 @@ export default class appConsole extends RootElement {
 	renderData(data){
 		this.innerHTML = `
 		<div class="console">
-			<h3>Broswer</h3>
+			<h3>Browser</h3>
 			<p>You have <span class="bold">${data.taskLength}</span> tasks, <span class="bold">${data.tasksChecked}</span> are completed</p>
 		</div>
 		`;
