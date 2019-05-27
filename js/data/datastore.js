@@ -6,7 +6,7 @@ class DataStore {
     this.meta = {
       tasksChecked: 0,
       taskLength: 0,
-      message: {server: ''}
+      message: {server: 'server is happy at the moment...'}
     };
   }
 
