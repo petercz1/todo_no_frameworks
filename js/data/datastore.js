@@ -88,6 +88,11 @@ class DataStore {
     return deletedTask;
   }
 
+    // handles returning ServerData
+    setServerData(data){
+      console.log(data);
+      this.meta.message = data;
+    }
   
   // handles returning ServerData
   setServerData(data){
