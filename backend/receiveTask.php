@@ -13,7 +13,7 @@ class ReceiveTask
 {
 
     /**
-     * Undocumented function
+     * init function
      *
      * @return void
      */
