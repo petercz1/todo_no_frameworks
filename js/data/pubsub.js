@@ -20,7 +20,7 @@ class PubSub {
   }
 
   // when anyone publishes something it arrives here
-  // a string of newInfo eg '
+  // a string of newInfo eg 'NewTask' and an object of data
   publish(newInfo, data) {
 
     // publish the new/changed data
