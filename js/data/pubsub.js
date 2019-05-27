@@ -6,6 +6,7 @@ class PubSub {
     this.subscribers = [];
   }
 
+  // this adds everyone 
   subscribe(newInfo, request, parameters, callback) {
     this.subscribers.push({
       newInfo,
