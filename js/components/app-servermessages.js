@@ -13,7 +13,7 @@ export default class appServerMessages extends RootElement {
     this.innerHTML = `
 		<div class="server">
 			<h3>Server</h3>
-			<p id="serverMessage">${data.message.server}</p>
+			<p class="serverMessage">${data.message.server}</p>
 		</div>
 		`;
   }
