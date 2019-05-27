@@ -98,6 +98,6 @@ class ReceiveTask
             }
         }
         file_put_contents('tasks.json', json_encode($tasks));
-        return '{"server":"deleted task"}';
+        return '{"server":"server deleted task"}';
     }
 }
