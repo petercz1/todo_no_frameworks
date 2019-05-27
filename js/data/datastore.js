@@ -89,7 +89,7 @@ class DataStore {
   }
 
     // handles returning ServerMessage
-    setServerData(data){
+    setServerMessage(data){
       console.log(data);
       this.meta.message = data;
     }
