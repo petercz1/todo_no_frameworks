@@ -1,5 +1,5 @@
 import RootElement from './app-rootelement.js';
-import RootElement from './app-rootelement.js';
+import GenerateRandomTask from './app-rootelement.js';
 import PubSub from '../data/pubsub.js';
 
 class appAddTask extends RootElement {
