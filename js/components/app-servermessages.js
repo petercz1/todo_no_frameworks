@@ -1,7 +1,7 @@
 import RootElement from '../helpers/app-rootelement.js';
 import PubSub from '../data/pubsub.js';
 
-class appConsole extends RootElement {
+export default class appConsole extends RootElement {
   constructor() {
 		super();
 		this.pubsub = PubSub;
