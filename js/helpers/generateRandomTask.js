@@ -13,7 +13,7 @@ export default new class GenerateRandomTask {
       return task != item;
     })
     // clear previous task from input box
-    document.getElementById("taskname").value;
+    document.getElementById("taskname").value = '';
 
     // act like a typewriter, because I was bored
     let counter = 0;
