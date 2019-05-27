@@ -17,6 +17,11 @@ body {
   padding: 0.5em;
 }
 
+.console {
+  background-color: var(--main-color);
+  padding: 0.5em;
+}
+
 .bold{
   font-weight: bold;
   color:var(--warning);
