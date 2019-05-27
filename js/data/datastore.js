@@ -88,7 +88,7 @@ class DataStore {
     return deletedTask;
   }
 
-  // handles returning s
+  // handles returning ServerData
 
   // clears rolldown css effect after task is added to list and displayed
   setDisplayedTask(data) {
