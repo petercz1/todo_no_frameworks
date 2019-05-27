@@ -30,9 +30,9 @@ class appAddTask extends RootElement {
       css: 'closed'
     };
     this.pubsub.publish('NewTask', task);
-
-    this.querySelector('#taskname').value = '';     // clear input
-    this.taskGen.generate();     // generate new random task
+    
+    this.querySelector('#taskname').value = '';   // clear input
+    this.taskGen.generate();                      // generate new random task
   }
 }
 
