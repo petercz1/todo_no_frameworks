@@ -8,11 +8,12 @@ export default new class GenerateRandomTask {
 
     // randomly choose a task
     let item = this.tasks[Math.floor(Math.random() * this.tasks.length)];
-    
+
     // remove item from random tasklist
     this.tasks = this.tasks.filter(task => {
       return task != item;
-    })
+    });
+    
     // clear previous task from input box
     document.getElementById("taskname").value = '';
 
