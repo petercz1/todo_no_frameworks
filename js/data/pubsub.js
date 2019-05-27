@@ -31,7 +31,7 @@ class PubSub {
   publish(newInfo, data) {
 
     // publish the new/changed data
-    // datastore converts this to a method and parameter eg setNewTask(data)
+    // datastore converts this to a 'set' method and parameter eg setNewTask(data)
     this.datastore.setRequest({
       newInfo,
       data
