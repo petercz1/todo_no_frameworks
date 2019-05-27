@@ -41,7 +41,7 @@ class ReceiveTask
      * @param [type] $task
      * @return void
      */
-    public function simpleRouter($task)
+    public function simpleRouter(array $task)
     {
         error_log(print_r($task, true));
         if ($task['deleteTask']) {
