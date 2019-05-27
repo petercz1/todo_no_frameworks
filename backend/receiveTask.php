@@ -14,7 +14,9 @@ class ReceiveTask
 
     /**
      * init function: receive task from frontend
-     *
+     * data is NOT arriving from a multipart-data form or an application/x-www-form-urlencoded
+     * so is not available in $_GET/$_POST superglobals
+        hence use file_get_contents('php://input')
      * @return void
      */
     public function init()
