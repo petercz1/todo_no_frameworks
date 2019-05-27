@@ -43,6 +43,7 @@ class ReceiveTask
     public function simpleRouter(array $task):void
     {
         error_log(print_r($task, true));
+        sleep(1);
         if ($task['deleteTask']) {
             echo $this->deleteTask($task);
         }
