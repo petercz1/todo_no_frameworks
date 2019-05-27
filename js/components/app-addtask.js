@@ -36,6 +36,7 @@ class appAddTask extends RootElement {
     // generate new random task
     this.pubsub.publish('NewTask', task);
     // this.generateNewTask();
+    this.taskGen();
   }
 
   // random task generator for testing, saves having to make up a task and type it into the input box
