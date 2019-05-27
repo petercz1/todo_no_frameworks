@@ -5,7 +5,8 @@ export default new class GenerateRandomTask {
   }
 
   generate() {
-    clear previous taskdocument.getElementById("taskname").value
+    clear previous task
+    document.getElementById("taskname").value
     let item = this.tasks[Math.floor(Math.random() * this.tasks.length)];
     // remove item from random tasklist
     this.tasks = this.tasks.filter(task => {
