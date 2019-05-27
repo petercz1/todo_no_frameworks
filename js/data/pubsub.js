@@ -32,7 +32,7 @@ class PubSub {
 
     // after publishing, alert all susbscribers to new/changed data
     // get all subscribers interested in this newInfo, then foreach of them
-    // fire the method requested and 
+    // fire the method requested and give it the info requested
     this.subscribers.filter(subscriber => (subscriber.newInfo == newInfo)).forEach((subscriber) => {
       subscriber.callback(this.datastore.getRequest(subscriber));
     });
