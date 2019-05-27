@@ -17,7 +17,7 @@ class appAddTask extends RootElement {
     `;
     document.querySelector('#newTask').addEventListener('click', this.addtask);
    
-    this.querySelector('#taskname').value = '';   // clear input
+    // this.querySelector('#taskname').value = '';   // clear input
     this.taskGen.generate();                      // generate new random task
   }
 
@@ -30,7 +30,7 @@ class appAddTask extends RootElement {
       css: 'closed'
     };
     this.pubsub.publish('NewTask', task);
-    
+
     this.querySelector('#taskname').value = '';   // clear input
     this.taskGen.generate();                      // generate new random task
   }
