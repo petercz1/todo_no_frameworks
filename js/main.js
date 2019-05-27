@@ -7,7 +7,6 @@ import './components/app-console.js';
 import './components/app-servermessages.js';
 import './data/sendTask.js';
 
-
 // load any tasks from server
 import fetchTasks from './data/fetchTasks.js';
 window.onload = fetchTasks.fetchData();
