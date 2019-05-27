@@ -17,6 +17,10 @@ export default class appServerMessages extends RootElement {
 		</div>
 		`;
 	}
+
+	setTimeout(() => {
+        this.querySelector('div').classList.replace('closed', 'open');
+      }, 100);
 }
 
 customElements.define('app-servermessages', appServerMessages);
