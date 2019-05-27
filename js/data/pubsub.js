@@ -7,6 +7,7 @@ class PubSub {
   }
 
   // this adds to an array everyone interested in some info being published
+  //
   subscribe(newInfo, request, parameters, callback) {
     this.subscribers.push({
       newInfo,
