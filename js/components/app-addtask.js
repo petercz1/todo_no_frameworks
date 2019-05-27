@@ -5,7 +5,7 @@ import PubSub from '../data/pubsub.js';
 class appAddTask extends RootElement {
   constructor() {
     super();
-    this.taskGen = GenerateRandomTask;
+    this.generateRandomTask = GenerateRandomTask;
     this.pubsub = PubSub;
     this.renderData();
   }
