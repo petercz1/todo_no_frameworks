@@ -1,4 +1,4 @@
-export default class GenerateRandomTask {
+export default new class GenerateRandomTask {
   constructor() {
     // list of tasks for random task generator below -  speeds up testing
     this.tasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee', 'google "pimp my noodles"', 'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list', 'beat personal best on snake'];
