@@ -68,7 +68,7 @@ class ReceiveTask
         array_unshift($tasks, $task);
         file_put_contents('tasks.json', json_encode($tasks));
         $str = json_encode($tasks['taskname']);
-        return "{\"server':'server added $str'}";
+        return "{\"server\":'server added $str'}";
     }
 
     public function changeTask(array $task): string
