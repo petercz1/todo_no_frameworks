@@ -12,7 +12,7 @@ export default new class GenerateRandomTask {
     this.tasks = this.tasks.filter(task => {
       return task != item;
     })
-    // clear previous task
+    // clear previous task from input box
     document.getElementById("taskname").value;
 
     // act like a typewriter, because I was bored
