@@ -35,7 +35,7 @@ class ReceiveTask
     }
 
     /**
-     * Undocumented function
+     * simplerouter: it is what it is
      *
      * @param array $task
      * @return callable
