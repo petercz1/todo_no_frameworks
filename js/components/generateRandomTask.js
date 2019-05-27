@@ -4,5 +4,8 @@ export default class GenerateRandomTask {
 
   }
 
-  
+  generate(){
+	let item = this.tasks[Math.floor(Math.random() * this.tasks.length)];
+
+  }
 }
