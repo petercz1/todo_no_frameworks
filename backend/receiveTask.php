@@ -34,6 +34,12 @@ class ReceiveTask
         }
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param [type] $task
+     * @return void
+     */
     public function simpleRouter($task)
     {
         error_log(print_r($task, true));
