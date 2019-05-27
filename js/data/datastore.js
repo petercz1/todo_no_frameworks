@@ -91,7 +91,7 @@ class DataStore {
   // handles returning ServerData
   setServerData(data){
     console.log(data);
-    this.meta.message =
+    this.meta.message = data;
   }
   // clears rolldown css effect after task is added to list and displayed
   setDisplayedTask(data) {
