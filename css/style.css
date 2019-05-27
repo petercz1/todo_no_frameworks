@@ -18,7 +18,7 @@ body {
 }
 
 .server {
-  background-color: var(--main-color);
+  background-color: var(--server-color);
   padding: 0.5em;
 }
 
