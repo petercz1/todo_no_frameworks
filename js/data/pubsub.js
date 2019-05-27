@@ -26,7 +26,7 @@ class PubSub {
     // TODO implement if needed!
   }
 
-  // when anyone publishes something it arrives here
+  // when anyone publishes something it arrives here - 
   // a string of newInfo eg 'NewTask' and an object of data to publish
   publish(newInfo, data) {
 
