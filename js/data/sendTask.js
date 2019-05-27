@@ -28,7 +28,7 @@ export default new class SendTask {
     // deal with the response
     if (!response.ok) {
       console.log(`${response.status}: ${response.statusText}`);
-      this.pubsub.publish('ServerMessage', `{server error: ${response.status}, ${response.sttusText}}`;
+      this.pubsub.publish('ServerMessage', `{server error: ${response.status}, ${response.sttusText}}`);
     }
     let json = await response.json();
     if (json.source == "server error") {
