@@ -1,1 +1,3 @@
-export default class GenerateRandomTask
+export default class GenerateRandomTask{
+
+}
