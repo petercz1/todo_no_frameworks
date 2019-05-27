@@ -60,7 +60,7 @@ class ReceiveTask
      * @param [type] $task
      * @return void
      */
-    public function addTask(array: $task)
+    public function addTask(array $task)
     {
         error_log('adding task');
         $tasks = json_decode(\file_get_contents('tasks.json'), true);
