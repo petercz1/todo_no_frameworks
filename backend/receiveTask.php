@@ -101,5 +101,5 @@ class ReceiveTask
         }
         file_put_contents('tasks.json', json_encode($tasks));
         $str = addslashes($task['taskname']);
-        return "{\"server\":\"server added: $str\"}";    }
+        return "{\"server\":\"server deleted: $str\"}";    }
 }
