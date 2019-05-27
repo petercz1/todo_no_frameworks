@@ -88,8 +88,7 @@ class DataStore {
     return deletedTask;
   }
 
-  // gets data from server
-  set
+  
   // handles returning ServerData
   setServerData(data){
     console.log(data);
