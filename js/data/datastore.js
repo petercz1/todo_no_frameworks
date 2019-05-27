@@ -89,6 +89,7 @@ class DataStore {
   }
 
   // gets data from server
+  
   // handles returning ServerData
   setServerData(data){
     console.log(data);
