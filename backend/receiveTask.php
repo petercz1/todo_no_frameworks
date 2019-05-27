@@ -24,7 +24,7 @@ class ReceiveTask
     {
         $data = json_decode(file_get_contents('php://input'), true);
 
-        // check for task or array of tasks
+        // check if frontened sent a task or array of tasks
         if (array_key_exists('taskname', $data)) {
             $this->simpleRouter($data);
         } else {
