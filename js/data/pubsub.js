@@ -24,7 +24,7 @@ class PubSub {
   publish(newInfo, data) {
 
     // publish the new/changed data
-    
+    // datastore converts this to 
     this.datastore.setRequest({
       newInfo,
       data
