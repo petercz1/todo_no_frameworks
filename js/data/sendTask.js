@@ -31,10 +31,6 @@ export default new class SendTask {
       throw new Error('HTTP error, status = ' + response.status);
     }
     let json = await response.json();
-    // if (json.source == "server error") {
-    //   console.log('blow up');
-    // } else {
-    //   this.pubsub.publish('ServerResult', json);
-    // }
+
   }
 }
