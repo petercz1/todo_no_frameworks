@@ -27,7 +27,7 @@ body {
 
 .serverMessage {
   opacity: 0;
-  animation: slidein 1s;
+  animation: slidein 1s forwards;
 }
 
 @keyframes slidein {
