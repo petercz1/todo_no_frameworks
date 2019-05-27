@@ -16,13 +16,13 @@ body {
 .console {
   margin: 0.5em 0;
   background-color: var(--main-color);
-  padding: 0 0.2em;
+  padding: em;
 }
 
 .server {
   margin: 0.5em 0;
   background-color: var(--server-color);
-  padding: 0 0.2em;
+  padding: 0.5em;
 }
 
 .serverMessage {
