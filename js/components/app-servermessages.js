@@ -17,12 +17,7 @@ export default class appServerMessages extends RootElement {
 		</div>
 		`;
   }
-  // setTimeout needed because connectedCallback doesn't wait for child elements to render
-  connectedCallback() {
-    setTimeout(() => {
-      this.querySelector('p').classList.replace('closed', 'open');
-    }, 100);
-  }
+
 }
 
 customElements.define('app-servermessages', appServerMessages);
