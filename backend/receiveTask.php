@@ -87,7 +87,7 @@ class ReceiveTask
         file_put_contents('tasks.json', json_encode($tasks));
         error_log('task changed');
         $str = addslashes($task['taskname']);
-        return "{\"server\":\"server added: $str\"}";    }
+        return "{\"server\":\"server changed: $str\"}";    }
 
     public function deleteTask(array $task): string
     {
@@ -100,6 +100,6 @@ class ReceiveTask
             }
         }
         file_put_contents('tasks.json', json_encode($tasks));
-        return '{"server":"server deleted task"}';
-    }
+        $str = addslashes($task['taskname']);
+        return "{\"server\":\"server added: $str\"}";    }
 }
