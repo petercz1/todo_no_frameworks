@@ -86,8 +86,8 @@ class ReceiveTask
         error_log(print_r($tasks, true));
         file_put_contents('tasks.json', json_encode($tasks));
         error_log('task changed');
-        return '{"server":"server changed task"}';
-    }
+        $str = addslashes($task['taskname']);
+        return "{\"server\":\"server added: $str\"}";    }
 
     public function deleteTask(array $task): string
     {
