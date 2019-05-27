@@ -11,7 +11,7 @@ export default class appServerMessages extends RootElement {
 
   renderData(data) {
     this.innerHTML = `
-		<div class="server closed">
+		<div>
 			<h3>Server</h3>
 			<p>${data.message.server}</p>
 		</div>
