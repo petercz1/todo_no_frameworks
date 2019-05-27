@@ -26,7 +26,7 @@ body {
 }
 
 .serverMessage{
-color: 
+color: var(--warning);
 }
 
 .bold{
