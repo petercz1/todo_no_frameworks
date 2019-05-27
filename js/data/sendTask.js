@@ -33,7 +33,6 @@ export default new class SendTask {
     let json = await response.json();
     if (json.source == "server error") {
       console.log('blow up');
-    } else {
     }
     this.pubsub.publish('ServerMessage', json);
   }
