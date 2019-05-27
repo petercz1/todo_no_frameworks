@@ -88,6 +88,8 @@ class DataStore {
     return deletedTask;
   }
 
+  // handles returning s
+
   // clears rolldown css effect after task is added to list and displayed
   setDisplayedTask(data) {
     // clear css field from all tasks
