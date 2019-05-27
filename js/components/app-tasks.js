@@ -12,7 +12,6 @@ export default class appTasks extends RootElement {
     this.pubsub.subscribe('ServerData', 'getTasks', null, this.renderData);
   }
 
-  // renders all people returned from 'getTasks()'
   renderData(tasks) {
     this.innerHTML = '';
     tasks.filter(task => task.delete != true).forEach(task => {
