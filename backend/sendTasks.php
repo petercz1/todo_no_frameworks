@@ -6,6 +6,11 @@ namespace chipbug\todo;
 
 class SendTasks
 {
+    /**
+     * Sends tasks to client
+     *
+     * @return void
+     */
     public function init()
     {
         echo \file_get_contents('tasks.json');

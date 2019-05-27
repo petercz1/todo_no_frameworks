@@ -31,7 +31,7 @@ class appTask extends RootElement {
       setTimeout(() => {
         this.querySelector('div').classList.replace('closed', 'open');
       }, 100);
-      // tells pubsub to clear rolldown effect after task is added
+      // tells pubsub to clear rolldown css effect after task is added
       this.pubsub.publish('DisplayedTask', this.task);
     }
   }
@@ -45,6 +45,7 @@ class appTask extends RootElement {
   }
 
   registerDelete() {
+    this.task.checked = false;
     this.task.deleteTask = true;
     this.pubsub.publish('DeleteTask', this.task);
     this.renderData();

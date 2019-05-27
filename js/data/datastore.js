@@ -40,7 +40,7 @@ class DataStore {
   }
 
   setNewTask(data) {
-    console.log('setting new task');
+    console.log('setNewTask');
     // clear css field from all tasks
     this.tasks.forEach(task => {
       delete task.css;
@@ -62,20 +62,25 @@ class DataStore {
   }
 
   setChangeTask(data) {
+    console.log('setChangeTask()');
     this.updateMeta();
   }
   getChangeTask() {
-    // stringify/parse cheat to pass object by value
-    let changedTask = JSON.parse(JSON.stringify(this.tasks.filter(task => task.changeTask == true)));
+    console.log('getChangeTask()');
+    // Object.assign to pass copy
+    let changedTask = Object.assign({},this.tasks.filter(task => task.changeTask == true));
     this.tasks.find(task => task.changeTask == true).changeTask = false;
     this.updateMeta();
     return changedTask;
   }
 
-  setDeleteTask() {
+  setDeleteTask(data) {
+    console.log('setDeleteTask()');
+    console.log(data);
     this.updateMeta();
   }
   getDeleteTask() {
+    console.log('getDeleteTask()');
     // filter returns a copy of the array, which then replaces the original
     let deletedTask = this.tasks.filter(task => task.deleteTask == true);
     this.tasks = this.tasks.filter(task => task.deleteTask != true);
