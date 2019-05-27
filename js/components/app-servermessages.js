@@ -22,7 +22,7 @@ export default class appServerMessages extends RootElement {
 	  // act like a typewriter, because I was bored
 	  let counter = 0;
 	  let typewriter = setInterval(function () {
-		document.getElementById("serverMessage").value += item[counter];
+		document.getElementById("serverMessage").value += data.message.server;
 		counter++;
 		if (counter > item.length - 1) {
 		  clearInterval(typewriter)
