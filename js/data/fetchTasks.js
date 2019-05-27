@@ -32,7 +32,7 @@ export default new class FetchTasks {
     if (json.source == "server error") {
       console.log(json);
     } else {
-      this.pubsub.publish('AppInit', json);
+      this.pubsub.publish('ServerData', json);
     }
   }
 }
