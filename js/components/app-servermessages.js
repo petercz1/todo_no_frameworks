@@ -13,8 +13,8 @@ export default class appServerMessages extends RootElement {
     this.innerHTML = `
 		<div>
 			<h3>Server</h3>
-			<p>${data.message.server}</p>
-		</div class="server closed">
+			<p class="server closed">${data.message.server}</p>
+		</div>
 		`;
   }
   // setTimeout needed because connectedCallback doesn't wait for child elements to render
