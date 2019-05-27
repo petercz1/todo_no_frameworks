@@ -16,10 +16,9 @@ class appAddTask extends RootElement {
     <button id="newTask">add task</button>
     `;
     document.querySelector('#newTask').addEventListener('click', this.addtask);
-    // clear input
-    this.querySelector('#taskname').value = '';
-    // generate random new task
-    this.taskGen.generate();
+   
+    this.querySelector('#taskname').value = '';     // clear input
+    this.taskGen.generate();     // generate new random task
   }
 
   addtask() {
