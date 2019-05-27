@@ -2,7 +2,7 @@ import RootElement from '../helpers/app-rootelement.js';
 import GenerateRandomTask from '../helpers/generateRandomTask.js';
 import PubSub from '../data/pubsub.js';
 
-class appAddTask extends RootElement {
+export default class appAddTask extends RootElement {
   constructor() {
     super();
     this.generateRandomTask = GenerateRandomTask;
@@ -36,4 +36,3 @@ class appAddTask extends RootElement {
 
 customElements.define('app-addtask', appAddTask);
 
-export default appAddTask;
