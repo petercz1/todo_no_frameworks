@@ -67,7 +67,7 @@ class ReceiveTask
         $tasks = json_decode(\file_get_contents('tasks.json'), true);
         array_unshift($tasks, $task);
         file_put_contents('tasks.json', json_encode($tasks));
-        $str = 
+        $str = json_encode()
         return "{'server':'server added {json_encode($task["taskname"])}'}";
     }
 
