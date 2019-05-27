@@ -21,6 +21,4 @@ export default class appTasks extends RootElement {
   }
 }
 
-export default appTasks;
-
 customElements.define('app-tasks', appTasks);
