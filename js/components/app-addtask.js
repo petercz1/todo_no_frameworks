@@ -1,4 +1,4 @@
-import RootElement from './app-rootelement.js';
+import RootElement from '../helpers/app-rootelement.js';
 import GenerateRandomTask from '../helpers/generateRandomTask.js';
 import PubSub from '../data/pubsub.js';
 
