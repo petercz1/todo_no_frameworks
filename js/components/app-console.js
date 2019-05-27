@@ -10,7 +10,7 @@ export default class appConsole extends RootElement {
 		this.pubsub.subscribe('ChangeTask', 'getMeta', null, this.renderData);
 		this.pubsub.subscribe('DeleteTask', 'getMeta', null, this.renderData);
 		this.pubsub.subscribe('ServerMessage', 'getMeta', null, this.renderData);
-		this.pubsub.subscribe('ServerMessage', 'getMeta', null, this.renderData);
+		this.pubsub.subscribe('ServerData', 'getMeta', null, this.renderData);
   }
 
 	renderData(data){
