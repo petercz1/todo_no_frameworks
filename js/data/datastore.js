@@ -6,7 +6,9 @@ class DataStore {
     this.meta = {
       tasksChecked: 0,
       taskLength: 0,
-      message: {server: 'server is happy at the moment...'}
+      message: {
+        server: 'server is happy at the moment...'
+      }
     };
   }
 
@@ -69,7 +71,7 @@ class DataStore {
   getChangeTask() {
     console.log('getChangeTask()');
     // Object.assign to pass copy
-    let changedTask = Object.assign({},this.tasks.filter(task => task.changeTask == true));
+    let changedTask = Object.assign({}, this.tasks.filter(task => task.changeTask == true));
     this.tasks.find(task => task.changeTask == true).changeTask = false;
     this.updateMeta();
     return changedTask;
@@ -89,14 +91,14 @@ class DataStore {
     return deletedTask;
   }
 
-    // handles returning ServerMessage
-    setServerMessage(data){
-      console.log(data);
-      this.meta.message = data;
-    }
-  
+  // handles returning ServerMessage
+  setServerMessage(data) {
+    console.log(data);
+    this.meta.message = data;
+  }
+
   // handles returning ServerData
-  setServerData(data){
+  setServerData(data) {
     console.log(data);
     // piping returning server data here - should probably do some client/server data reconcile work here?
     this.meta.serverdata = data;
