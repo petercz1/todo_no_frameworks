@@ -12,7 +12,6 @@ export default class appConsole extends RootElement {
 		this.pubsub.subscribe('ServerMessage', 'getMeta', null, this.renderData);
   }
 
-	// renders all data from 'getPeople()'
 	renderData(data){
 		this.innerHTML = `
 		<div class="console">
