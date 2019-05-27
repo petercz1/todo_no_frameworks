@@ -12,6 +12,11 @@ ini_set("error_log", getcwd() . "/debug.log");
 class ReceiveTask
 {
 
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
     public function init()
     {
         // receive task from frontend
