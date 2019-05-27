@@ -19,6 +19,7 @@ class PubSub {
     // TODO implement if needed!
   }
 
+  // when anyone published 
   publish(newInfo, data) {
 
     // publish the new/changed data
