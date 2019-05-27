@@ -25,6 +25,8 @@ body {
   padding: 0.5em;
 }
 
+
+
 .bold{
   font-weight: bold;
   color:var(--warning);
