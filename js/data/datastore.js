@@ -5,7 +5,8 @@ class DataStore {
     this.tasks = [];
     this.meta = {
       tasksChecked: 0,
-      taskLength: 0
+      taskLength: 0,
+      
     };
   }
 
