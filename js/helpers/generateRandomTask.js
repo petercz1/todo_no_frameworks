@@ -13,7 +13,7 @@ export default new class GenerateRandomTask {
     this.tasks = this.tasks.filter(task => {
       return task != item;
     });
-    
+
     // clear previous task from input box
     document.getElementById("taskname").value = '';
 
@@ -25,6 +25,7 @@ export default new class GenerateRandomTask {
       if (counter > item.length - 1) {
         clearInterval(typewriter)
       }
-    }, 50)
+    }, 50);
+    
   }
 }
