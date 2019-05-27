@@ -91,7 +91,7 @@ class DataStore {
   // handles returning ServerData
   setServerData(data){
     
-
+  }
   // clears rolldown css effect after task is added to list and displayed
   setDisplayedTask(data) {
     // clear css field from all tasks
