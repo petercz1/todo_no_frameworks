@@ -40,7 +40,7 @@ class ReceiveTask
      * @param array $task
      * @return void
      */
-    public function simpleRouter(array $task):void
+    public function simpleRouter(array $task):callable
     {
         error_log(print_r($task, true));
         if ($task['deleteTask']) {
