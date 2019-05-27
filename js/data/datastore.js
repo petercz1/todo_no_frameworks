@@ -89,7 +89,7 @@ class DataStore {
   }
 
   // handles returning ServerData
-  setServerData(){
+  setServerData(data){
     
 
   // clears rolldown css effect after task is added to list and displayed
