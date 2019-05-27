@@ -19,7 +19,7 @@ class PubSub {
     // TODO implement if needed!
   }
 
-  // when anyone published something it arrives here
+  // when anyone publishes something it arrives here
   // 
   publish(newInfo, data) {
 
