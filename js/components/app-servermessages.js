@@ -18,6 +18,8 @@ export default class appServerMessages extends RootElement {
 		`;
   }
 
+  connected
+
 }
 
 customElements.define('app-servermessages', appServerMessages);
