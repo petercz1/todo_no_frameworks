@@ -19,7 +19,7 @@ class appConsole extends RootElement {
 		<div class="console">
 			<h3>Console monitoring stuff</h3>
 			<p>You have <span class="bold">${data.taskLength}</span> tasks, <span class="bold">${data.tasksChecked}</span> are completed</p>
-			<p>(Server data messages: ${data.message})</p>
+			<p>(Server data messages: ${data.message.server})</p>
 		</div>
 		`;
 	}
