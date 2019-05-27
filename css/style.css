@@ -14,13 +14,13 @@ body {
 }
 
 .console {
-  margin: 0.2em 0;
+  margin: 0.em 0;
   background-color: var(--main-color);
   padding: 0 0.2em;
 }
 
 .server {
-  margin: 0.2em 0;
+  margin: 0.5em 0;
   background-color: var(--server-color);
   padding: 0 0.2em;
 }
