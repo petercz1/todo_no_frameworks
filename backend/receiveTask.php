@@ -34,12 +34,6 @@ class ReceiveTask
         }
     }
 
-    /**
-     * 
-     * 
-     * @param array $task
-     * @return callable
-     */
     public function simpleRouter(array $task):callable
     {
         error_log(print_r($task, true));
