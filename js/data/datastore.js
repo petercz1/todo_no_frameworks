@@ -97,7 +97,7 @@ class DataStore {
   // handles returning ServerData
   setServerData(data){
     console.log(data);
-    // piping returning server data here - should probably do some reconcile work
+    // piping returning server data here - should probably do some reconcile work here?
     this.meta.serverdata = data;
   }
   // clears rolldown css effect after task is added to list and displayed
