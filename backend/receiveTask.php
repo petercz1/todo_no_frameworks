@@ -69,7 +69,7 @@ class ReceiveTask
         return '{"server":"added task"}';
     }
 
-    public function changeTask(array $task)
+    public function changeTask(array $task): string
     {
         error_log('changing task');
         $tasks = json_decode(\file_get_contents('tasks.json'), true);
