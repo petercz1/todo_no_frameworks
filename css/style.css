@@ -16,7 +16,7 @@ body {
 .console {
   margin: 0.5em 0;
   background-color: var(--main-color);
-  padding: em;
+  padding: 0.5em;
 }
 
 .server {
