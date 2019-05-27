@@ -1,4 +1,4 @@
-:root{
+:root {
   --main-color: powderblue;
   --server-color: pink;
   --warning: red;
@@ -25,13 +25,26 @@ body {
   padding: 0.5em;
 }
 
-.serverMessage{
-  
+.serverMessage {
+  opacity: 0;
+  display: block;
+  animation: slidein 1s ease-out forwards;
 }
 
-.bold{
+@keyframes slidein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.bold {
   font-weight: bold;
-  color:var(--warning);
+  color: var(--warning);
 }
 
 /* setting font-size to zero kills all spaces between elements inside components and allows box-sizing/width to work properly */
@@ -67,14 +80,14 @@ app-addtask button {
   width: 20%;
 }
 
-.closed{
+.closed {
   font-size: 0;
   color: white;
   max-height: 0;
   overflow: hidden;
 }
 
-.open{
+.open {
   font-size: 1rem;
   color: black;
   max-height: 500px;
@@ -82,6 +95,6 @@ app-addtask button {
   transition-property: max-height, color;
 }
 
-.checked{
+.checked {
   text-decoration: line-through;
 }
