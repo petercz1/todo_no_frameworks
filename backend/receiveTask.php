@@ -87,7 +87,7 @@ class ReceiveTask
         return '{"server":"changed task"}';
     }
 
-    public function deleteTask($task)
+    public function deleteTask(array $task)
     {
         error_log('deleting task');
         $tasks = json_decode(\file_get_contents('tasks.json'), true);
