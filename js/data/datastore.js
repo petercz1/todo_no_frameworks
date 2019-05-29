@@ -82,11 +82,11 @@ class DataStore {
 
   // handles returning ServerMessage
   setServerMessage(data) {
-    this.meta.message = data.message;
   }
-
+  
   // handles returning ServerData
   setServerData(data) {
+    this.meta.message = data.message;
     this.tasks = data;
     this.updateMeta();
   }
