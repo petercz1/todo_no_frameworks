@@ -9,7 +9,7 @@ import './data/sendTask.js';
 
 // import helpers
 import fetchTasks from './data/fetchTasks.js';
-import serverMonitor from './helpers/serverMonitor.js';
+//import serverMonitor from './helpers/serverMonitor.js';
 
 window.onload = start();
 
