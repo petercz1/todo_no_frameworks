@@ -15,9 +15,9 @@ class ReceiveTask
     /**
      * init function: receive task from frontend
      * data is NOT arriving from a multipart-data form or an application/x-www-form-urlencoded
-     * so is not available in $_GET/$_POST superglobals 
+     * so is not available in $_GET/$_POST superglobals
      * hence use file_get_contents('php://input')
-     * 
+     *
      * @return void
      */
     public function init():void
@@ -36,70 +36,84 @@ class ReceiveTask
 
     /**
      * simplerouter: it is what it is
-     * 
+     * sleeps for a second to mimic a slow server
+     *
      * @param array $task
      * @return callable
      */
     public function simpleRouter(array $task):void
     {
         error_log(print_r($task, true));
-        sleep(1);
+        sleep(1); // mimic a 'slow' server
         if ($task['deleteTask']) {
             echo $this->deleteTask($task);
-        }
-        else if ($task['changeTask']) {
+        } elseif ($task['changeTask']) {
             echo $this->changeTask($task);
-        }
-        else {
+        } else {
             echo $this->addTask($task);
         }
     }
 
     /**
-     * Undocumented function
+     * add task from client
      *
-     * @param [type] $task
+     * @param array $clientTask
      * @return void
      */
-    public function addTask(array $task):string
+    public function addTask(array $clientTask):string
     {
-        error_log('adding task');
-        $tasks = json_decode(\file_get_contents('tasks.json'), true);
-        array_unshift($tasks, $task);
-        file_put_contents('tasks.json', json_encode($tasks));
-        $str = addslashes($task['taskname']);
-        return "{\"server\":\"server added: $str\"}";
+        $serverTasks = json_decode(\file_get_contents('tasks.json'), true); //get tasks from file
+        $clientTask['message'] = "server received and added task: " . $clientTask['taskname']; //update message
+        array_unshift($serverTasks, $clientTask); // add task from client to start of tasks on server
+        file_put_contents('tasks.json', json_encode($serverTasks));
+        // send back a response
+        return json_encode($clientTask);
     }
 
-    public function changeTask(array $task): string
+    /**
+     * change task if checked/unchecked
+     *
+     * @param array $task
+     * @return string
+     */
+    public function changeTask(array $clientTask): string
     {
-        error_log('changing task');
-        $tasks = json_decode(\file_get_contents('tasks.json'), true);
-        error_log(print_r($tasks, true));
-        foreach ($tasks as &$item) {
-            $item = (array)$item;
-            if ($item['id'] == $task['id']) {
-                $item['changeTask'] = false; // set back to false now we've changed it
-                $item['checked'] = $task['checked']; // sync check on server with frontend
+        $serverTasks = json_decode(\file_get_contents('tasks.json'), true); //get tasks from file
+        foreach ($serverTasks as &$serverTask) {
+            $serverTask = (array)$serverTask;
+            if ($serverTask['id'] == $clientTask['id']) {
+                if($clientTask['checked']){
+                    $clientTask['message'] = "server checked task: " . $clientTask['taskname'];
+                }else{
+                    $clientTask['message'] = "server unchecked task: " . $clientTask['taskname'];
+                }
+                $serverTask['checked'] = $clientTask['checked']; // sync check on server with frontend
+                $serverTask['changeTask'] = false; // set back to false now we've changed it
             }
         }
-        error_log(print_r($tasks, true));
-        file_put_contents('tasks.json', json_encode($tasks));
-        error_log('task changed');
-        $str = addslashes($task['taskname']);
-        return "{\"server\":\"server changed: $str\"}";    }
+        file_put_contents('tasks.json', json_encode($serverTasks));
+        // send back a response
+        return json_encode($clientTask);
+    }
 
-    public function deleteTask(array $task): string
+    /**
+     * delete task
+     *
+     * @param array $task
+     * @return string
+     */
+    public function deleteTask(array $clientTask): string
     {
-        error_log('deleting task');
-        $tasks = json_decode(\file_get_contents('tasks.json'), true);
-        $index = array_search($task['id'], array_column($tasks, 'id'));
-        foreach ($tasks as $key => $item) {
-            if ($item['id'] == $task['id']) {
-                unset($tasks[$key]);
+        $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
+        $index = array_search($clientTask['id'], array_column($serverTasks, 'id'));
+        foreach ($serverTasks as $key => $item) {
+            if ($item['id'] == $clientTask['id']) {
+                unset($serverTasks[$key]); // delete task
             }
         }
-        file_put_contents('tasks.json', json_encode($tasks));
-        $str = addslashes($task['taskname']);
-        return "{\"server\":\"server deleted: $str\"}";    }
+        file_put_contents('tasks.json', json_encode($serverTasks));
+        // send back a response
+        $clientTask['message'] = "server deleted task: " . $clientTask['taskname'];
+        return json_encode($clientTask);
+    }
 }

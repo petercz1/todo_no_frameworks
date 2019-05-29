@@ -6,9 +6,7 @@ class DataStore {
     this.meta = {
       tasksChecked: 0,
       taskLength: 0,
-      message: {
-        server: 'server is happy at the moment...'
-      }
+      message: 'server is quiet at the moment...'
     };
   }
 
@@ -28,22 +26,16 @@ class DataStore {
     return res;
   }
 
-  // fired when serverdata is returned
-  // setServerData(tasks) {
-  //   this.tasks = tasks;
-  //   this.updateMeta();
-  // }
-
   getMeta() {
     return this.meta;
   }
   updateMeta() {
     this.meta.tasksChecked = this.tasks.filter(task => (task.checked == true)).length;
     this.meta.taskLength = this.tasks.filter(task => task.deleteTask != true).length;
+    
   }
 
   setNewTask(data) {
-    console.log('setNewTask');
     // clear css field from all tasks
     this.tasks.forEach(task => {
       delete task.css;
@@ -54,54 +46,47 @@ class DataStore {
 
     // add task to tasks
     this.tasks.unshift(data);
+    this.meta.message = data.message;
     this.updateMeta();
+    
   }
   getNewTask() {
     return this.tasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
   }
   getTasks() {
-    console.log(this.tasks);
     return this.tasks.filter(task => task.deleteTask != true);
   }
 
   setChangeTask(data) {
-    console.log('setChangeTask()');
     this.updateMeta();
   }
   getChangeTask() {
-    console.log('getChangeTask()');
-    // Object.assign to pass copy
-    let changedTask = Object.assign({}, this.tasks.filter(task => task.changeTask == true));
-    this.tasks.find(task => task.changeTask == true).changeTask = false;
+    // use the JSON.parse/stringify hack to make a copy of task array
+    let changedTask = JSON.parse(JSON.stringify(this.tasks.filter(task => task.changeTask == true)));
     this.updateMeta();
+    
     return changedTask;
   }
 
   setDeleteTask(data) {
-    console.log('setDeleteTask()');
-    console.log(data);
     this.updateMeta();
   }
   getDeleteTask() {
-    console.log('getDeleteTask()');
     // filter returns a copy of the array, which then replaces the original
     let deletedTask = this.tasks.filter(task => task.deleteTask == true);
     this.tasks = this.tasks.filter(task => task.deleteTask != true);
     this.updateMeta();
+    
     return deletedTask;
   }
 
   // handles returning ServerMessage
   setServerMessage(data) {
-    console.log(data);
-    this.meta.message = data;
+    this.meta.message = data.message;
   }
 
   // handles returning ServerData
   setServerData(data) {
-    console.log(data);
-    // piping returning server data here - should probably do some client/server data reconcile work here?
-    //this.meta.serverdata = data;
     this.tasks = data;
     this.updateMeta();
   }

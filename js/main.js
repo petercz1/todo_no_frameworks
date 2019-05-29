@@ -7,6 +7,13 @@ import './components/app-console.js';
 import './components/app-servermessages.js';
 import './data/sendTask.js';
 
-// load any tasks from server
+// import helpers
 import fetchTasks from './data/fetchTasks.js';
-window.onload = fetchTasks.fetchData();
+import serverMonitor from './helpers/serverMonitor.js';
+
+window.onload = start();
+
+function start() {
+  fetchTasks.fetchData(); // load any tasks from server
+  serverMonitor.monitor(); // watch server for new messages
+}

@@ -11,7 +11,7 @@ class SendTasks
      *
      * @return void
      */
-    public function init()
+    public function init():void
     {
         echo \file_get_contents('tasks.json');
     }

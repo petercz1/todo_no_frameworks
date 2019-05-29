@@ -16,7 +16,9 @@ body {
 h3, p {
   margin: 0.2em;
 }
-
+.evilboss{
+  background-color: pink;
+}
 .console {
   margin: 0.5em 0;
   background-color: var(--main-color);

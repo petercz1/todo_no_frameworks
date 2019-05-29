@@ -40,6 +40,7 @@ export default class appTask extends RootElement {
     // publish change if task is checked
     this.task.checked = !this.task.checked;
     this.task.changeTask = true;
+    console.log(this.task);
     this.pubsub.publish('ChangeTask', this.task);
     this.renderData();
   }
