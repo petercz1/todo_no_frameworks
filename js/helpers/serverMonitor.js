@@ -17,7 +17,6 @@ export default new class ServerMonitor {
 
   evilBossAddedTask(event) {
 	let data = JSON.parse(event.data);
-	console.log(data);
     if (event.data != "{}") {
     this.pubsub.publish('ServerData', data);
     //this.pubsub.publish('ServerData', data); // send null as task has already been added directly at the server
