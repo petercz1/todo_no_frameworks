@@ -47,7 +47,6 @@ class DataStore {
         this.tasks.unshift(data);
         this.meta.message = data.message;
       }
-
       // add task to tasks
       this.updateMeta();
     
