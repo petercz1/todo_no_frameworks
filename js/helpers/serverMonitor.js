@@ -19,7 +19,7 @@ export default new class ServerMonitor {
 	let data = JSON.parse(event.data);
 	console.log(data);
     if (event.data != "{}") {
-    this.pubsub.publish('ServerMessage', data);
+    this.pubsub.publish('ServerData', data);
     //this.pubsub.publish('ServerData', data); // send null as task has already been added directly at the server
 	  //this.pubsub.publish('NewServerInfo', data.evilTask);
     }
