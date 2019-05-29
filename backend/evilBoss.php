@@ -47,6 +47,7 @@ class EvilBoss
      */
     public function sse(array $evilTask):void
     {
+        // send 
         //$timeint = 1000 * rand(10, 15);
 
         try {
