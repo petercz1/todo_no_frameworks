@@ -41,7 +41,9 @@ class DataStore {
         delete task.css;
       });
       // simple id field: find max id and increment it
-      if(data)
+      if(data){
+        
+      }
       let max = Math.max(...this.tasks.map(obj => obj.id), 0);
       data.id = max + 1;
 
