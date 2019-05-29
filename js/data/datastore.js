@@ -40,12 +40,12 @@ class DataStore {
       this.tasks.forEach(task => {
         delete task.css;
       });
-      // simple id field: find max id and increment it
       if(data){
-        
+        // simple id field: find max id and increment it
+        let max = Math.max(...this.tasks.map(obj => obj.id), 0);
+        data.id = max + 1;
+
       }
-      let max = Math.max(...this.tasks.map(obj => obj.id), 0);
-      data.id = max + 1;
 
       // add task to tasks
       this.tasks.unshift(data);
