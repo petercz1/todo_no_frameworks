@@ -44,11 +44,11 @@ class DataStore {
         // simple id field: find max id and increment it
         let max = Math.max(...this.tasks.map(obj => obj.id), 0);
         data.id = max + 1;
+        this.tasks.unshift(data);
 
       }
 
       // add task to tasks
-      this.tasks.unshift(data);
       this.meta.message = data.message;
       this.updateMeta();
     
