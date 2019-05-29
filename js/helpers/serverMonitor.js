@@ -20,7 +20,7 @@ export default new class ServerMonitor {
 	console.log(data);
     if (event.data != "{}") {
     this.pubsub.publish('ServerMessage', data);
-    this.pubsub.publish('NewTask', null); // HERE IS THE PROBLEM...
+    this.pubsub.publish('NewTask', null); // send null as task has already been added directly at the server
 	  //this.pubsub.publish('NewServerInfo', data.evilTask);
     }
   }
