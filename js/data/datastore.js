@@ -37,7 +37,6 @@ class DataStore {
 
   setNewTask(data) {
     // clear css field from all tasks
-    if (data) {
       this.tasks.forEach(task => {
         delete task.css;
       });
@@ -49,7 +48,7 @@ class DataStore {
       this.tasks.unshift(data);
       this.meta.message = data.message;
       this.updateMeta();
-    }
+    
   }
   getNewTask() {
     return this.tasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
