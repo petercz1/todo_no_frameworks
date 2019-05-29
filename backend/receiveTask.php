@@ -43,7 +43,6 @@ class ReceiveTask
      */
     public function simpleRouter(array $task):void
     {
-        error_log(print_r($task, true));
         sleep(1); // mimic a 'slow' server
         if ($task['deleteTask']) {
             echo $this->deleteTask($task);
