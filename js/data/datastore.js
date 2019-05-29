@@ -32,24 +32,24 @@ class DataStore {
   updateMeta() {
     this.meta.tasksChecked = this.tasks.filter(task => (task.checked == true)).length;
     this.meta.taskLength = this.tasks.filter(task => task.deleteTask != true).length;
-    
+
   }
 
   setNewTask(data) {
     // clear css field from all tasks
-    if(data){
-    this.tasks.forEach(task => {
-      delete task.css;
-    });
-    // simple id field: find max id and increment it
-    let max = Math.max(...this.tasks.map(obj => obj.id), 0);
-    data.id = max + 1;
+    if (data) {
+      this.tasks.forEach(task => {
+        delete task.css;
+      });
+      // simple id field: find max id and increment it
+      let max = Math.max(...this.tasks.map(obj => obj.id), 0);
+      data.id = max + 1;
 
-    // add task to tasks
-    this.tasks.unshift(data);
-    this.meta.message = data.message;
-    this.updateMeta();
-    
+      // add task to tasks
+      this.tasks.unshift(data);
+      this.meta.message = data.message;
+      this.updateMeta();
+    }
   }
   getNewTask() {
     return this.tasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
@@ -65,7 +65,7 @@ class DataStore {
     // use the JSON.parse/stringify hack to make a copy of task array
     let changedTask = JSON.parse(JSON.stringify(this.tasks.filter(task => task.changeTask == true)));
     this.updateMeta();
-    
+
     return changedTask;
   }
 
@@ -77,7 +77,7 @@ class DataStore {
     let deletedTask = this.tasks.filter(task => task.deleteTask == true);
     this.tasks = this.tasks.filter(task => task.deleteTask != true);
     this.updateMeta();
-    
+
     return deletedTask;
   }
 
