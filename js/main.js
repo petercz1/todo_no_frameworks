@@ -15,5 +15,5 @@ window.onload = start();
 
 function start() {
   fetchTasks.fetchData(); // load any tasks from server
-  serverMonitor.monitor(); // watch server for new messages
+  //serverMonitor.monitor(); // watch server for new messages
 }
