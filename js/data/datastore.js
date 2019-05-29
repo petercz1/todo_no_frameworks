@@ -38,17 +38,17 @@ class DataStore {
   setNewTask(data) {
     // clear css field from all tasks
     console.log(data);
-      this.tasks.forEach(task => {
-        delete task.css;
-      });
-        // simple id field: find max id and increment it
-        let max = Math.max(...this.tasks.map(obj => obj.id), 0);
-        data.id = max + 1;
-        this.tasks.unshift(data);
-        this.meta.message = data.message;
-      // add task to tasks
-      this.updateMeta();
-    
+    this.tasks.forEach(task => {
+      delete task.css;
+    });
+    // simple id field: find max id and increment it
+    let max = Math.max(...this.tasks.map(obj => obj.id), 0);
+    data.id = max + 1;
+    this.tasks.unshift(data);
+    this.meta.message = data.message;
+    // add task to tasks
+    this.updateMeta();
+
   }
   getNewTask() {
     return this.tasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
