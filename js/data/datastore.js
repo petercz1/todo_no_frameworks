@@ -37,6 +37,7 @@ class DataStore {
 
   setNewTask(data) {
     // clear css field from all tasks
+    console.log(data);
       this.tasks.forEach(task => {
         delete task.css;
       });
