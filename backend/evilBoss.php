@@ -47,7 +47,7 @@ class EvilBoss
      */
     public function sse(array $evilTask):void
     {
-        // send update every 
+        // send update every 10 
         //$timeint = 1000 * rand(10, 15);
 
         try {
