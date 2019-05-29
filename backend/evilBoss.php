@@ -48,7 +48,7 @@ class EvilBoss
     public function sse(array $evilTask):void
     {
         error_log(print_r($evilTask, true));
-        $timeint = 1000 * rand(10, 15);
+        //$timeint = 1000 * rand(10, 15);
 
         try {
             header("Cache-Control: no-cache");
