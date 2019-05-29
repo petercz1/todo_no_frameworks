@@ -46,7 +46,6 @@ class DataStore {
         data.id = max + 1;
         this.tasks.unshift(data);
         this.meta.message = data.message;
-      }
       // add task to tasks
       this.updateMeta();
     
