@@ -1,7 +1,7 @@
 class ChangeTask{
 
-public function init()
-{
-	# code...
-}
+	public function init()
+	{
+		# code...
+	}
 }
