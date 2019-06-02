@@ -8,9 +8,10 @@ namespace chipbug\todo;
 ini_set("log_errors", "1");
 ini_set("error_log", getcwd() . "/debug.log");
 
-class NewTask{
+class NewTask
+{
 
-	 /**
+     /**
      * add new task from client
      *
      * @param array $clientTask
