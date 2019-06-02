@@ -52,7 +52,7 @@ export default class appTask extends RootElement {
   }
 
   registerDelete() {
-    //
+    // publish delete if task is deleted
     this.task.checked = false;
     this.task.deleteTask = true;
     this.pubsub.publish('DeleteTask', this.task);
