@@ -14,6 +14,7 @@ export default class appConsole extends RootElement {
   }
 
 	renderData(metaData){
+		// build html
 		this.innerHTML = `
 		<div class="console">
 			<h3>Browser</h3>
