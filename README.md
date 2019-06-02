@@ -26,7 +26,14 @@ To install,
 
 Objects that have something to say publish a string of NewInfo and an object of data:
 ```
-    let task = {'name':'bill, 'age': 34};
+    let task = {
+      taskname: document.querySelector('#taskname').value,
+      message: 'client added ' + document.querySelector('#taskname').value,
+      changeTask: false,
+      deleteTask: false,
+      checked: false,
+      css: 'closed'
+    };
     this.pubsub.publish('NewPerson', person);
     this.pubsub.publish('Message', {"component": "app-addperson", "text": "adding " + person.name});
 ```
