@@ -35,7 +35,7 @@ class DataStore {
   getTasks() {
     return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
   }
-  getNewTask() {
+  getAddTask() {
     // new task added at the client side doesn't have an ID
     return this.clientTasks.filter(clientTask => !clientTask.id)[0];
   }
@@ -55,7 +55,7 @@ class DataStore {
 
     // <------------------ all datastore PUBLISHERS publish info here --------------------->
 
-  NewTask(task) {
+  AddTask(task) {
     // clear css field from all tasks
     this.clientTasks.forEach(clientTask => {
       delete clientTask.css;

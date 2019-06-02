@@ -35,7 +35,7 @@ export default class appAddTask extends RootElement {
       css: 'closed'
     };
     // now publish it to anyone who's interested
-    this.pubsub.publish('NewTask', task);
+    this.pubsub.publish('AddTask', task);
 
     this.generateRandomTask.generate(); // generate new random task
   }

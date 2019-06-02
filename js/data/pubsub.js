@@ -8,8 +8,8 @@ export default new class PubSub {
 
   // this adds to the subscribers[] array everyone interested in some info being published
   // here's a subscription from <app-tasks>:
-  // "eg this.pubsub.subscribe('NewTask', 'getTasks', this.renderData);"
-  // 1) app-tasks is interested in any new tasks being published (newInfo - 'NewTask')
+  // "eg this.pubsub.subscribe('AddTask', 'getTasks', this.renderData);"
+  // 1) app-tasks is interested in any new tasks being published (newInfo - 'AddTask')
   // 2) if there is a new task, fire 'getTasks()' in the datastore (request - 'getTasks')
   // 3) fire the renderData() method in <app-tasks> component and supply the info from getTasks (callback - 'renderData')
   subscribe(newInfo, request, callback) {
@@ -25,11 +25,11 @@ export default new class PubSub {
   }
 
   // when anyone publishes something it arrives here,
-  // a string of newInfo eg 'NewTask' and an object of data to publish
+  // a string of newInfo eg 'AddTask' and an object of data to publish
   publish(newInfo, data) {
 
     // publish the new/changed data
-    // datastore converts this to a 'set' method and parameter eg setNewTask(data)
+    // datastore converts this to a 'set' method and parameter eg setAddTask(data)
     this.datastore.setRequest({
       newInfo,
       data

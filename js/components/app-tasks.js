@@ -10,7 +10,7 @@ export default class appTasks extends RootElement {
     this.pubsub = PubSub;
     this.renderData(this.pubsub.getData('getTasks', null));
     // subscribe to any of these events, get tasks, pass tasks to renderData
-    this.pubsub.subscribe('NewTask', 'getTasks', this.renderData);
+    this.pubsub.subscribe('AddTask', 'getTasks', this.renderData);
     this.pubsub.subscribe('DeleteTask', 'getTasks', this.renderData);
     this.pubsub.subscribe('ServerTask', 'getTasks', this.renderData);
   }

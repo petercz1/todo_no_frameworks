@@ -37,22 +37,22 @@ Objects that have something to say publish a string of NewInfo and an object of 
       checked: false,
       css: 'closed'
     };
-    this.pubsub.publish('NewTask', task);
+    this.pubsub.publish('AddTask', task);
 ```
 Objects that are interested in those news items subscribe to 'NewPerson'/'Message'/'SomeEvent' etc, state what info they want and give the callback function they want to be fired:
 ```
-	this.pubsub.subscribe('NewTask', 'getMeta', this.renderData);
+	this.pubsub.subscribe('AddTask', 'getMeta', this.renderData);
 ```
 I could have wrapped all requests in an object, so instead of 
 <pre>
-   this.pubsub.subscribe(<b>'NewTask'</b>, 'getMeta', this.renderData);
+   this.pubsub.subscribe(<b>'AddTask'</b>, 'getMeta', this.renderData);
 	this.pubsub.subscribe(<b>'ChangeTask'</b>, 'getMeta', this.renderData);
 	this.pubsub.subscribe(<b>'DeleteTask'</b>, 'getMeta', this.renderData);
 	this.pubsub.subscribe(<b>'ServerTask'</b>, 'getMeta', this.renderData);
 </pre>
 we would have
 <pre>
-	this.pubsub.subscribe(<b>{'NewTask', 'ChangeTask','DeleteTask','ServerTask'}</b>, 'getMeta', this.renderData);
+	this.pubsub.subscribe(<b>{'AddTask', 'ChangeTask','DeleteTask','ServerTask'}</b>, 'getMeta', this.renderData);
 </pre>
 but then it would be more tricky to assign specific requests/callbacks to each NewInfo.
 
