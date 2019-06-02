@@ -10,7 +10,7 @@ ini_set("error_log", getcwd() . "/debug.log");
 
 class ChangeTask{
 
-	public function init(Type $var = null)
+	public function init()
 	{
 		# code...
 	}
