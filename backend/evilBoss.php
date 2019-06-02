@@ -42,7 +42,7 @@ class EvilBoss
         array_unshift($serverTasks, $evilTask);
         file_put_contents('tasks.json', json_encode($serverTasks));
         // send fresh copy of all serverTasks
-        $this->sse($serverTasks);
+        $this->sse($evilTask);
     }
     
     /**
