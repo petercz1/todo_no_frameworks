@@ -65,6 +65,8 @@ Language            Files        Lines         Code     Comments       Blanks
  PHP                     3          209          116           76           17
 -------------------------------------------------------------------------------
  Total                  20          948          666          162          120
+ 
+ ```
 
 ## notes
 I used [James Johnson's](http://jelly.codes/articles/javascript-es6-autobind-class/) code to autobind 'this' for methods instead of having to do it in every class. So originally I had something like:
