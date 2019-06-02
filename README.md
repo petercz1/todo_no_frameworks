@@ -7,3 +7,5 @@
 It uses built-in ES6 webcomponents and the pubsub pattern to allow each component to subscribe and/or publish to the datastore. In 300 lines of pure Javascript.
 
 ![](demo.gif)
+
+
