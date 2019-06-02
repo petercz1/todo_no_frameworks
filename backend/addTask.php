@@ -11,7 +11,7 @@ ini_set("error_log", getcwd() . "/debug.log");
 class AddTask
 {
      /**
-     * add new task from client
+     * add new task
      *
      * @param array $clientTask
      * @return void
