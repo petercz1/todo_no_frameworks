@@ -27,11 +27,11 @@ class DataStore {
     this.meta.taskLength = this.clientTasks.filter(task => task.deleteTask != true).length;
   }
 
-  // all data
+  // all datastore GETTERS here:
+
   getMeta() {
     return this.meta;
   }
-
 
   NewTask(task) {
     // clear css field from all tasks
