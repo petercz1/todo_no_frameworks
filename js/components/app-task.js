@@ -25,7 +25,7 @@ export default class appTask extends RootElement {
     if (this.task.checked) {
       this.querySelector('label').classList.add('checked');
     }
-    // wire up event
+    // wire up event listeners
     this.querySelector('input').addEventListener('change', this.registerChange);
     this.querySelector('span').addEventListener('click', this.registerDelete);
   }
