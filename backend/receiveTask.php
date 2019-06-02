@@ -31,9 +31,9 @@ class ReceiveTask
         $this->clientTask = json_decode(file_get_contents('php://input'), true);
         $this->simpleRouter($this->clientTask);
         if ($task['deleteTask']) {
-            echo $this->deleteTask($task);
+            echo $this->deleteTask($this->clientTask);
         } elseif ($task['changeTask']) {
-            echo $this->changeTask($task);
+            echo $this->changeTask($this->clientTask);
         } else {
             echo $this->newTask($task);
         }
