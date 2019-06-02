@@ -19,7 +19,7 @@ class EvilBoss
      */
     public function init():void
     {
-        // wait for a couple of seconds, let the workers get coffee before
+        // wait 10 seconds, let the workers get coffee before
         // being a jerk...
         sleep(10);
         // ok get current tasks
