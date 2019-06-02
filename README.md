@@ -26,7 +26,7 @@ To install,
 
 Objects that have something to say publish a string of NewInfo and an object of data:
 ```
-    let person = {'name':'bill, 'age': 34};
+    let task = {'name':'bill, 'age': 34};
     this.pubsub.publish('NewPerson', person);
     this.pubsub.publish('Message', {"component": "app-addperson", "text": "adding " + person.name});
 ```
