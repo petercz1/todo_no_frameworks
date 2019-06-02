@@ -45,7 +45,7 @@ class ReceiveTask
 
     /**
      * simplerouter: it is what it is
-     * sleeps for a couple of second to mimic a slow server
+     * sleeps for a couple of seconds to mimic a slow server
      *
      * @param array $task
      * @return callable
