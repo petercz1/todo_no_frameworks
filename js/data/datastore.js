@@ -32,7 +32,6 @@ class DataStore {
   getMeta() {
     return this.meta;
   }
- x
   getTasks() {
     return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
   }
