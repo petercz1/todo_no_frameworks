@@ -65,7 +65,7 @@ Language            Files        Lines         Code     Comments       Blanks
  PHP                     3          209          116           76           17
 -------------------------------------------------------------------------------
  Total                  20          948          666          162          120
- .
+
 ├── backend
 │   ├── debug.log
 │   ├── evilBoss.php
