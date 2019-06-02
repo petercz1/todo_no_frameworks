@@ -12,7 +12,27 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 
 
 ## how it works
-
+Objects that have something to say publish a string of NewInfo and an object of data:
+```
+    let person = {'name':'bill, 'age': 34};
+    this.pubsub.publish('NewPerson', person);
+    this.pubsub.publish('Message', {"component": "app-addperson", "text": "adding " + person.name});
+```
+Objects that are interested in those news items subscribe to 'NewPerson'/'Message'/'SomeEvent' etc, state what info they want, pass parameters if needed (eg id) and give the callback function they want to be fired:
+```
+    this.pubsub.subscribe('NewPerson', 'getChosenPeople', null, this.renderData);
+```
+I could have wrapped all requests in an object, so instead of 
+<pre>
+    this.pubsub.subscribe(<b>'NewPerson'</b>, 'getChosenPeople', null, this.renderData);
+    this.pubsub.subscribe(<b>'ChangePerson'</b>, 'getChosenPeople', null, this.renderData);
+    this.pubsub.subscribe(<b>'DeletePerson'</b>, 'getChosenPeople', null, this.renderData);
+</pre>
+we would have
+<pre>
+this.pubsub.subscribe(<b>{'NewPerson','ChangePerson','DeletePerson'}</b>, 'getChosenPeople', null, this.renderData);
+</pre>
+but then it would be more tricky to assign specific requests/callbacks to each NewInfo.
 ##
 
 
