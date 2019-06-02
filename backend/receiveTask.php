@@ -47,34 +47,4 @@ class ReceiveTask
             echo $addTask->init($this->clientTask);
         }
     }
-
-   
-['changeTask'] = false;
-    //         }
-    //     }
-    //     file_put_contents('tasks.json', json_encode($serverTasks));
-    //     // send back a response
-    //     return json_encode($clientTask);
-    // }
-
-    // /**
-    //  * delete task
-    //  *
-    //  * @param array $task
-    //  * @return string
-    //  */
-    // public function deleteTask(array $clientTask): string
-    // {
-    //     //get tasks from file
-    //     $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
-    //     foreach ($serverTasks as $key => $serverTask) {
-    //         if ($serverTask['id'] == $clientTask['id']) {
-    //             unset($serverTasks[$key]); // delete task
-    //         }
-    //     }
-    //     file_put_contents('tasks.json', json_encode($serverTasks));
-    //     // send back a response
-    //     $clientTask['message'] = "server deleted task: " . $clientTask['taskname'];
-    //     return json_encode($clientTask);
-    // }
 }
