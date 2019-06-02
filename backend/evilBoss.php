@@ -43,7 +43,7 @@ class EvilBoss
         // send evilTask to client
         (new ReceiveTask())->newTask($evilTask);
         $receiveTask = new ReceiveTask();
-        $this->sse($receiveTask);
+        $this->sse($receiveTask->newTask());
     }
     
     /**
