@@ -15,7 +15,7 @@ This was built on
 * chromium
 * Ubuntu 18.04
 
-The only real requirements are php 7.x and avoid using the non-chromium IE/Edge
+The only real requirements are php 7.x and avoid using non-chromium IE/Edge
 To install,
 * download and unzip to a folder of your choice
 * start with `php -S localhost:4567`
