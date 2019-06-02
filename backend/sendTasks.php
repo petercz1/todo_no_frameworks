@@ -18,7 +18,7 @@ class SendTasks
             \file_put_contents('tasks.json','[]');
             echo '[]';
         }else{
-            // send 
+            // send to client
             echo \file_get_contents('tasks.json');
         }
     }
