@@ -39,8 +39,9 @@ class EvilBoss
         
         // add to the start of task array
         //array_unshift($serverTasks, $evilTask);
-        file_put_contents('tasks.json', json_encode($serverTasks));
+        //file_put_contents('tasks.json', json_encode($serverTasks));
         // send evilTask to client
+        (new )
         $this->sse($evilTask);
     }
     
