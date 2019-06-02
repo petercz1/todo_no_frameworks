@@ -54,6 +54,17 @@ we would have
 but then it would be more tricky to assign specific requests/callbacks to each NewInfo.
 
 ## structure
+```
+Language            Files        Lines         Code     Comments       Blanks
+-------------------------------------------------------------------------------
+ CSS                     1          105           86            1           18
+ HTML                    1           23           14            0            9
+ JavaScript             13          548          387           85           76
+ JSON                    1            1            1            0            0
+ Markdown                1           62           62            0            0
+ PHP                     3          209          116           76           17
+-------------------------------------------------------------------------------
+ Total                  20          948          666          162          120
 
 ## notes
 I used [James Johnson's](http://jelly.codes/articles/javascript-es6-autobind-class/) code to autobind 'this' for methods instead of having to do it in every class. So originally I had something like:
