@@ -24,6 +24,7 @@ export default class appAddTask extends RootElement {
   }
 
   addtask() {
+    // build task
     let task = {
       taskname: document.querySelector('#taskname').value,
       message: 'client added ' + document.querySelector('#taskname').value,
