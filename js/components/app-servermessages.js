@@ -7,11 +7,13 @@ export default class appServerMessages extends RootElement {
     super();
     this.pubsub = PubSub;
     this.renderData(this.pubsub.getData('getMeta'));
+
+    // subscribe to any of these events, get metadata, pass data to renderData
     this.pubsub.subscribe('NewTask', 'getMeta', this.renderData);
-		this.pubsub.subscribe('ChangeTask', 'getMeta', this.renderData);
-		this.pubsub.subscribe('DeleteTask', 'getMeta', this.renderData);
-		this.pubsub.subscribe('ServerTask', 'getMeta', this.renderData);
-		this.pubsub.subscribe('ServerTasks', 'getMeta', this.renderData);
+    this.pubsub.subscribe('ChangeTask', 'getMeta', this.renderData);
+    this.pubsub.subscribe('DeleteTask', 'getMeta', this.renderData);
+    this.pubsub.subscribe('ServerTask', 'getMeta', this.renderData);
+    this.pubsub.subscribe('ServerTasks', 'getMeta', this.renderData);
   }
 
   renderData(metaData) {
