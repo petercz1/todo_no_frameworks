@@ -14,3 +14,7 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 ## how it works
 
 ##
+
+
+
+Use as you like, ask questions if stuck, and stars are nice (top right)...
