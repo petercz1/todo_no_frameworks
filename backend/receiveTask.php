@@ -79,7 +79,8 @@ class ReceiveTask
                 }
                 // sync check on server with client
                 $serverTask['checked'] = $clientTask['checked']; 
-                $serverTask['changeTask'] = false; // set back to false now we've changed it
+                // set back to false now we've changed it
+                $serverTask['changeTask'] = false;
             }
         }
         file_put_contents('tasks.json', json_encode($serverTasks));
