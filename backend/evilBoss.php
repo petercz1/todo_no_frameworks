@@ -43,7 +43,7 @@ class EvilBoss
     
     /**
      * Server Sent Event
-     * fires data back every 10 - 10 seconds
+     * fires data back every 10 - 15 seconds
      *
      * @param array $data
      * @return void
