@@ -71,7 +71,7 @@ class ReceiveTask
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
         foreach ($serverTasks as &$serverTask) {
             if ($serverTask['id'] == $clientTask['id']) {
-                // set message to 
+                // set message to checked/unchecked
                 if ($clientTask['checked']) {
                     $clientTask['message'] = "server checked task: " . $clientTask['taskname'];
                 } else {
