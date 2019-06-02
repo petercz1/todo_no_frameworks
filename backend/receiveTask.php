@@ -15,7 +15,6 @@ ini_set("error_log", getcwd() . "/debug.log");
 // I would probably split these functions up into separate classes but for now it works as a backend demo
 class ReceiveTask
 {
-
     private $clientTask = [];
 
     /**
@@ -88,9 +87,9 @@ class ReceiveTask
         foreach ($serverTasks as &$serverTask) {
             $serverTask = (array)$serverTask;
             if ($serverTask['id'] == $clientTask['id']) {
-                if($clientTask['checked']){
+                if ($clientTask['checked']) {
                     $clientTask['message'] = "server checked task: " . $clientTask['taskname'];
-                }else{
+                } else {
                     $clientTask['message'] = "server unchecked task: " . $clientTask['taskname'];
                 }
                 $serverTask['checked'] = $clientTask['checked']; // sync check on server with frontend
