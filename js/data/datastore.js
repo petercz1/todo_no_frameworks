@@ -3,7 +3,7 @@ class DataStore {
   constructor() {
     // create datastores
     this.clientTasks = [];
-    // could have created this meta on the fly from clientTasks array
+    // could have created this meta on the fly from clientTasks array?
     this.meta = {
       tasksChecked: 0,
       taskLength: 0,
