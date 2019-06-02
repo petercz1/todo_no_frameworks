@@ -3,7 +3,7 @@ import AppTask from './app-task.js';
 import PubSub from '../data/pubsub.js';
 
 // ES6 webcomponent <app-tasks>
-// container for multiple <app-task>
+// container for multiple <app-task> elements
 export default class appTasks extends RootElement {
   constructor() {
     super();
