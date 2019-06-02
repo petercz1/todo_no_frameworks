@@ -16,7 +16,7 @@ class SendTasks
         // check if file exists
         if(!file_get_contents('tasks.json')){
             \file_put_contents('tasks.json','[]');
-            send empty 
+            // send empty js array to client
             echo '[]';
         }else{
             // send to client
