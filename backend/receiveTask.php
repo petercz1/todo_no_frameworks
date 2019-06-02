@@ -64,34 +64,34 @@ class ReceiveTask
     //     return json_encode($clientTask);
     // }
 
-    /**
-     * change task if checked/unchecked
-     *
-     * @param array $task
-     * @return string
-     */
-    public function changeTask(array $clientTask): string
-    {
-        //get tasks from file
-        $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
-        foreach ($serverTasks as &$serverTask) {
-            if ($serverTask['id'] == $clientTask['id']) {
-                // set message to checked/unchecked
-                if ($clientTask['checked']) {
-                    $clientTask['message'] = "server checked task: " . $clientTask['taskname'];
-                } else {
-                    $clientTask['message'] = "server unchecked task: " . $clientTask['taskname'];
-                }
-                // sync check on server with client
-                $serverTask['checked'] = $clientTask['checked'];
-                // set back to false now we've changed it
-                $serverTask['changeTask'] = false;
-            }
-        }
-        file_put_contents('tasks.json', json_encode($serverTasks));
-        // send back a response
-        return json_encode($clientTask);
-    }
+    // /**
+    //  * change task if checked/unchecked
+    //  *
+    //  * @param array $task
+    //  * @return string
+    //  */
+    // public function changeTask(array $clientTask): string
+    // {
+    //     //get tasks from file
+    //     $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
+    //     foreach ($serverTasks as &$serverTask) {
+    //         if ($serverTask['id'] == $clientTask['id']) {
+    //             // set message to checked/unchecked
+    //             if ($clientTask['checked']) {
+    //                 $clientTask['message'] = "server checked task: " . $clientTask['taskname'];
+    //             } else {
+    //                 $clientTask['message'] = "server unchecked task: " . $clientTask['taskname'];
+    //             }
+    //             // sync check on server with client
+    //             $serverTask['checked'] = $clientTask['checked'];
+    //             // set back to false now we've changed it
+    //             $serverTask['changeTask'] = false;
+    //         }
+    //     }
+    //     file_put_contents('tasks.json', json_encode($serverTasks));
+    //     // send back a response
+    //     return json_encode($clientTask);
+    // }
 
     /**
      * delete task
