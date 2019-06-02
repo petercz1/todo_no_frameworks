@@ -21,7 +21,7 @@ class DataStore {
     return res;
   }
 
-  // internal function for 
+  // internal function for datastore functions to use
   updateMeta() {
     this.meta.tasksChecked = this.clientTasks.filter(task => (task.checked == true)).length;
     this.meta.taskLength = this.clientTasks.filter(task => task.deleteTask != true).length;
