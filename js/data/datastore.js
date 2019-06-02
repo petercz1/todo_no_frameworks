@@ -32,9 +32,7 @@ class DataStore {
   getMeta() {
     return this.meta;
   }
-  getNewTask() {
-    return this.clientTasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
-  }
+ x
   getTasks() {
     return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
   }
