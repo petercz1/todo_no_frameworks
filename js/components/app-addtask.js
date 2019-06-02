@@ -12,6 +12,7 @@ export default class appAddTask extends RootElement {
   }
 
   renderData() {
+    /
     this.innerHTML = `
     <input type="text" id="taskname" placeholder="your new task"></input>
     <button id="newTask">add task</button>
