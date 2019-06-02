@@ -57,6 +57,7 @@ class EvilBoss
         // send update every 10 - 15 seconds
         $timeint = 1000 * rand(10, 15);
 
+        
         try {
             header("Cache-Control: no-cache");
             header("Content-Type: text/event-stream");
