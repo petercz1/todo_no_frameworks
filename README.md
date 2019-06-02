@@ -9,3 +9,7 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 ![](demo.gif)
 
 ## Install
+
+
+## how it works
+
