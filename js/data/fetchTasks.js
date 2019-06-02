@@ -27,7 +27,6 @@ export default new class FetchTasks {
       throw new Error('HTTP error, status = ' + response.status);
     }
     let json = await response.json();
-    console.log(json);
     if (json.source == "server error") {
       this.pubsub.publish('ServerMessage', `{server error: ${response.status}, ${response.statusText}}`);
     } else {
