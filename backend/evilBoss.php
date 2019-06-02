@@ -52,7 +52,7 @@ class EvilBoss
      * @param array $data
      * @return void
      */
-    public function sse(array $evilTask):void
+    public function sse(string $evilTask):void
     {
         // send update every 10 - 15 seconds
         $timeint = 1000 * rand(10, 15);
