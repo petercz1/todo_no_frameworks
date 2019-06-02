@@ -78,7 +78,7 @@ class ReceiveTask
                     $clientTask['message'] = "server unchecked task: " . $clientTask['taskname'];
                 }
                 // sync check on server with client
-                $serverTask['checked'] = $clientTask['checked']; 
+                $serverTask['checked'] = $clientTask['checked'];
                 // set back to false now we've changed it
                 $serverTask['changeTask'] = false;
             }
