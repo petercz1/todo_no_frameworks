@@ -29,8 +29,6 @@ class ReceiveTask
     public function init():void
     {
         $this->clientTask = json_decode(file_get_contents('php://input'), true);
-        // check if frontend sent a task or array of tasks
-        if (array_key_exists('taskname', $this->clientTask)) {
             $this->simpleRouter($this->clientTask);
         
     }
