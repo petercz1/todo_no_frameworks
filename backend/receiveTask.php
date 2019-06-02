@@ -29,8 +29,7 @@ class ReceiveTask
     public function init():void
     {
         $this->clientTask = json_decode(file_get_contents('php://input'), true);
-            $this->simpleRouter($this->clientTask);
-        
+        $this->simpleRouter($this->clientTask);
     }
 
     /**
