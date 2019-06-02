@@ -11,6 +11,8 @@ export default class appTask extends RootElement {
   }
 
   renderData() {
+    		// build html
+
     this.innerHTML = `
     <div class="${this.task.css}">
       <label for="${this.task.id}" class="label">${this.task.taskname}</label>
