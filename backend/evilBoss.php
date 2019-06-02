@@ -32,6 +32,7 @@ class EvilBoss
             "css" => "closed",
         );
         // set id
+        // if no tas
         empty($serverTasks) ? $evilTask['id'] = 1: $evilTask['id'] = max(array_column($serverTasks, 'id')) + 1;
         
         // add to the start of task array
