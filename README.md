@@ -42,9 +42,10 @@ Objects that are interested in those news items subscribe to 'NewPerson'/'Messag
 ```
 I could have wrapped all requests in an object, so instead of 
 <pre>
-    this.pubsub.subscribe(<b>'NewPerson'</b>, 'getChosenPeople', null, this.renderData);
-    this.pubsub.subscribe(<b>'ChangePerson'</b>, 'getChosenPeople', null, this.renderData);
-    this.pubsub.subscribe(<b>'DeletePerson'</b>, 'getChosenPeople', null, this.renderData);
+   this.pubsub.subscribe('NewTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('ChangeTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('DeleteTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('ServerTask', 'getMeta', this.renderData);
 </pre>
 we would have
 <pre>
