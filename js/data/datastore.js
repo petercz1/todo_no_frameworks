@@ -92,8 +92,8 @@ class DataStore {
   }
 
   // handles evilBossTask
-  EvilBossTask(){
-    
+  EvilBossTask(serverTask){
+
   }
 
   // handles all tasks from server
