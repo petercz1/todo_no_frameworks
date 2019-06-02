@@ -13,6 +13,7 @@ class ReceiveTask
 {
 
     private $clientTask = [];
+    
     /**
      * init function: receive task from frontend
      * data is NOT arriving from a multipart-data form or an application/x-www-form-urlencoded
