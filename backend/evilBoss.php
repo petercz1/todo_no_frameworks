@@ -21,7 +21,7 @@ class EvilBoss
     {
         // wait for a couple of seconds, let the workers get coffee before
         // being a jerk...
-        sleep(2);
+        sleep(10);
         // ok get current tasks
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
 
