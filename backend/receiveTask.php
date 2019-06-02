@@ -30,6 +30,7 @@ class ReceiveTask
     {
         $this->clientTask = json_decode(file_get_contents('php://input'), true);
         //$this->simpleRouter($this->clientTask);
+        sleep(2); // mimic a 'slow' server
         if ($task['deleteTask']) {
             echo $this->deleteTask($this->clientTask);
         } elseif ($task['changeTask']) {
