@@ -9,7 +9,7 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 ![](demo.gif)
 
 ## caveats
-I used JSON just to demonstrate proof-of-concept. JSON is a data-interchange format so not the tool for reliable client/server data sync (unique id numbers for tasks added can't be guaranteed), but most (all?) of these problems would be solved with a proper db backend instead of a json textfile.
+I used JSON just to demonstrate proof-of-concept. JSON is a data-interchange format so not the tool for reliable client/server data sync (unique id numbers for tasks added can't be guaranteed), but most (all?) of these problems would be solved with a proper db backend.
 
 ## Install
 
