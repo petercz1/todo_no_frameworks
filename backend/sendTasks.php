@@ -13,7 +13,7 @@ class SendTasks
      */
     public function init():void
     {
-        // check if file is empty json
+        // check if file exists and is empty json
         if(!file_get_contents('tasks.json')){
             \file_put_contents('tasks.json','[]');
             echo '[]';
