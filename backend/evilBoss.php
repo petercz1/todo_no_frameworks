@@ -38,7 +38,7 @@ class EvilBoss
         // add to the start of task array
         array_unshift($serverTasks, $evilTask);
         file_put_contents('tasks.json', json_encode($serverTasks));
-        // send fresh copy of all server
+        // send fresh copy of all serverTasks
         $this->sse($serverTasks);
     }
     
