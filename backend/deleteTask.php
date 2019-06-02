@@ -16,7 +16,7 @@ class DeleteTask{
      * @param array $task
      * @return string
      */
-    public function deleteTask(array $clientTask): string
+    public function init(array $clientTask): string
     {
         //get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
