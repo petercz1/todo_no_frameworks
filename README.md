@@ -11,7 +11,7 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 ## Install
 
 This was built on
-* php 7.x
+* php 7.3
 * chromium
 * Ubuntu 18.04
 
