@@ -50,7 +50,7 @@ class ReceiveTask
         // get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
         // add id
-        empty($serverTasks) ? $evilTask['id'] = 1: $evilTask['id'] = max(array_column($serverTasks, 'id')) + 1;
+        empty($serverTasks) ? $clientTask['id'] = 1: $clientTask['id'] = max(array_column($serverTasks, 'id')) + 1;
         // update message
         $clientTask['message'] = "server received and added task: " . $clientTask['taskname'];
         // add task from client to start of tasks on server
