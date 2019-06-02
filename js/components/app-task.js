@@ -30,6 +30,7 @@ export default class appTask extends RootElement {
     this.querySelector('span').addEventListener('click', this.registerDelete);
   }
 
+  // run when 
   connectedCallback() {
     if (this.task.css) {
       // setTimeout needed because connectedCallback doesn't wait for child elements to render
