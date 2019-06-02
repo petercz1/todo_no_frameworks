@@ -72,13 +72,7 @@ class DataStore {
     this.meta.message = 'client deleted: ' + task.taskname;
     this.updateMeta();
   }
-  getDeleteTask() {
-    // filter returns a copy of the array, which then replaces the original
-    let deletedTask = this.clientTasks.filter(clientTask => clientTask.deleteTask == true);
-    this.clientTasks = this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
-    this.updateMeta();
-    return deletedTask[0];
-  }
+ 
 
   // handles single task from server
   ServerTask(serverTask) {
