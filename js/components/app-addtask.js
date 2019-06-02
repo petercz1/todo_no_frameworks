@@ -2,6 +2,7 @@ import RootElement from '../helpers/app-rootelement.js';
 import GenerateRandomTask from '../helpers/generateRandomTask.js';
 import PubSub from '../data/pubsub.js';
 
+// webcomponent
 export default class appAddTask extends RootElement {
   constructor() {
     super();
