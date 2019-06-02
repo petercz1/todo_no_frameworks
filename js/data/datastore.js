@@ -56,6 +56,7 @@ class DataStore {
   // <------------------ all datastore PUBLISHERS publish info here --------------------->
 
   AddTask(task) {
+    debugger;
     // clear css field from all tasks
     this.clientTasks.forEach(clientTask => {
       delete clientTask.css;
