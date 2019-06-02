@@ -75,7 +75,7 @@ class DataStore {
     console.log(deletedTask[0]);
     this.updateMeta();
 
-    return deletedTask;
+    return deletedTask[0];
   }
 
 
