@@ -37,6 +37,7 @@ class DataStore {
   }
   getNewTask() {
     // return this.clientTasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
+    console.log(this.clientTasks.filter(clientTask => !clientTask.id)[0]);
     return this.clientTasks.filter(clientTask => !clientTask.id)[0];
   }
   getChangeTask() {
