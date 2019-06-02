@@ -8,8 +8,8 @@ import './components/app-servermessages.js';
 import './data/sendTask.js';
 
 // import helpers
-import fetchTasks from './data/fetchTasks.js';
-import serverMonitor from './helpers/serverMonitor.js';
+import FetchTasks from './data/fetchTasks.js';
+import ServerMonitor from './helpers/serverMonitor.js';
 
 window.onload = start();
 
