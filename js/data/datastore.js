@@ -47,12 +47,7 @@ class DataStore {
     this.meta.message = task.message;
     this.updateMeta();
   }
-  getNewTask() {
-    return this.clientTasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
-  }
-  getTasks() {
-    return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
-  }
+
 
   ChangeTask(task) {
     this.meta.message = 'client changed task: ' + task.taskname;
