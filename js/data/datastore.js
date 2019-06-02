@@ -75,13 +75,11 @@ class DataStore {
     this.updateMeta();
   }
 
-
   DeleteTask(task) {
     this.meta.message = 'client deleted: ' + task.taskname;
     this.updateMeta();
   }
  
-
   // handles single task from server
   ServerTask(serverTask) {
     if (serverTask) {
