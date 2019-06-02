@@ -60,6 +60,7 @@ class DataStore {
     // use the JSON.parse/stringify hack to make a copy of task array
     let changedTask = JSON.parse(JSON.stringify(this.clientTasks.filter(clientTask => clientTask.changeTask == true)));
     this.updateMeta();
+    console.log('');
     return changedTask;
   }
 
