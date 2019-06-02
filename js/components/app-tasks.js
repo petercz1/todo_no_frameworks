@@ -16,6 +16,7 @@ export default class appTasks extends RootElement {
 
   renderData(clientTasks) {
     this.innerHTML = '';
+    // filter for
     clientTasks.filter(task => task.delete != true).forEach(task => {
       this.append(new AppTask(task));
     });
