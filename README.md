@@ -1,4 +1,4 @@
-# TODO list with simple pubsub, asynchronous server communication and no frameworks
+# TODO list with simple pubsub, asyn server communication and no frameworks
 
 ![](https://img.shields.io/badge/licence-free-green.svg) ![](https://img.shields.io/badge/frameworks-none-green.svg)
 
