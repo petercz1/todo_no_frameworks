@@ -60,7 +60,7 @@ class DataStore {
       delete clientTask.css;
     });
     // simple id field: find max id and increment it
-    let max = Math.max(...this.clientTasks.map(obj => obj.id), 0);
+    //let max = Math.max(...this.clientTasks.map(obj => obj.id), 0);
     task.id = max + 1;
     // add task to tasks
     this.clientTasks.unshift(task);
