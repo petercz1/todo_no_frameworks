@@ -74,7 +74,6 @@ class DataStore {
     return deletedTask[0];
   }
 
-
   // handles single task from server
   ServerTask(serverTask) {
     if (serverTask) {
