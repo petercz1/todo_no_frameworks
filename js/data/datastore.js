@@ -37,7 +37,7 @@ class DataStore {
   }
   getNewTask() {
     // return this.clientTasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
-    return this.clientTasks
+    return this.clientTasks.filter()
   }
   getChangeTask() {
     // use the JSON.parse/stringify hack to make a copy of task array
