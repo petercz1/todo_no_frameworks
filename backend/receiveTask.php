@@ -35,13 +35,6 @@ class ReceiveTask
             error_log(print_r($this->clientTask, true));
             $this->simpleRouter($this->clientTask);
         } 
-        // else {
-        //     foreach ($this->clientTask as $task) {
-        //         error_log('PROBLEM - Multidimensional array here...');
-        //         error_log(print_r($task, true));
-        //         $this->simpleRouter($task);
-        //     }
-        // }
     }
 
     /**
