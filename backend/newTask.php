@@ -16,7 +16,7 @@ class NewTask{
      * @param array $clientTask
      * @return void
      */
-    public function newTask(array $clientTask):string
+    public function init(array $clientTask):string
     {
         // get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
