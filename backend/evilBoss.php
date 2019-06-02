@@ -41,7 +41,7 @@ class EvilBoss
         //array_unshift($serverTasks, $evilTask);
         //file_put_contents('tasks.json', json_encode($serverTasks));
         // send evilTask to client
-        $newTask = new NewTask();
+        $addTask = new NewTask();
         $this->sse($newTask->init($evilTask));
     }
     
