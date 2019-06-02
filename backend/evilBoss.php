@@ -33,13 +33,7 @@ class EvilBoss
             "checked" => 0,
             "css" => "closed",
         );
-        // set id
-        // if tasks.json is empty set id = 1, else find max and add 1
-        // empty($serverTasks) ? $evilTask['id'] = 1: $evilTask['id'] = max(array_column($serverTasks, 'id')) + 1;
-        
-        // add to the start of task array
-        //array_unshift($serverTasks, $evilTask);
-        //file_put_contents('tasks.json', json_encode($serverTasks));
+
         // send evilTask to client
         $addTask = new AddTask();
         $this->sse($addTask->init($evilTask));
