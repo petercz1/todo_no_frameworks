@@ -19,7 +19,7 @@ export default class appTask extends RootElement {
       <span>&#128465;</span>
     </div>
     `;
-    
+    // set
     this.querySelector('input').checked = this.task.checked;
     if (this.task.checked) {
       this.querySelector('label').classList.add('checked');
