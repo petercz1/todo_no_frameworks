@@ -42,7 +42,7 @@ class EvilBoss
         //file_put_contents('tasks.json', json_encode($serverTasks));
         // send evilTask to client
         (new ReceiveTask())->newTask($evilTask);
-        $
+        $receiveTask = new ReceiveTask();
         $this->sse($evilTask);
     }
     
