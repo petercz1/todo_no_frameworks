@@ -12,7 +12,7 @@ class EvilBoss
     /**
      * generate pointless tasks from evil boss
      *
-     * @return string
+     * @return void
      */
     public function init():void
     {
