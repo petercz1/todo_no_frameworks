@@ -17,6 +17,7 @@ export default class appServerMessages extends RootElement {
   }
 
   renderData(metaData) {
+    // build html
     this.innerHTML = `
 		<div class="server">
 			<h3>Client/Server messages</h3>
