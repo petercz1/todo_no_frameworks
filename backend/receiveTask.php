@@ -42,27 +42,27 @@ class ReceiveTask
         }
     }
 
-    /**
-     * add new task from client
-     *
-     * @param array $clientTask
-     * @return void
-     */
-    public function newTask(array $clientTask):string
-    {
-        // get tasks from file
-        $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
-        // add id
-        empty($serverTasks) ? $clientTask['id'] = 1: $clientTask['id'] = max(array_column($serverTasks, 'id')) + 1;
-        // update message
-        $clientTask['message'] = "server received and added task: " . $clientTask['taskname'];
-        // add task from client to start of tasks on server
-        array_unshift($serverTasks, $clientTask);
-        // save it
-        file_put_contents('tasks.json', json_encode($serverTasks));
-        // send back a response
-        return json_encode($clientTask);
-    }
+    // /**
+    //  * add new task from client
+    //  *
+    //  * @param array $clientTask
+    //  * @return void
+    //  */
+    // public function newTask(array $clientTask):string
+    // {
+    //     // get tasks from file
+    //     $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
+    //     // add id
+    //     empty($serverTasks) ? $clientTask['id'] = 1: $clientTask['id'] = max(array_column($serverTasks, 'id')) + 1;
+    //     // update message
+    //     $clientTask['message'] = "server received and added task: " . $clientTask['taskname'];
+    //     // add task from client to start of tasks on server
+    //     array_unshift($serverTasks, $clientTask);
+    //     // save it
+    //     file_put_contents('tasks.json', json_encode($serverTasks));
+    //     // send back a response
+    //     return json_encode($clientTask);
+    // }
 
     /**
      * change task if checked/unchecked
