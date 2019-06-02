@@ -6,6 +6,7 @@ export default class appConsole extends RootElement {
   constructor() {
 		super();
 		this.pubsub = PubSub;
+		// initial render with metadata
 		this.renderData(this.pubsub.getData('getMeta', null));
 		this.pubsub.subscribe('NewTask', 'getMeta', this.renderData);
 		this.pubsub.subscribe('ChangeTask', 'getMeta', this.renderData);
