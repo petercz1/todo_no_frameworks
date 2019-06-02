@@ -2,7 +2,7 @@
 declare(strict_types=1);
 namespace chipbug\todo;
 
-// dumps 
+// dumps debug stuff into a
 ini_set("log_errors", "1");
 ini_set("error_log", getcwd() . "/debug.log");
 
