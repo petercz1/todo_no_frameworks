@@ -53,7 +53,7 @@ class DataStore {
     return deletedTask[0];
   }
 
-    // <------------------ all datastore PUBLISHERS publish info here --------------------->
+  // <------------------ all datastore PUBLISHERS publish info here --------------------->
 
   AddTask(task) {
     // clear css field from all tasks
@@ -79,7 +79,7 @@ class DataStore {
     this.meta.message = 'client deleted: ' + task.taskname;
     this.updateMeta();
   }
- 
+
   // handles single task from server
   ServerTask(serverTask) {
     if (serverTask) {
@@ -92,10 +92,10 @@ class DataStore {
   }
 
   // handles evilBossTask
-  EvilBossTask(evilTask){
+  EvilBossTask(evilTask) {
     if (evilTask) {
       this.meta.message = evilTask.message;
-      this.clientTasks.unshift(serverTask);
+      this.clientTasks.unshift(evilTask);
     } else {
       this.meta.message = "No new tasks on server";
     }
