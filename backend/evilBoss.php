@@ -3,7 +3,8 @@ declare(strict_types=1);
 namespace chipbug\todo;
 
 // dumps debug stuff into a debug.log file in this directory
-// error_log('stuff'); for 
+// error_log('stuff'); for simple debug.
+// error_
 ini_set("log_errors", "1");
 ini_set("error_log", getcwd() . "/debug.log");
 
