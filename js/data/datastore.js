@@ -44,7 +44,7 @@ class DataStore {
     this.updateMeta();
     return changedTask[0];
   }
-  
+
 
   NewTask(task) {
     // clear css field from all tasks
@@ -77,7 +77,6 @@ class DataStore {
     let deletedTask = this.clientTasks.filter(clientTask => clientTask.deleteTask == true);
     this.clientTasks = this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
     this.updateMeta();
-
     return deletedTask[0];
   }
 
