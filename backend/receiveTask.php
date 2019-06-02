@@ -31,8 +31,6 @@ class ReceiveTask
         $this->clientTask = json_decode(file_get_contents('php://input'), true);
         // check if frontend sent a task or array of tasks
         if (array_key_exists('taskname', $this->clientTask)) {
-            error_log('single array');
-            error_log(print_r($this->clientTask, true));
             $this->simpleRouter($this->clientTask);
         } 
     }
