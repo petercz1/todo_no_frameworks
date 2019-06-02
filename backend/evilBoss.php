@@ -52,7 +52,7 @@ class EvilBoss
      * @param array $data
      * @return void
      */
-    public function sse(array $serverTasks):void
+    public function sse(array $evilTask):void
     {
         // send update every 10 - 15 seconds
         $timeint = 1000 * rand(10, 15);
@@ -62,7 +62,7 @@ class EvilBoss
             header("Content-Type: text/event-stream");
             echo "event: evilBossAddedTask" . PHP_EOL;
             echo "retry: " . $timeint . PHP_EOL;
-            echo "data: ".json_encode($serverTasks). PHP_EOL;
+            echo "data: ".json_encode($evilTask). PHP_EOL;
             echo PHP_EOL;
             flush();
         } catch (Exception $ex) {
