@@ -44,8 +44,7 @@ export default new class PubSub {
   }
 
   getData(request) {
-    // I decided to have the PubSub class act as the interface to
-    // all transactions between modules and datastore, hence this handles 
+    // this handles 
     // non-publish/subscribe requests for info such as getting totals 
     // before publishing a new record eg 'getCheckedTotal()'
     return this.datastore.getRequest({
