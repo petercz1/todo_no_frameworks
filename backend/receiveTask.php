@@ -96,6 +96,7 @@ class ReceiveTask
      */
     public function deleteTask(array $clientTask): string
     {
+        //get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
         $index = array_search($clientTask['id'], array_column($serverTasks, 'id'));
         foreach ($serverTasks as $key => $item) {
