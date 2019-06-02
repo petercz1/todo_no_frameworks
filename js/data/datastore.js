@@ -38,6 +38,13 @@ class DataStore {
   getTasks() {
     return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
   }
+  getChangeTask() {
+    // use the JSON.parse/stringify hack to make a copy of task array
+    let changedTask = JSON.parse(JSON.stringify(this.clientTasks.filter(clientTask => clientTask.changeTask == true)));
+    this.updateMeta();
+    return changedTask[0];
+  }
+  
 
   NewTask(task) {
     // clear css field from all tasks
