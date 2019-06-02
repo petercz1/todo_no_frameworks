@@ -11,7 +11,7 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 ## Install
 
 This was built on
-
+* php 7.
 * download and unzip to a folder of your choice
 * start with `php -S localhost:4567`
 * point your browser at `localhost:4567`
