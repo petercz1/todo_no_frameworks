@@ -82,14 +82,14 @@ class DataStore {
     if (serverTask) {
       this.meta.message = serverTask.message;
       this.clientTasks.unshift(serverTask);
-    }else{
+    } else {
       this.meta.message = "No new tasks on server";
     }
     this.updateMeta();
   }
 
   // handles all tasks from server
-  ServerTasks(serverTasks){
+  ServerTasks(serverTasks) {
     this.clientTasks = serverTasks;
     this.updateMeta();
   }
