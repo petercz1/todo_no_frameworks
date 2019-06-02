@@ -48,7 +48,7 @@ class ReceiveTask
      * sleeps for a couple of seconds to mimic a slow server
      *
      * @param array $task
-     * @return callable
+     * @return void
      */
     public function simpleRouter(array $task):void
     {
