@@ -6,7 +6,7 @@ export default new class PubSub {
     this.subscribers = [];
   }
 
-  // this adds to an array everyone interested in some info being published
+  // this adds to the subscibers[] array everyone interested in some info being published
   // here's a subscription from <app-tasks>:
   // "this.pubsub.subscribe('NewTask', 'getTasks', this.renderData);"
   // app-tasks is interested in any new tasks being published (newInfo - 'NewTask')
