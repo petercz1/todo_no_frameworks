@@ -24,10 +24,7 @@ class DataStore {
   getMeta() {
     return this.meta;
   }
-  updateMeta() {
-    this.meta.tasksChecked = this.clientTasks.filter(task => (task.checked == true)).length;
-    this.meta.taskLength = this.clientTasks.filter(task => task.deleteTask != true).length;
-  }
+
 
   NewTask(task) {
     // clear css field from all tasks
