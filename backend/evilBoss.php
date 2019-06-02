@@ -22,7 +22,7 @@ class EvilBoss
     public function init():void
     {
         // ok get current tasks
-        $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
+        //$serverTasks = json_decode(\file_get_contents('tasks.json'), true);
 
         // create evil task
         $evilTask = array(
@@ -38,7 +38,7 @@ class EvilBoss
         // empty($serverTasks) ? $evilTask['id'] = 1: $evilTask['id'] = max(array_column($serverTasks, 'id')) + 1;
         
         // add to the start of task array
-        array_unshift($serverTasks, $evilTask);
+        //array_unshift($serverTasks, $evilTask);
         file_put_contents('tasks.json', json_encode($serverTasks));
         // send evilTask to client
         $this->sse($evilTask);
