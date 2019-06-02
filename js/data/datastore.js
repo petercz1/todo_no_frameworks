@@ -86,12 +86,12 @@ class DataStore {
     this.updateMeta();
   }
 
-  // handles all tasks from server
-  ServerTasks(serverTasks){
-    //this.clientTasks = serverTasks;
-    this.meta.message = serverTasks.message;
-    this.updateMeta();
-  }
+  // // handles all tasks from server
+  // ServerTasks(serverTasks){
+  //   //this.clientTasks = serverTasks;
+  //   this.meta.message = serverTasks.message;
+  //   this.updateMeta();
+  // }
 
   // clears rolldown css effect after task is added to list and displayed
   DisplayedTask(data) {
