@@ -12,7 +12,7 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 
 This was built on
 * php 7.3
-* chromium
+* chromium 74
 * Ubuntu 18.04
 
 The only real requirements are php 7.x and avoid using non-chromium IE/Edge
