@@ -27,7 +27,7 @@ class DataStore {
     this.meta.taskLength = this.clientTasks.filter(task => task.deleteTask != true).length;
   }
 
-  // <------------------ all datastore SUBSCRIBERs get info here --------------------->
+  // <------------------ all datastore SUBSCRIBERS get info here --------------------->
 
   getMeta() {
     return this.meta;
