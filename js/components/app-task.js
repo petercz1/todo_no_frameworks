@@ -21,7 +21,7 @@ export default class appTask extends RootElement {
     `;
     // set html checkbox to task.checked value
     this.querySelector('input').checked = this.task.checked;
-    // add css checked if checked
+    // add css .checked if checked
     if (this.task.checked) {
       this.querySelector('label').classList.add('checked');
     }
