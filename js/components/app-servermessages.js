@@ -1,7 +1,7 @@
 import RootElement from '../helpers/app-rootelement.js';
 import PubSub from '../data/pubsub.js';
 
-// ES6 webcomponent 
+// ES6 webcomponent <app-
 export default class appServerMessages extends RootElement {
   constructor() {
     super();
