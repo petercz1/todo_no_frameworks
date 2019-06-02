@@ -91,17 +91,6 @@ class DataStore {
     this.updateMeta();
   }
 
-  // handles evilBossTask
-  EvilBossTask(evilTask) {
-    if (evilTask) {
-      this.meta.message = evilTask.message;
-      this.clientTasks.unshift(evilTask);
-    } else {
-      this.meta.message = "No new tasks on server";
-    }
-    this.updateMeta();
-  }
-
   // handles all tasks from server
   ServerTasks(serverTasks) {
     this.clientTasks = serverTasks;
