@@ -77,7 +77,6 @@ class DataStore {
 
   // handles single task from server
   ServerTask(serverTask) {
-    console.log(serverTask);
     if (serverTask) {
       this.meta.message = serverTask.message;
     }else{
@@ -88,7 +87,6 @@ class DataStore {
 
   // handles all tasks from server
   ServerTasks(serverTasks){
-    console.log(serverTasks);
     this.clientTasks = serverTasks;
     this.updateMeta();
   }
