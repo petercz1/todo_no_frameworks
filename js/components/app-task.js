@@ -35,7 +35,7 @@ export default class appTask extends RootElement {
     if (this.task.css) {
       // setTimeout needed because connectedCallback doesn't wait for child elements to render
       setTimeout(() => {
-        // css to do open/close effect
+        // css to do 
         this.querySelector('div').classList.replace('closed', 'open');
       }, 100);
       // tells pubsub to clear rolldown css effect after task is added
