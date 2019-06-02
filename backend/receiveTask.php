@@ -98,8 +98,6 @@ class ReceiveTask
     {
         //get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
-        // find $clientTask in list of $serverTasks
-        //$index = array_search($clientTask['id'], array_column($serverTasks, 'id'));
         foreach ($serverTasks as $key => $item) {
             if ($item['id'] == $clientTask['id']) {
                 unset($serverTasks[$key]); // delete task
