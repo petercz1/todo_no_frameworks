@@ -63,7 +63,7 @@ class ReceiveTask
     }
 
     /**
-     * add task from client
+     * add new task from client
      *
      * @param array $clientTask
      * @return void
