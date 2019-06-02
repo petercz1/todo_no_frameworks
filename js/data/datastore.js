@@ -36,6 +36,7 @@ class DataStore {
     return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
   }
   getNewTask() {
+    // new task added at the client side doesn't have an ID
     console.log(this.clientTasks.filter(clientTask => !clientTask.id)[0]);
     return this.clientTasks.filter(clientTask => !clientTask.id)[0];
   }
