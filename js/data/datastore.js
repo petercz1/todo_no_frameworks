@@ -87,7 +87,7 @@ class DataStore {
 
   // handles all tasks from server
   ServerTasks(serverTasks){
-    this.clientTasks = serverTasks;
+    //this.clientTasks = serverTasks;
     this.updateMeta();
   }
 
