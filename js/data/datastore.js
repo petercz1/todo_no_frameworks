@@ -44,6 +44,13 @@ class DataStore {
     this.updateMeta();
     return changedTask[0];
   }
+  getDeleteTask() {
+    // filter returns a copy of the array, which then replaces the original
+    let deletedTask = this.clientTasks.filter(clientTask => clientTask.deleteTask == true);
+    this.clientTasks = this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
+    this.updateMeta();
+    return deletedTask[0];
+  }
 
 
   NewTask(task) {
