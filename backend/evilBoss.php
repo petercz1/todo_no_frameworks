@@ -55,7 +55,7 @@ class EvilBoss
     public function sse(string $evilTask):void
     {
         // send update every 10 - 15 seconds
-        //$timeint = 1000 * rand(10, 15);
+        $timeint = 1000 * rand(10, 15);
 
         //$evilTask = json_decode($evilTask);
 
