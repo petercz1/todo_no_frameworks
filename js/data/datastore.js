@@ -52,7 +52,7 @@ class DataStore {
     return deletedTask[0];
   }
 
-    // <------------------ all datastore SUBSCRIBERS get info here --------------------->
+    // <------------------ all datastore PUBLISHERS get info here --------------------->
 
   NewTask(task) {
     // clear css field from all tasks
