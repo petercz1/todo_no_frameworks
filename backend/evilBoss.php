@@ -44,7 +44,7 @@ class EvilBoss
     
     /**
      * Server Sent Event
-     * pushes data back every 10 - 15 seconds
+     * pushes data to client every 10 - 15 seconds
      *
      * @param array $data
      * @return void
