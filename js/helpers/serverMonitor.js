@@ -1,6 +1,6 @@
 import PubSub from '../data/pubsub.js';
 
-export default class ServerMonitor {
+export default new class ServerMonitor {
 
   constructor() {
     this.pubsub = PubSub;
