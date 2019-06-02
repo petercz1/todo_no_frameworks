@@ -36,7 +36,7 @@ class DataStore {
     return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
   }
   getNewTask() {
-    return this.clientTasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
+    // return this.clientTasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
   }
   getChangeTask() {
     // use the JSON.parse/stringify hack to make a copy of task array
@@ -61,7 +61,7 @@ class DataStore {
     });
     // simple id field: find max id and increment it
     //let max = Math.max(...this.clientTasks.map(obj => obj.id), 0);
-    task.id = max + 1;
+    //task.id = max + 1;
     // add task to tasks
     this.clientTasks.unshift(task);
     // update message
