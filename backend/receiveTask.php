@@ -39,25 +39,6 @@ class ReceiveTask
     }
 
     /**
-     * simplerouter: it is what it is
-     * sleeps for a couple of seconds to mimic a slow server
-     *
-     * @param array $task
-     * @return void
-     */
-    public function simpleRouter(array $task):void
-    {
-        sleep(2); // mimic a 'slow' server
-        if ($task['deleteTask']) {
-            echo $this->deleteTask($task);
-        } elseif ($task['changeTask']) {
-            echo $this->changeTask($task);
-        } else {
-            echo $this->newTask($task);
-        }
-    }
-
-    /**
      * add new task from client
      *
      * @param array $clientTask
