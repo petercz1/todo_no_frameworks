@@ -6,7 +6,6 @@ export default class FetchTasks {
   constructor() {
     this.pubsub = PubSub;
     this.fetchData = this.fetchData.bind(this);
-    //this.pubsub.subscribe('RequestServerData', 'getRequestServerData', null, this.fetchData);
   }
 
   async fetchData() {
