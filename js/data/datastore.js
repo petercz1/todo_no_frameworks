@@ -27,7 +27,6 @@ class DataStore {
   updateMeta() {
     this.meta.tasksChecked = this.clientTasks.filter(task => (task.checked == true)).length;
     this.meta.taskLength = this.clientTasks.filter(task => task.deleteTask != true).length;
-
   }
 
   NewTask(task) {
