@@ -8,6 +8,9 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 
 ![](demo.gif)
 
+## caveats
+More robust checking of client/server data sync is needed, but most (all?) of these problems would be solved with a proper db backend instead of a json textfile.
+
 ## Install
 
 This was built on
