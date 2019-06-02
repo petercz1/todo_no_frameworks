@@ -19,9 +19,6 @@ class EvilBoss
      */
     public function init():void
     {
-        // wait 10 seconds, let the workers get coffee before
-        // being a jerk...
-        sleep(10);
         // ok get current tasks
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
 
