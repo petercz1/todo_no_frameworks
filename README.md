@@ -33,7 +33,6 @@ we would have
 this.pubsub.subscribe(<b>{'NewPerson','ChangePerson','DeletePerson'}</b>, 'getChosenPeople', null, this.renderData);
 </pre>
 but then it would be more tricky to assign specific requests/callbacks to each NewInfo.
-##
 
 
 I used [James Johnson's](http://jelly.codes/articles/javascript-es6-autobind-class/) code to autobind 'this' for methods instead of having to do it in every class. So originally I had something like:
