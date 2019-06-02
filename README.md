@@ -16,6 +16,16 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 ##
 
 
+Finally, I've used [James Johnson's](http://jelly.codes/articles/javascript-es6-autobind-class/) excellent code to autobind 'this' for methods instead of having to do it in every class. So originally I had something like:
+<pre>class appAddperson extends HTMLElement {}</pre>
+I now have:
+<pre>class appAddperson extends RootElement {}</pre>
+and RootElement (with James' code) extends HTMLElement.
+
+It did need a couple of changes:
+* [currCls.\_\_proto\_\_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) is deprecated in favor of [Object.getPrototypeOf(currCls)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
+* Object.getPrototypeOf(currCls) needs to be checked for null/undefined, hence the check on line 16 in app-rootelement.js
+
 The [Vaadin](https://www.youtube.com/channel/UCsGakFIbOsj-fgPFLf1QlQA) clip that showed me the way is [here](https://www.youtube.com/watch?v=mTNdTcwK3MM&t=213s)
 
 Use as you like, ask questions if stuck, and stars are nice (top right)...
