@@ -1,1 +1,2 @@
-# TODO list with simple pubsub and no frameworks
+# TODO list with simple pubsub, asyncronous server updates and no frameworks
+
