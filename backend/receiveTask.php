@@ -58,7 +58,7 @@ class ReceiveTask
         } elseif ($task['changeTask']) {
             echo $this->changeTask($task);
         } else {
-            echo $this->addTask($task);
+            echo $this->newTask($task);
         }
     }
 
