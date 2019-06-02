@@ -8,7 +8,9 @@ namespace chipbug\todo;
 ini_set("log_errors", "1");
 ini_set("error_log", getcwd() . "/debug.log");
 
-require './newTask.php'
+require './newTask.php';
+require './newTask.php';
+require './newTask.php';
 
 // IIFE
 (new ReceiveTask)->init();
