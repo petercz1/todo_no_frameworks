@@ -11,7 +11,7 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 ## Install
 
 * download and unzip to a folder of your choice
-
+* start with 
 
 ## how it works
 Objects that have something to say publish a string of NewInfo and an object of data:
