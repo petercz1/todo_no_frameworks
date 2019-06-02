@@ -16,7 +16,7 @@ export default class appTasks extends RootElement {
 
   renderData(clientTasks) {
     this.innerHTML = '';
-    // filter for all tasks not deleted
+    // filter for all tasks not deleted and then loop through with a foreach
     clientTasks.filter(task => task.delete != true).forEach(task => {
       this.append(new AppTask(task));
     });
