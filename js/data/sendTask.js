@@ -1,6 +1,7 @@
 // fetches videos from server, catches any network/server errors, returns json list of video details
 import PubSub from './pubsub.js';
 
+// async sending of new/changed/deleted task to server
 export default new class SendTask {
 
   constructor() {
