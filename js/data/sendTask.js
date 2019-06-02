@@ -7,7 +7,7 @@ export default new class SendTask {
   constructor() {
     this.pubsub = PubSub;
     this.sendData = this.sendData.bind(this);
-    // 
+    // listen for any of these
     this.pubsub.subscribe('NewTask', 'getNewTask', this.sendData);
     this.pubsub.subscribe('ChangeTask', 'getChangeTask', this.sendData);
     this.pubsub.subscribe('DeleteTask', 'getDeleteTask', this.sendData);
