@@ -16,7 +16,7 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 ##
 
 
-Finally, I've used [James Johnson's](http://jelly.codes/articles/javascript-es6-autobind-class/) excellent code to autobind 'this' for methods instead of having to do it in every class. So originally I had something like:
+I've used [James Johnson's](http://jelly.codes/articles/javascript-es6-autobind-class/) excellent code to autobind 'this' for methods instead of having to do it in every class. So originally I had something like:
 <pre>class appAddperson extends HTMLElement {}</pre>
 I now have:
 <pre>class appAddperson extends RootElement {}</pre>
