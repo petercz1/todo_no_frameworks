@@ -40,7 +40,6 @@ export default new class PubSub {
     // first get all subscribers interested in this newInfo, then foreach of them
     // fire the callback method requested.
     this.subscribers.filter(subscriber => (subscriber.newInfo == newInfo)).forEach((subscriber) => {
-      console.log(subscriber);
       subscriber.callback(this.datastore.getRequest(subscriber));
     });
   }
