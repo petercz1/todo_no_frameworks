@@ -94,7 +94,7 @@ class DataStore {
   // handles evilBossTask
   EvilBossTask(evilTask){
     if (evilTask) {
-      this.meta.message = serverTask.message;
+      this.meta.message = evilTask.message;
       this.clientTasks.unshift(serverTask);
     } else {
       this.meta.message = "No new tasks on server";
