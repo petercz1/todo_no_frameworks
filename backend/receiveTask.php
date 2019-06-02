@@ -47,6 +47,7 @@ class ReceiveTask
      */
     public function newTask(array $clientTask):string
     {
+        //get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
         $clientTask['message'] = "server received and added task: " . $clientTask['taskname']; //update message
         array_unshift($serverTasks, $clientTask); // add task from client to start of tasks on server
