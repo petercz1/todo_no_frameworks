@@ -36,7 +36,7 @@ class ReceiveTask
         if ($this->clientTask['deleteTask']) {
             $deleteTask = new DeleteTask();
             echo $deleteTask->init($this->clientTask);
-            echo $this->deleteTask($this->clientTask);
+            //echo $this->deleteTask($this->clientTask);
         } elseif ($this->clientTask['changeTask']) {
             echo $this->changeTask($this->clientTask);
         } else {
