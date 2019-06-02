@@ -35,6 +35,9 @@ class DataStore {
   getTasks() {
     return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
   }
+  getNewTask() {
+    return this.clientTasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
+  }
   getChangeTask() {
     // use the JSON.parse/stringify hack to make a copy of task array
     let changedTask = JSON.parse(JSON.stringify(this.clientTasks.filter(clientTask => clientTask.changeTask == true)));
