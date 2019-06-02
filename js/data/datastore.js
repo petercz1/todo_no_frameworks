@@ -72,7 +72,7 @@ class DataStore {
     // filter returns a copy of the array, which then replaces the original
     let deletedTask = this.clientTasks.filter(clientTask => clientTask.deleteTask == true);
     this.clientTasks = this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
-    console.log();
+    console.log(delete);
     this.updateMeta();
 
     return deletedTask;
