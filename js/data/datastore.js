@@ -69,7 +69,6 @@ class DataStore {
     this.updateMeta();
   }
 
-
   ChangeTask(task) {
     this.meta.message = 'client changed task: ' + task.taskname;
     this.updateMeta();
