@@ -43,7 +43,6 @@ class DataStore {
     this.clientTasks.unshift(task);
     // update message
     this.meta.message = task.message;
-    cl
     this.updateMeta();
   }
   getNewTask() {
