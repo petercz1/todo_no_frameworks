@@ -32,7 +32,7 @@ class ReceiveTask
         // check if frontend sent a task or array of tasks
         if (array_key_exists('taskname', $this->clientTask)) {
             $this->simpleRouter($this->clientTask);
-        } 
+        
     }
 
     /**
