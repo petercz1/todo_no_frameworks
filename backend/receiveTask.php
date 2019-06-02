@@ -67,6 +67,7 @@ class ReceiveTask
      */
     public function changeTask(array $clientTask): string
     {
+        //get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
         foreach ($serverTasks as &$serverTask) {
             $serverTask = (array)$serverTask;
