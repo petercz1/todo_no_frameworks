@@ -93,7 +93,7 @@ class DataStore {
 
   // handles evilBossTask
   EvilBossTask(evilTask){
-    if (serverTask) {
+    if (evilTask) {
       this.meta.message = serverTask.message;
       this.clientTasks.unshift(serverTask);
     } else {
