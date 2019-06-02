@@ -34,7 +34,7 @@ class EvilBoss
             "css" => "closed",
         );
 
-        // send evilTask to client
+        // add evilTask to 
         $addTask = new AddTask();
         $this->sse($addTask->init($evilTask));
     }
