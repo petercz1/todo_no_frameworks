@@ -12,7 +12,6 @@ ini_set("error_log", getcwd() . "/debug.log");
 (new ReceiveTask)->init();
 
 // receives newTask, changeTask and deleteTask.
-
 class ReceiveTask
 {
     private $clientTask = [];
