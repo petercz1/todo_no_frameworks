@@ -33,7 +33,7 @@ class ReceiveTask
         sleep(2); // mimic a 'slow' server
         if ($this->clientTask['deleteTask']) {
             echo $this->deleteTask($this->clientTask);
-        } elseif ($task['changeTask']) {
+        } elseif ($this->clientTask['changeTask']) {
             echo $this->changeTask($this->clientTask);
         } else {
             echo $this->newTask($this->clientTask);
