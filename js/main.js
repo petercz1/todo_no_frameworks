@@ -17,5 +17,5 @@ function start() {
   let fetchTasks = new FetchTasks();
   fetchTasks.fetchData(); // load any tasks from server
   let serverMonitor = new serverMonitor();
-  servermon.monitor(); // watch server for new messages
+  serverMonitor.monitor(); // watch server for new messages
 }
