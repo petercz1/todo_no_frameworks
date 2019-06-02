@@ -1,6 +1,6 @@
 import PubSub from '../data/pubsub.js';
 
-// monitors when evilBoss adds extra t
+// monitors when evilBoss adds pointless tasks
 export default class ServerMonitor {
 
   constructor() {
