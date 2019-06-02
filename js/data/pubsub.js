@@ -9,7 +9,7 @@ export default new class PubSub {
   // this adds to the subscribers[] array everyone interested in some info being published
   // here's a subscription from <app-tasks>:
   // "eg this.pubsub.subscribe('NewTask', 'getTasks', this.renderData);"
-  // app-tasks is interested in any new tasks being published (newInfo - 'NewTask')
+  // 1) app-tasks is interested in any new tasks being published (newInfo - 'NewTask')
   // if there is a new task, fire 'getTasks()' in the datastore (request - 'getTasks')
   // finally fire the renderData() method in app-tasks and supply the info from getTasks (callback - 'renderData')
   subscribe(newInfo, request, callback) {
