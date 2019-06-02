@@ -11,8 +11,7 @@ export default class appTask extends RootElement {
   }
 
   renderData() {
-    		// build html
-
+    // build html
     this.innerHTML = `
     <div class="${this.task.css}">
       <label for="${this.task.id}" class="label">${this.task.taskname}</label>
@@ -21,7 +20,7 @@ export default class appTask extends RootElement {
     </div>
     `;
     this.querySelector('input').checked = this.task.checked;
-    if(this.task.checked){
+    if (this.task.checked) {
       this.querySelector('label').classList.add('checked');
     }
     this.querySelector('input').addEventListener('change', this.registerChange);
