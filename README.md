@@ -23,6 +23,7 @@ To install,
 * point your browser at `localhost:4567`
 
 ## how it works
+
 Objects that have something to say publish a string of NewInfo and an object of data:
 ```
     let person = {'name':'bill, 'age': 34};
