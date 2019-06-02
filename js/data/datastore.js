@@ -32,6 +32,12 @@ class DataStore {
   getMeta() {
     return this.meta;
   }
+  getNewTask() {
+    return this.clientTasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
+  }
+  getTasks() {
+    return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
+  }
 
   NewTask(task) {
     // clear css field from all tasks
