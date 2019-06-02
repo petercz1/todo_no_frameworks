@@ -28,7 +28,7 @@ class ReceiveTask
     public function init():void
     {
         $this->clientTask = json_decode(file_get_contents('php://input'), true);
-        
+
         sleep(2); // mimic a 'slow' server
         if ($this->clientTask['deleteTask']) {
             echo $this->deleteTask($this->clientTask);
@@ -47,7 +47,7 @@ class ReceiveTask
      */
     public function newTask(array $clientTask):string
     {
-        $serverTasks = json_decode(\file_get_contents('tasks.json'), true); //get tasks from file
+        $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
         $clientTask['message'] = "server received and added task: " . $clientTask['taskname']; //update message
         array_unshift($serverTasks, $clientTask); // add task from client to start of tasks on server
         file_put_contents('tasks.json', json_encode($serverTasks));
