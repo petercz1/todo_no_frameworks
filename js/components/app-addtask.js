@@ -19,7 +19,7 @@ export default class appAddTask extends RootElement {
     // add click listener for adding a task
     document.querySelector('#newTask').addEventListener('click', this.addtask);
    
-    
+    // generate new random task 
     this.generateRandomTask.generate();
   }
 
