@@ -53,6 +53,8 @@ we would have
 </pre>
 but then it would be more tricky to assign specific requests/callbacks to each NewInfo.
 
+## structure
+
 ## notes
 I used [James Johnson's](http://jelly.codes/articles/javascript-es6-autobind-class/) code to autobind 'this' for methods instead of having to do it in every class. So originally I had something like:
 <pre>class appAddtask extends HTMLElement {}</pre>
