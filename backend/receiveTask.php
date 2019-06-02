@@ -43,7 +43,7 @@ class ReceiveTask
             echo $changeTask->init($this->clientTask);
         } else {
             // echo $this->newTask($this->clientTask);
-            $addask = new AddTask();
+            $addTask = new AddTask();
             echo $addTask->init($this->clientTask);
         }
     }
