@@ -14,7 +14,7 @@ import ServerMonitor from './helpers/serverMonitor.js';
 window.onload = start();
 
 function start() {
-  let fetchtasks = new FetchTasks();
+  let fetchTasks = new FetchTasks();
   fetchTasks.fetchData(); // load any tasks from server
   let servermon = new serverMonitor();
   servermon.monitor(); // watch server for new messages
