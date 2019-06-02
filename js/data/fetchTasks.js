@@ -1,7 +1,7 @@
 // fetches videos from server, catches any network/server errors, returns json list of video details
 import PubSub from './pubsub.js';
 
-// async retrieval of tasks from 
+// async retrieval of tasks from task.json on server
 export default class FetchTasks {
 
   constructor() {
