@@ -1,6 +1,7 @@
 import RootElement from '../helpers/app-rootelement.js';
 import PubSub from '../data/pubsub.js';
 
+// ES6 webcomponent <app-addtask>
 export default class appConsole extends RootElement {
   constructor() {
 		super();
