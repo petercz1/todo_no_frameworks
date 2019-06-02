@@ -8,7 +8,7 @@ namespace chipbug\todo;
 ini_set("log_errors", "1");
 ini_set("error_log", getcwd() . "/debug.log");
 
-require_once 'receiveTask.php';
+require_once 'new.php';
 
 (new EvilBoss)->init();
 
