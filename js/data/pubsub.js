@@ -13,11 +13,10 @@ export default new class PubSub {
   // if there is a new task, fire 'getTasks()' in the datastore (request - 'getTasks')
   // it could also send a parameter if implemented eg getTasks(6) (parameters - null)
   // finally fire the renderData() method in app-tasks and supply the info from getTasks (callback - 'renderData')
-  subscribe(newInfo, request, parameters, callback) {
+  subscribe(newInfo, request, callback) {
     this.subscribers.push({
       newInfo,
       request,
-      parameters,
       callback
     });
   }
@@ -41,20 +40,18 @@ export default new class PubSub {
     // first get all subscribers interested in this newInfo, then foreach of them
     // fire the callback method requested.
     this.subscribers.filter(subscriber => (subscriber.newInfo == newInfo)).forEach((subscriber) => {
+      console.log(subscriber);
       subscriber.callback(this.datastore.getRequest(subscriber));
     });
   }
 
-  getData(request, data) {
+  getData(request) {
     // I decided to have the PubSub class act as the interface to
     // all transactions between modules and datastore, hence this handles 
     // non-publish/subscribe requests for info such as getting totals 
     // before publishing a new record eg 'getCheckedTotal()'
-    // I added 'data' as part of the request if a parameter needed to be passed in
-    // such as specific id (not implemented here)
     return this.datastore.getRequest({
-      request,
-      data
+      request
     });
   }
 }

@@ -27,11 +27,11 @@ export default new class FetchTasks {
       throw new Error('HTTP error, status = ' + response.status);
     }
     let json = await response.json();
+    console.log(json);
     if (json.source == "server error") {
-      console.log(json);
       this.pubsub.publish('ServerMessage', `{server error: ${response.status}, ${response.statusText}}`);
     } else {
-      this.pubsub.publish('ServerData', json);
+      this.pubsub.publish('ServerTasks', json);
     }
   }
 }

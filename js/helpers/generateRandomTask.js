@@ -1,16 +1,16 @@
 export default new class GenerateRandomTask {
   constructor() {
     // list of tasks for random task generator below -  speeds up testing
-    this.tasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee', 'google "pimp my noodles"', 'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list', 'beat personal best on snake'];
+    this.randomTasks = ['watch GOT', 'check FB', 'wash dishes', 'refine plans for Death Star', 'invent killer app', 'practice sarcasm', 'make fun of hipsters', 'drink more coffee', 'google "pimp my noodles"', 'complain more often', 'spike watercooler', 'write "idiot filter" for gmail', 'ignore todo list', 'beat personal best on snake'];
   }
 
   generate() {
 
     // randomly choose a task
-    let item = this.tasks[Math.floor(Math.random() * this.tasks.length)];
+    let item = this.randomTasks[Math.floor(Math.random() * this.randomTasks.length)];
 
     // remove item from random tasklist
-    this.tasks = this.tasks.filter(task => {
+    this.randomTasks = this.randomTasks.filter(task => {
       return task != item;
     });
 

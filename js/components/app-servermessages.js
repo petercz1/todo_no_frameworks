@@ -5,20 +5,19 @@ export default class appServerMessages extends RootElement {
   constructor() {
     super();
     this.pubsub = PubSub;
-    this.renderData(this.pubsub.getData('getMeta', null));
-    this.pubsub.subscribe('NewTask', 'getMeta', null, this.renderData);
-		this.pubsub.subscribe('ChangeTask', 'getMeta', null, this.renderData);
-		this.pubsub.subscribe('DeleteTask', 'getMeta', null, this.renderData);
-		this.pubsub.subscribe('ServerData', 'getMeta', null, this.renderData);
-    this.pubsub.subscribe('ServerMessage', 'getMeta', null, this.renderData);
+    this.renderData(this.pubsub.getData('getMeta'));
+    this.pubsub.subscribe('NewTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('ChangeTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('DeleteTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('ServerTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('ServerTasks', 'getMeta', this.renderData);
   }
 
-  renderData(data) {
-    console.log(data);
+  renderData(metaData) {
     this.innerHTML = `
 		<div class="server">
-			<h3>Server</h3>
-			<p class="serverMessage">${data.message}</p>
+			<h3>Client/Server messages</h3>
+			<p class="serverMessage">${metaData.message}</p>
 		</div>
 		`;
   }

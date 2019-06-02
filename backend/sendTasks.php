@@ -13,6 +13,11 @@ class SendTasks
      */
     public function init():void
     {
-        echo \file_get_contents('tasks.json');
+        if(!file_get_contents('tasks.json')){
+            \file_put_contents('tasks.json','[]');
+            echo '[]';
+        }else{
+            echo \file_get_contents('tasks.json');
+        }
     }
 }

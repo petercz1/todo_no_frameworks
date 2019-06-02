@@ -12,6 +12,7 @@ ini_set("error_log", getcwd() . "/debug.log");
 class ReceiveTask
 {
 
+    private $clientTask = [];
     /**
      * init function: receive task from frontend
      * data is NOT arriving from a multipart-data form or an application/x-www-form-urlencoded
@@ -22,13 +23,16 @@ class ReceiveTask
      */
     public function init():void
     {
-        $data = json_decode(file_get_contents('php://input'), true);
-
+        $this->clientTask = json_decode(file_get_contents('php://input'), true);
         // check if frontend sent a task or array of tasks
-        if (array_key_exists('taskname', $data)) {
-            $this->simpleRouter($data);
+        if (array_key_exists('taskname', $this->clientTask)) {
+            error_log('single array');
+            error_log(print_r($this->clientTask, true));
+            $this->simpleRouter($this->clientTask);
         } else {
-            foreach ($data as $task) {
+            foreach ($this->clientTask as $task) {
+                error_log('PROBLEM - Multidimensional array here...');
+                error_log(print_r($task, true));
                 $this->simpleRouter($task);
             }
         }
@@ -77,6 +81,7 @@ class ReceiveTask
      */
     public function changeTask(array $clientTask): string
     {
+        error_log(print_r($clientTask, true));
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true); //get tasks from file
         foreach ($serverTasks as &$serverTask) {
             $serverTask = (array)$serverTask;

@@ -6,9 +6,9 @@ export default new class SendTask {
   constructor() {
     this.pubsub = PubSub;
     this.sendData = this.sendData.bind(this);
-    this.pubsub.subscribe('NewTask', 'getNewTask', null, this.sendData);
-    this.pubsub.subscribe('ChangeTask', 'getChangeTask', null, this.sendData);
-    this.pubsub.subscribe('DeleteTask', 'getDeleteTask', null, this.sendData);
+    this.pubsub.subscribe('NewTask', 'getNewTask', this.sendData);
+    this.pubsub.subscribe('ChangeTask', 'getChangeTask', this.sendData);
+    this.pubsub.subscribe('DeleteTask', 'getDeleteTask', this.sendData);
   }
 
   async sendData(task) {
@@ -34,6 +34,6 @@ export default new class SendTask {
     if (json.source == "server error") {
       console.log('blow up');
     }
-    this.pubsub.publish('ServerMessage', json);
+    this.pubsub.publish('ServerTask', json);
   }
 }

@@ -16,10 +16,12 @@ class EvilBoss
      */
     public function init():void
     {
-        // get current tasks from json file
-        $tasks = json_decode(\file_get_contents('tasks.json'), true);
-        error_log('adding evil boss task');
-        
+        // wait for a couple of seconds, let the workers get coffee before
+        // being a jerk...
+        sleep(2);
+        // ok get current tasks
+        $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
+
         // create evil task
         $evilTask = array(
             "taskname" => "&#9785; Attend pointless meeting",
@@ -30,12 +32,12 @@ class EvilBoss
             "css" => "closed",
         );
         // set id
-        empty($tasks) ? $evilTask['id'] = 1: $evilTask['id'] = max(array_column($tasks, 'id')) + 1;
+        empty($serverTasks) ? $evilTask['id'] = 1: $evilTask['id'] = max(array_column($serverTasks, 'id')) + 1;
         
         // add to the start of task array
-        array_unshift($tasks, $evilTask);
-        file_put_contents('tasks.json', json_encode($tasks));
-        $this->sse($evilTask);
+        array_unshift($serverTasks, $evilTask);
+        file_put_contents('tasks.json', json_encode($serverTasks));
+        $this->sse($serverTasks);
     }
     
     /**
@@ -45,17 +47,17 @@ class EvilBoss
      * @param array $data
      * @return void
      */
-    public function sse(array $evilTask):void
+    public function sse(array $serverTasks):void
     {
         // send update every 10 - 15 seconds
-        //$timeint = 1000 * rand(10, 15);
+        $timeint = 1000 * rand(10, 15);
 
         try {
             header("Cache-Control: no-cache");
             header("Content-Type: text/event-stream");
             echo "event: evilBossAddedTask" . PHP_EOL;
             echo "retry: " . $timeint . PHP_EOL;
-            echo "data: ".json_encode($evilTask). PHP_EOL;
+            echo "data: ".json_encode($serverTasks). PHP_EOL;
             echo PHP_EOL;
             flush();
         } catch (Exception $ex) {

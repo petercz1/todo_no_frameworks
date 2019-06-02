@@ -2,7 +2,7 @@ class DataStore {
 
   constructor() {
     // create datastores
-    this.tasks = [];
+    this.clientTasks = [];
     this.meta = {
       tasksChecked: 0,
       taskLength: 0,
@@ -15,14 +15,8 @@ class DataStore {
     return this[subscriber.request](subscriber.parameters);
   }
 
-  // setRequest() works by appending 'set to the 'request.newInfo' string
-  // and then uses that as the function name
-  // eg 'NewTask' becomes 'setNewTask'
-  // I added 'request.data' in case someone wants to extend the idea
-  // by passing a variable eg id (not implemented here)
   setRequest(request) {
-    let req = 'set' + request.newInfo;
-    let res = this[req](request.data);
+    let res = this[request.newInfo](request.data);
     return res;
   }
 
@@ -30,68 +24,82 @@ class DataStore {
     return this.meta;
   }
   updateMeta() {
-    this.meta.tasksChecked = this.tasks.filter(task => (task.checked == true)).length;
-    this.meta.taskLength = this.tasks.filter(task => task.deleteTask != true).length;
+    console.log(this.clientTasks);
+    this.meta.tasksChecked = this.clientTasks.filter(task => (task.checked == true)).length;
+    this.meta.taskLength = this.clientTasks.filter(task => task.deleteTask != true).length;
 
   }
 
-  setNewTask(data) {
+  NewTask(task) {
     // clear css field from all tasks
-    console.log(data);
-    this.tasks.forEach(task => {
-      delete task.css;
+    console.log(task);
+    this.clientTasks.forEach(clientTask => {
+      delete clientTask.css;
     });
     // simple id field: find max id and increment it
-    let max = Math.max(...this.tasks.map(obj => obj.id), 0);
-    data.id = max + 1;
-    this.tasks.unshift(data);
-    this.meta.message = data.message;
+    let max = Math.max(...this.clientTasks.map(obj => obj.id), 0);
+    task.id = max + 1;
     // add task to tasks
+    this.clientTasks.unshift(task);
+    // update message
+    this.meta.message = task.message;
     this.updateMeta();
-
   }
   getNewTask() {
-    return this.tasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
+    return this.clientTasks.reduce((prev, current) => (prev.id > current.id) ? prev : current);
   }
   getTasks() {
-    return this.tasks.filter(task => task.deleteTask != true);
+    return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
   }
 
-  setChangeTask(data) {
+  ChangeTask(task) {
+    this.meta.message = 'client changed task: ' + task.taskname;
     this.updateMeta();
   }
   getChangeTask() {
     // use the JSON.parse/stringify hack to make a copy of task array
-    let changedTask = JSON.parse(JSON.stringify(this.tasks.filter(task => task.changeTask == true)));
+    let changedTask = JSON.parse(JSON.stringify(this.clientTasks.filter(clientTask => clientTask.changeTask == true)));
     this.updateMeta();
-
     return changedTask;
   }
 
-  setDeleteTask(data) {
+  DeleteTask(task) {
+    this.meta.message = 'client deleted: ' + task.taskname;
     this.updateMeta();
   }
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
-    let deletedTask = this.tasks.filter(task => task.deleteTask == true);
-    this.tasks = this.tasks.filter(task => task.deleteTask != true);
+    let deletedTask = this.clientTasks.filter(clientTask => clientTask.deleteTask == true);
+    this.clientTasks = this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
     this.updateMeta();
 
     return deletedTask;
   }
 
 
-  // handles returning ServerData
-  setServerData(data) {
-    this.meta.message = data.message;
-    this.tasks = data;
+  // handles single task from server
+  ServerTask(serverTask) {
+    console.log(serverTask);
+    if (serverTask) {
+      this.meta.message = serverTask.message;
+    }else{
+      this.meta.message = "No new tasks on server";
+    }
     this.updateMeta();
   }
+
+  // handles all tasks from server
+  ServerTasks(serverTasks){
+    console.log(serverTasks);
+    this.clientTasks = serverTasks;
+    this.updateMeta();
+  }
+
   // clears rolldown css effect after task is added to list and displayed
-  setDisplayedTask(data) {
+  DisplayedTask(data) {
     // clear css field from all tasks
-    this.tasks.forEach(task => {
-      delete task.css;
+    this.clientTasks.forEach(clientTask => {
+      delete clientTask.css;
     });
   }
 }

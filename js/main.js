@@ -9,11 +9,12 @@ import './data/sendTask.js';
 
 // import helpers
 import fetchTasks from './data/fetchTasks.js';
-//import serverMonitor from './helpers/serverMonitor.js';
+import serverMonitor from './helpers/serverMonitor.js';
 
 window.onload = start();
 
 function start() {
   fetchTasks.fetchData(); // load any tasks from server
-  //serverMonitor.monitor(); // watch server for new messages
+  let servermon = new serverMonitor();
+  servermon.monitor(); // watch server for new messages
 }

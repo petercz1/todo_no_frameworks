@@ -6,17 +6,17 @@ export default class appConsole extends RootElement {
 		super();
 		this.pubsub = PubSub;
 		this.renderData(this.pubsub.getData('getMeta', null));
-		this.pubsub.subscribe('NewTask', 'getMeta', null, this.renderData);
-		this.pubsub.subscribe('ChangeTask', 'getMeta', null, this.renderData);
-		this.pubsub.subscribe('DeleteTask', 'getMeta', null, this.renderData);
-		this.pubsub.subscribe('ServerData', 'getMeta', null, this.renderData);
+		this.pubsub.subscribe('NewTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('ChangeTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('DeleteTask', 'getMeta', this.renderData);
+		this.pubsub.subscribe('ServerTasks', 'getMeta', this.renderData);
   }
 
-	renderData(data){
+	renderData(metaData){
 		this.innerHTML = `
 		<div class="console">
 			<h3>Browser</h3>
-			<p>You have <span class="bold">${data.taskLength}</span> tasks, <span class="bold">${data.tasksChecked}</span> are completed</p>
+			<p>You have <span class="bold">${metaData.taskLength}</span> tasks, <span class="bold">${metaData.tasksChecked}</span> are completed</p>
 		</div>
 		`;
 	}
