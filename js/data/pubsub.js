@@ -44,8 +44,7 @@ export default new class PubSub {
   }
 
   getData(request) {
-    // this handles 
-    // non-publish/subscribe requests for info such as getting totals 
+    // this handles non-publish/subscribe requests for info such as getting totals 
     // before publishing a new record eg 'getCheckedTotal()'
     return this.datastore.getRequest({
       request
