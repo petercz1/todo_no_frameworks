@@ -29,13 +29,13 @@ class ReceiveTask
     public function init():void
     {
         $this->clientTask = json_decode(file_get_contents('php://input'), true);
-        $this->simpleRouter($this->clientTask);
+        //$this->simpleRouter($this->clientTask);
         if ($task['deleteTask']) {
             echo $this->deleteTask($this->clientTask);
         } elseif ($task['changeTask']) {
             echo $this->changeTask($this->clientTask);
         } else {
-            echo $this->newTask($task);
+            echo $this->newTask($this->clientTask);
         }
     }
 
