@@ -87,7 +87,6 @@ class DataStore {
       this.meta.message = serverTask.message;
       // check task coming from server isn't already in tasks on client
       if(this.clientTasks.filter(clientTask => clientTask.clientId == serverTask.clientId).length == 0){
-        // give incoming tas
         serverTask.clientId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15),
 
         this.clientTasks.unshift(serverTask);
