@@ -85,7 +85,7 @@ class DataStore {
     console.log(serverTask);
     if (serverTask) {
       this.meta.message = serverTask.message;
-      console.log();
+      console.log(this.clientTasks.filter(clientTask => clientTask.clientId == serverTask.clientId));
       if(!this.clientTasks.filter(clientTask => clientTask.clientId == serverTask.clientId)){
         this.clientTasks.unshift(serverTask);
       }
