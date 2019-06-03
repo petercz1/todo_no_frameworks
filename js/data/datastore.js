@@ -88,6 +88,7 @@ class DataStore {
       if(this.clientTasks.filter(clientTask => clientTask.clientId == serverTask.clientId).length == 0){
         console.log(serverTask);
         this.clientTasks.unshift(serverTask);
+        
       }
     } else {
       this.meta.message = "No new tasks on server";
