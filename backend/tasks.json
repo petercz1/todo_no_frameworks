@@ -1,1 +1,41 @@
-[{"taskname":"&#9785; Attend pointless meeting","message":"server received and added task: &#9785; Attend pointless meeting","changeTask":0,"deleteTask":0,"checked":0,"css":"closed","id":5},{"taskname":"beat personal best on snake","message":"server received and added task: beat personal best on snake","clientId":"r4a7bl2gp9dfazcheuly5","changeTask":false,"deleteTask":false,"checked":false,"id":4},{"taskname":"&#9785; Attend pointless meeting","message":"server received and added task: &#9785; Attend pointless meeting","changeTask":0,"deleteTask":0,"checked":0,"css":"closed","id":3},{"taskname":"spike watercooler","message":"server received and added task: spike watercooler","clientId":"8y369v88vkshjk0r9iu6hu","changeTask":false,"deleteTask":false,"checked":false,"id":2},{"taskname":"&#9785; Attend pointless meeting","message":"server received and added task: &#9785; Attend pointless meeting","changeTask":0,"deleteTask":0,"checked":0,"css":"closed","id":1}]
+[{
+  "taskname": "&#9785; Attend pointless meeting",
+  "message": "server received and added task: &#9785; Attend pointless meeting",
+  "changeTask": 0,
+  "deleteTask": 0,
+  "checked": 0,
+  "css": "closed",
+  "id": 5
+}, {
+  "taskname": "beat personal best on snake",
+  "message": "server received and added task: beat personal best on snake",
+  "clientId": "r4a7bl2gp9dfazcheuly5",
+  "changeTask": false,
+  "deleteTask": false,
+  "checked": false,
+  "id": 4
+}, {
+  "taskname": "&#9785; Attend pointless meeting",
+  "message": "server received and added task: &#9785; Attend pointless meeting",
+  "changeTask": 0,
+  "deleteTask": 0,
+  "checked": 0,
+  "css": "closed",
+  "id": 3
+}, {
+  "taskname": "spike watercooler",
+  "message": "server received and added task: spike watercooler",
+  "clientId": "8y369v88vkshjk0r9iu6hu",
+  "changeTask": false,
+  "deleteTask": false,
+  "checked": false,
+  "id": 2
+}, {
+  "taskname": "&#9785; Attend pointless meeting",
+  "message": "server received and added task: &#9785; Attend pointless meeting",
+  "changeTask": 0,
+  "deleteTask": 0,
+  "checked": 0,
+  "css": "closed",
+  "id": 1
+}]
