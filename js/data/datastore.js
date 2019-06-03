@@ -82,6 +82,7 @@ class DataStore {
 
   // handles single task from server
   ServerTask(serverTask) {
+    console.log(serverTask);
     if (serverTask) {
       this.meta.message = serverTask.message;
       if(!this.clientTasks.filter(clientTask => clientTask.clientId == serverTask.clientId)){
