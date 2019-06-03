@@ -85,7 +85,7 @@ class DataStore {
     console.log(serverTask);
     if (serverTask) {
       this.meta.message = serverTask.message;
-      // check task coming from server isn't already in 
+      // check task coming from server isn't already in tasks on client
       if(this.clientTasks.filter(clientTask => clientTask.clientId == serverTask.clientId).length == 0){
         this.clientTasks.unshift(serverTask);
       }
