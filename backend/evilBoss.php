@@ -29,6 +29,7 @@ class EvilBoss
             "taskname" => "&#9785; Attend pointless meeting",
             "message" => "evil boss added: Attend pointless meeting",
             "changeTask" => 0,
+            
             "deleteTask" => 0,
             "checked" => 0,
             "css" => "closed",
