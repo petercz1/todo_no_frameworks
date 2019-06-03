@@ -82,7 +82,6 @@ class DataStore {
 
   // handles single task from server
   ServerTask(serverTask) {
-    console.log(serverTask);
     if (serverTask) {
       this.meta.message = serverTask.message;
       // check task coming from server isn't already in tasks on client
