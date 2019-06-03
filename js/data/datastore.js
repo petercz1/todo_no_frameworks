@@ -84,7 +84,7 @@ class DataStore {
   ServerTask(serverTask) {
     if (serverTask) {
       this.meta.message = serverTask.message;
-      let deletedTask = this.clientTasks.filter(clientTask => clientTask.clientId == serverTask);
+      if(this.clientTasks.filter(clientTask => clientTask.clientId == serverTask.clientId);
 
       this.clientTasks.unshift(serverTask);
     } else {
