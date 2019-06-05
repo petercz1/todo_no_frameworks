@@ -28,7 +28,6 @@ export default new class PubSub {
   // when anyone publishes something it arrives here,
   // a string of newInfo eg 'AddTask' and an object of data to publish
   publish(newInfo, data) {
-console.log('newInfo: ' + newInfo);
 console.log(data);
     // publish the new/changed data
     // datastore converts this to a 'set' method and parameter eg setAddTask(data)
