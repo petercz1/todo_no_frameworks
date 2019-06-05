@@ -8,9 +8,10 @@ namespace chipbug\todo;
 ini_set("log_errors", "1");
 ini_set("error_log", getcwd() . "/debug.log");
 
-class DeleteTask{
+class DeleteTask
+{
 
-	 /**
+     /**
      * delete task
      *
      * @param array $task
@@ -18,14 +19,15 @@ class DeleteTask{
      */
     public function init(array $clientTask): string
     {
+        error_log(print_r($clientTask, true));
         //get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
         foreach ($serverTasks as $key => $serverTask) {
-            if ($serverTask['id'] == $clientTask['id']) {
+            if ($serverTask['clientId'] == $clientTask['clientId']) {
                 unset($serverTasks[$key]); // delete task
             }
         }
-        file_put_contents('tasks.json', json_encode($serverTasks));
+        file_put_contents('tasks.json', json_encode(array_values($serverTasks)));
         // send back a response
         $clientTask['message'] = "server deleted task: " . $clientTask['taskname'];
         return json_encode($clientTask);

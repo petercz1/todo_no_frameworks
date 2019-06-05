@@ -33,6 +33,7 @@ export default class appAddTask extends RootElement {
       changeTask: false,
       deleteTask: false,
       checked: false,
+      addedToServer: false,
       css: 'closed'
     };
     // now publish it to anyone who's interested

@@ -29,10 +29,10 @@ class EvilBoss
             "taskname" => "&#9785; Attend pointless meeting",
             "message" => "evil boss added: Attend pointless meeting",
             "changeTask" => 0,
-            "clientId" => '',
+            "clientId" => substr(md5((string)rand()), 0, 22),
             "deleteTask" => 0,
             "checked" => 0,
-            "css" => "closed",
+            "addedToServer" => false
         );
 
         // add evilTask to tasks.json

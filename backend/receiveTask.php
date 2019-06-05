@@ -32,19 +32,23 @@ class ReceiveTask
     {
         $this->clientTask = json_decode(file_get_contents('php://input'), true);
 
-        sleep(2); // mimic a 'slow' server
+        sleep(1); // mimic a 'slow' server
+        
         if ($this->clientTask['deleteTask']) {
+
             $deleteTask = new DeleteTask();
             echo $deleteTask->init($this->clientTask);
-            //echo $this->deleteTask($this->clientTask);
+
         } elseif ($this->clientTask['changeTask']) {
-            // echo $this->changeTask($this->clientTask);
+
             $changeTask = new ChangeTask();
             echo $changeTask->init($this->clientTask);
+
         } else {
-            // echo $this->newTask($this->clientTask);
+
             $addTask = new AddTask();
             echo $addTask->init($this->clientTask);
+
         }
     }
 }

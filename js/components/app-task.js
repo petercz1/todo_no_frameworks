@@ -14,7 +14,7 @@ export default class appTask extends RootElement {
     // build html
     this.innerHTML = `
     <div class="${this.task.css}">
-      <label for="${this.task.id}" class="label">${this.task.taskname}</label>
+      <label for="${this.task.id}" class="label">${this.task.clientId + ': ' + this.task.taskname}</label>
       <input type="checkbox" id="${this.task.id}" />
       <span>&#128465;</span>
     </div>
@@ -25,6 +25,7 @@ export default class appTask extends RootElement {
     if (this.task.checked) {
       this.querySelector('label').classList.add('checked');
     }
+
     // wire up event listeners
     this.querySelector('input').addEventListener('change', this.registerChange);
     this.querySelector('span').addEventListener('click', this.registerDelete);

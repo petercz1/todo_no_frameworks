@@ -7,8 +7,11 @@ export default class FetchTasks {
   constructor() {
     this.pubsub = PubSub;
     this.fetchData = this.fetchData.bind(this);
-    //this.pubsub.subscribe('EvilBossTask', 'getTasks', this.renderData);
-  }
+    this.pubsub.subscribe('AddTask', 'getTasks', this.fetchData);
+    this.pubsub.subscribe('ChangeTask', 'getTasks', this.fetchData);
+    this.pubsub.subscribe('DeleteTask', 'getTasks', this.fetchData);
+    this.pubsub.subscribe('ServerTask', 'getTasks', this.fetchData);
+    }
 
   async fetchData() {
     // build GET url
@@ -29,7 +32,7 @@ export default class FetchTasks {
     }
     let json = await response.json();
     if (json.source == "server error") {
-      this.pubsub.publish('ServerMessage', `{server error: ${response.status}, ${response.statusText}}`);
+      this.pubsub.publish('ServerError', `{server error: ${response.status}, ${response.statusText}}`);
     } else {
       this.pubsub.publish('ServerTasks', json);
     }

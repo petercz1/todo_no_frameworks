@@ -32,12 +32,13 @@ class DataStore {
   getMeta() {
     return this.meta;
   }
+
   getTasks() {
     return this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
   }
   getAddTask() {
-    // new task added at the client side doesn't have an ID
-    return this.clientTasks.filter(clientTask => !clientTask.id)[0];
+    // get task if not added to server db
+    return this.clientTasks.filter(clientTask => !clientTask.addedToServer)[0];
   }
   getChangeTask() {
     // use the JSON.parse/stringify hack to make a copy of task array
@@ -47,7 +48,8 @@ class DataStore {
   }
   getDeleteTask() {
     // filter returns a copy of the array, which then replaces the original
-    let deletedTask = this.clientTasks.filter(clientTask => clientTask.deleteTask == true);
+    let deletedTask = JSON.parse(JSON.stringify(this.clientTasks.filter(clientTask => clientTask.deleteTask == true)));
+    // replace clientTasks with undeleted ie remaining tasks
     this.clientTasks = this.clientTasks.filter(clientTask => clientTask.deleteTask != true);
     this.updateMeta();
     return deletedTask[0];
@@ -60,9 +62,6 @@ class DataStore {
     this.clientTasks.forEach(clientTask => {
       delete clientTask.css;
     });
-    // simple id field: find max id and increment it
-    //let max = Math.max(...this.clientTasks.map(obj => obj.id), 0);
-    //task.id = max + 1;
     // add task to tasks
     this.clientTasks.unshift(task);
     // update message
@@ -83,12 +82,11 @@ class DataStore {
   // handles single task from server
   ServerTask(serverTask) {
     if (serverTask) {
-      console.log(serverTask);
+      if (serverTask.error) return this.meta.message = 'Server blow-up...'
       this.meta.message = serverTask.message;
       // check task coming from server isn't already in tasks on client
-      if(this.clientTasks.filter(clientTask => clientTask.clientId == serverTask.clientId).length == 0){
+      if (this.clientTasks.filter(clientTask => clientTask.clientId == serverTask.clientId).length == 0) {
         this.clientTasks.unshift(serverTask);
-        console.log(this.clientTasks);
       }
     } else {
       this.meta.message = "No new tasks on server";
@@ -98,7 +96,14 @@ class DataStore {
 
   // handles all tasks from server
   ServerTasks(serverTasks) {
+    console.log(serverTasks);
     this.clientTasks = serverTasks;
+    console.log(this.clientTasks);
+    this.updateMeta();
+  }
+
+  ServerError(error) {
+    this.meta.message = error.error;
     this.updateMeta();
   }
 

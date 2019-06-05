@@ -21,7 +21,7 @@ class ChangeTask{
         //get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
         foreach ($serverTasks as &$serverTask) {
-            if ($serverTask['id'] == $clientTask['id']) {
+            if ($serverTask['clientId'] == $clientTask['clientId']) {
                 // set message to checked/unchecked
                 if ($clientTask['checked']) {
                     $clientTask['message'] = "server checked task: " . $clientTask['taskname'];
@@ -34,7 +34,7 @@ class ChangeTask{
                 $serverTask['changeTask'] = false;
             }
         }
-        file_put_contents('tasks.json', json_encode($serverTasks));
+        file_put_contents('tasks.json', json_encode(array_values($serverTasks)));
         // send back a response
         return json_encode($clientTask);
     }

@@ -13,9 +13,11 @@ export default class appServerMessages extends RootElement {
     this.pubsub.subscribe('ChangeTask', 'getMeta', this.renderData);
     this.pubsub.subscribe('DeleteTask', 'getMeta', this.renderData);
     this.pubsub.subscribe('ServerTask', 'getMeta', this.renderData);
+    this.pubsub.subscribe('ServerError', 'getMeta', this.renderData);
   }
 
   renderData(metaData) {
+    console.log(metaData);
     // build html
     this.innerHTML = `
 		<div class="server">
