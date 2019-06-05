@@ -52,7 +52,7 @@ this.pubsub.subscribe(<b>'ServerTask'</b>, 'getMeta', this.renderData);
 </pre>
 we would have
 <pre>
-	this.pubsub.subscribe(<b>{'AddTask', 'ChangeTask','DeleteTask','ServerTask'}</b>, 'getMeta', this.renderData);
+this.pubsub.subscribe(<b>{'AddTask', 'ChangeTask','DeleteTask','ServerTask'}</b>, 'getMeta', this.renderData);
 </pre>
 but then it would be more tricky to assign specific requests/callbacks to each NewInfo.
 
