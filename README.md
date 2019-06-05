@@ -48,7 +48,7 @@ I could have wrapped all requests in an object, so instead of
 this.pubsub.subscribe(<b>'AddTask'</b>, 'getMeta', this.renderData);
 this.pubsub.subscribe(<b>'ChangeTask'</b>, 'getMeta', this.renderData);
 this.pubsub.subscribe(<b>'DeleteTask'</b>, 'getMeta', this.renderData);
-	this.pubsub.subscribe(<b>'ServerTask'</b>, 'getMeta', this.renderData);
+this.pubsub.subscribe(<b>'ServerTask'</b>, 'getMeta', this.renderData);
 </pre>
 we would have
 <pre>
