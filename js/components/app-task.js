@@ -14,7 +14,7 @@ export default class appTask extends RootElement {
     // build html
     this.innerHTML = `
     <div class="${this.task.css}">
-      <label for="${this.task.id}" class="label">${this.task.clientId + ': ' + this.task.taskname}</label>
+      <label for="${this.task.id}" class="label">${this.task.taskname}</label>
       <input type="checkbox" id="${this.task.id}" />
       <span>&#128465;</span>
     </div>
