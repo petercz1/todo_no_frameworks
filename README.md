@@ -29,15 +29,15 @@ To install,
 
 Objects that have something to say publish a string of NewInfo and an object of data:
 ```
-    let task = {
-      taskname: document.querySelector('#taskname').value,
-      message: 'client added ' + document.querySelector('#taskname').value,
-      changeTask: false,
-      deleteTask: false,
-      checked: false,
-      css: 'closed'
-    };
-    this.pubsub.publish('AddTask', task);
+  let task = {
+    taskname: document.querySelector('#taskname').value,
+    message: 'client added ' + document.querySelector('#taskname').value,
+    changeTask: false,
+    deleteTask: false,
+    checked: false,
+    css: 'closed'
+  };
+  this.pubsub.publish('AddTask', task);
 ```
 Objects that are interested in those news items subscribe to 'NewPerson'/'Message'/'SomeEvent' etc, state what info they want and give the callback function they want to be fired:
 ```
