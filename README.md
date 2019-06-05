@@ -4,12 +4,12 @@
 
 [#noframeworks](https://dev.to/gypsydave5/why-you-shouldnt-use-a-web-framework-3g24), just plain JavaScript ES6 with a simple php backend.
 
-It uses built-in ES6 webcomponents and the pubsub pattern to allow each component to subscribe and/or publish to the datastore. In 399 lines of Javascript. Including an evil boss who keeps adding pointless meetings.
+It uses built-in ES6 webcomponents and the pubsub pattern to allow each component to subscribe and/or publish to the datastore. In 399 lines of Javascript. Including an evil boss who keeps adding pointless meetings. And a 'slow' server to demo the async-ness of it all.
 
 ![](demo.gif)
 
 ## caveats
-I used JSON just to demonstrate proof-of-concept. JSON is a data-interchange format so not the tool for reliable client/server data sync (unique id numbers for tasks added can't be guaranteed), but most (all?) of these problems would be solved with a proper db backend.
+I used a plain JSON file as a 'database' just to demonstrate proof-of-concept. As JSON is a data-interchange format it's obviously not the tool for reliable client/server data sync but most (all?) of these problems would be solved with a proper db backend.
 
 ## Install
 
