@@ -41,7 +41,7 @@ Objects that have something to say publish a string of NewInfo and an object of 
 ```
 Objects that are interested in those news items subscribe to 'NewPerson'/'Message'/'SomeEvent' etc, state what info they want and give the callback function they want to be fired:
 ```
-	this.pubsub.subscribe('AddTask', 'getMeta', this.renderData);
+this.pubsub.subscribe('AddTask', 'getMeta', this.renderData);
 ```
 I could have wrapped all requests in an object, so instead of 
 <pre>
