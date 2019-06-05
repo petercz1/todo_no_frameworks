@@ -27,7 +27,6 @@ export default class FetchTasks {
 
     // deal with the response
     if (!response.ok) {
-      console.log(`${response.status}: ${response.statusText}`);
       throw new Error('HTTP error, status = ' + response.status);
     }
     let json = await response.json();
