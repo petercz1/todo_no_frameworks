@@ -4,7 +4,7 @@
 
 [#noframeworks](https://dev.to/gypsydave5/why-you-shouldnt-use-a-web-framework-3g24), just plain JavaScript ES6 with a simple php backend.
 
-It uses built-in ES6 webcomponents and the pubsub pattern to allow each component to subscribe and/or publish to the datastore. In 3 lines of Javascript. Including an evil boss who keeps adding pointless meetings.
+It uses built-in ES6 webcomponents and the pubsub pattern to allow each component to subscribe and/or publish to the datastore. In 399 lines of Javascript. Including an evil boss who keeps adding pointless meetings.
 
 ![](demo.gif)
 
