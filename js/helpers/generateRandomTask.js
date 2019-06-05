@@ -26,6 +26,5 @@ export default new class GenerateRandomTask {
         clearInterval(typewriter)
       }
     }, 50);
-
   }
 }
