@@ -19,7 +19,6 @@ class DeleteTask
      */
     public function init(array $clientTask): string
     {
-        error_log(print_r($clientTask, true));
         //get tasks from file
         $serverTasks = json_decode(\file_get_contents('tasks.json'), true);
         foreach ($serverTasks as $key => $serverTask) {
