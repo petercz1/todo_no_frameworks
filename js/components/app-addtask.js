@@ -44,4 +44,3 @@ export default class appAddTask extends RootElement {
 }
 
 customElements.define('app-addtask', appAddTask);
-
