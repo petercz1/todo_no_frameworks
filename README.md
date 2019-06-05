@@ -11,7 +11,7 @@ It uses built-in ES6 webcomponents and the pubsub pattern to allow each componen
 ## caveats
 I used a plain JSON file as a 'database' just to demonstrate proof-of-concept. As JSON is a data-interchange format it's obviously not the tool for reliable client/server data sync but most (all?) of these problems would be solved with a proper db backend.
 
-## Install
+## install
 
 This was built on
 * php 7.3
